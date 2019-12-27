@@ -2,20 +2,7 @@
     <div>
         <el-row :gutter="10">
             <el-col :span="3">
-                <el-select size="mini" v-model="statu" placeholder="状态">
-                    <el-option
-                            v-for="item in status"
-                            :key="item.value"
-                            :label="item.label"
-                            :value="item.value">
-                    </el-option>
-                </el-select>
-            </el-col>
-            <el-col :span="3">
                 <el-input size="mini" placeholder="邮箱"></el-input>
-            </el-col>
-            <el-col :span="3">
-                <el-input size="mini" placeholder="密码重置Token"></el-input>
             </el-col>
             <el-col :span="6">
                 <el-date-picker
@@ -24,22 +11,18 @@
                         size="mini"
                         type="daterange"
                         range-separator="至"
-                        start-placeholder="创建开始日期"
-                        end-placeholder="创建结束日期"
+                        start-placeholder="创建开始时间"
+                        end-placeholder="创建结束时间"
                         value-format="yyyy-MM-dd">
                 </el-date-picker>
             </el-col>
-            <el-col :span="2" :offset="7" style="text-align: right">
+            <el-col :span="2" :offset="13" style="text-align: right">
                 <el-button size="mini" type="primary">查询</el-button>
             </el-col>
         </el-row>
-        <el-row class="btn-box">
-            <el-button size="mini" type="primary">新增</el-button>
-            <el-button size="mini" type="primary">修改</el-button>
-            <el-button size="mini" type="danger">批量删除</el-button>
-        </el-row>
         <el-row class="table-style">
             <el-table
+                    :data="letters.slice((currentPage-1)*pageSize,currentPage*pageSize)"
                     :height="650"
                     ref="table"
                     border
@@ -57,23 +40,8 @@
                         width="50">
                 </el-table-column>
                 <el-table-column
-                        prop="name"
-                        label="用户-名"
-                        width="">
-                </el-table-column>
-                <el-table-column
-                        prop="surname"
-                        label="用户-姓"
-                        width="">
-                </el-table-column>
-                <el-table-column
                         prop="email"
-                        label="Email"
-                        width="">
-                </el-table-column>
-                <el-table-column
-                        prop="collections"
-                        label="收藏产品数"
+                        label="邮箱"
                         width="">
                 </el-table-column>
                 <el-table-column
@@ -86,14 +54,10 @@
                         label="创建时间"
                         width="">
                 </el-table-column>
-                <el-table-column
-                        prop="updatetime"
-                        label="更新时间"
-                        width="120">
-                </el-table-column>
+
                 <el-table-column
                         label="操作"
-                        width="120">
+                        width="140">
                     <template slot-scope="scope">
                         <el-button size="mini" type="primary" icon="el-icon-edit"></el-button>
                         <el-button size="mini" type="primary" icon="el-icon-delete"></el-button>
@@ -118,21 +82,12 @@
     export default {
         data() {
             return {
-                status:[
-                    {
-                        label:'激活',
-                        value:1
-                    },
-                    {
-                        label:'关闭',
-                        value:0
-                    }
-                ],
-                statu:'',
                 datevalue:'',
                 totle:16,
                 currentPage:1,
                 pageSize:10,
+                multipleSelection:[],
+                letters:[]
             };
         },
         methods: {
@@ -163,11 +118,9 @@
     .datesty{
         width: 100%;
     }
-    .btn-box{
-        margin: 10px 0px;
-    }
     .table-style{
         background: white;
+        margin-top: 10px;
     }
     .page-style{
         float: right;

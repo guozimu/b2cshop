@@ -176,6 +176,11 @@ export default new Router({
                     path: '/accountmanager',
                     component: () => import(/* webpackChunkName: "donate" */ '../components/page/AccountManager.vue'),
                     meta: { title: '账户管理' }
+                },
+                {
+                    path: '/newsletter',
+                    component: () => import(/* webpackChunkName: "donate" */ '../components/page/NewsLetter.vue'),
+                    meta: { title: 'NewsLetter' }
                 }
             ]
         },

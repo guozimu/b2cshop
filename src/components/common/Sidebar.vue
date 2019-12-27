@@ -246,6 +246,10 @@ export default {
                                     title: '账户管理'
                                 }
                             ]
+                        },
+                        {
+                            index: 'newsletter',
+                            title: 'NewsLetter'
                         }
                     ]
                 }
