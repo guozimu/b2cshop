@@ -151,7 +151,7 @@ export default {
                     title: '支持作者'
                 },
                 {
-                    icon: 'el-icon-lx-calendar',
+                    icon: 'el-icon-lx-qrcode',
                     index: '9',
                     title: '产品分类',
                     subs: [
@@ -210,7 +210,7 @@ export default {
                     ]
                 },
                 {
-                    icon: 'el-icon-lx-cascades',
+                    icon: 'el-icon-lx-shop',
                     index: '10',
                     title: '商城管理',
                     subs: [
@@ -250,6 +250,51 @@ export default {
                         {
                             index: 'newsletter',
                             title: 'NewsLetter'
+                        }
+                    ]
+                },
+                {
+                    icon: 'el-icon-lx-settings',
+                    index: '11',
+                    title: '控制面板',
+                    subs:[
+                        {
+                            index: '11-1',
+                            title: '后台用户',
+                            subs:[
+                                {
+                                    index: 'myaccount',
+                                    title: '我的账户'
+                                },
+                                {
+                                    index: 'accountmanagement',
+                                    title: '账户管理'
+                                },
+                                {
+                                    index: 'privilegemanagement',
+                                    title: '权限管理'
+                                },
+                                {
+                                    index: 'resourcemanagement',
+                                    title: '资源管理'
+                                }
+                            ]
+                        },
+                        {
+                            index:'operationlog',
+                            title:'操作日志'
+                        },
+                        {
+                            index:'logstatistics',
+                            title:'日志统计'
+                        },
+                        {
+                            index:'cachemanagement',
+                            title:'缓存管理'
+                        },
+                        {
+                            index:'backgroundconfiguration',
+                            title:'后台配置'
                         }
                     ]
                 }

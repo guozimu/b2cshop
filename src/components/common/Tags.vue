@@ -27,7 +27,7 @@
     export default {
         data() {
             return {
-                tagsList: []
+                tagsList: [],
             }
         },
         methods: {
@@ -80,7 +80,8 @@
         computed: {
             showTags() {
                 return this.tagsList.length > 0;
-            }
+            },
+
         },
         watch:{
             $route(newValue, oldValue){
@@ -106,6 +107,10 @@
                     }
                 }
             })
+        },
+        mounted() {
+
+
         }
     }
 
@@ -126,6 +131,7 @@
         box-sizing: border-box;
         width: 100%;
         height: 100%;
+        overflow: hidden;
     }
 
     .tags-li {
@@ -158,6 +164,7 @@
     .tags-li-title {
         float: left;
         max-width: 80px;
+        text-align: center;
         overflow: hidden;
         white-space: nowrap;
         text-overflow: ellipsis;

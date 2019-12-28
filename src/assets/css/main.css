@@ -216,7 +216,7 @@ a {
     font-size: 12px;
 }
 .el-form-item--mini.el-form-item, .el-form-item--small.el-form-item{
-    margin-bottom: 10px;
+    margin-bottom: 10px !important;
 }
 .size-12{
     font-size: 12px;
@@ -226,4 +226,12 @@ a {
 }
 .el-table__body-wrapper {
     overflow-y: auto !important;
+}
+.page-style{
+    float: right;
+    margin: 10px 0px;
+}
+.table-style{
+    background: white;
+    margin-top: 10px;
 }

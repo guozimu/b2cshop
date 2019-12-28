@@ -181,7 +181,47 @@ export default new Router({
                     path: '/newsletter',
                     component: () => import(/* webpackChunkName: "donate" */ '../components/page/NewsLetter.vue'),
                     meta: { title: 'NewsLetter' }
-                }
+                },
+                {
+                    path: '/myaccount',
+                    component: () => import(/* webpackChunkName: "donate" */ '../components/page/MyAccount.vue'),
+                    meta: { title: '我的账户' }
+                },
+                {
+                    path: '/accountmanagement',
+                    component: () => import(/* webpackChunkName: "donate" */ '../components/page/AccountManagement.vue'),
+                    meta: { title: '账户管理' }
+                },
+                {
+                    path: '/privilegemanagement',
+                    component: () => import(/* webpackChunkName: "donate" */ '../components/page/PrivilegeManagement.vue'),
+                    meta: { title: '权限管理' }
+                },
+                {
+                    path: '/resourcemanagement',
+                    component: () => import(/* webpackChunkName: "donate" */ '../components/page/ResourceManagement.vue'),
+                    meta: { title: '资源管理' }
+                },
+                {
+                    path: '/operationlog',
+                    component: () => import(/* webpackChunkName: "donate" */ '../components/page/OperationLog.vue'),
+                    meta: { title: '操作日志' }
+                },
+                {
+                    path: '/logstatistics',
+                    component: () => import(/* webpackChunkName: "donate" */ '../components/page/LogStatistics.vue'),
+                    meta: { title: '日志统计' }
+                },
+                {
+                    path: '/cachemanagement',
+                    component: () => import(/* webpackChunkName: "donate" */ '../components/page/CacheManagement.vue'),
+                    meta: { title: '缓存管理' }
+                },
+                {
+                    path: '/backgroundconfiguration',
+                    component: () => import(/* webpackChunkName: "donate" */ '../components/page/BackgroundConfiguration.vue'),
+                    meta: { title: '后台配置' }
+                },
             ]
         },
         {
