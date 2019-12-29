@@ -60,15 +60,16 @@
             <el-button size="mini" type="warning">修改</el-button>
             <el-button size="mini" type="danger">批量删除</el-button>
         </el-row>
-        <el-row class="table-style">
+        <el-row ref="table-box" class="table-style">
             <el-table
                     :data="goodsdata.slice((currentPage-1)*pageSize,currentPage*pageSize)"
-                    :height="650"
                     ref="table"
+                    :height="tableHeight"
                     border
                     :cell-style="cellStyle"
                     :header-cell-style="rowStyle"
                     style="width: 100%;"
+                    class="tabelHeight"
                     @selection-change="handleSelectionChange">
                 <el-table-column
                         type="selection"
@@ -160,17 +161,6 @@
 
         <!--模态框-->
         <el-dialog title="修改" :visible.sync="dialogFormVisible">
-            <!--<el-form>-->
-                <!--<el-form-item label="活动名称" :label-width="formLabelWidth">-->
-                    <!--<el-input auto-complete="off"></el-input>-->
-                <!--</el-form-item>-->
-                <!--<el-form-item label="活动区域" :label-width="formLabelWidth">-->
-                    <!--<el-select placeholder="请选择活动区域">-->
-                        <!--<el-option label="区域一" value="1"></el-option>-->
-                        <!--<el-option label="区域二" value="2"></el-option>-->
-                    <!--</el-select>-->
-                <!--</el-form-item>-->
-            <!--</el-form>-->
             <el-tabs v-model="activeName" class="editsty" @tab-click="handleClick">
                 <el-tab-pane label="基本信息" name="basicinfo">
                     <div class="basicTop">
@@ -626,7 +616,8 @@
 
                     }
                 ],
-                multipleSelection: []
+                multipleSelection: [],
+                tableHeight:0
             };
         },
         methods: {
@@ -688,12 +679,18 @@
             Attrgroup,
             Aboutpro
         },
+        created(){
+            this.tableHeight = document.documentElement.clientHeight - 284;
+        },
         mounted() {
+
+            console.log(document.documentElement.clientHeight - 166);
         }
     };
 </script>
 
 <style scoped>
+
     .datesty{
         width: 100%;
     }
@@ -701,7 +698,7 @@
         width: 80%;
     }
     .btn-group{
-        padding: 10px 0px;
+        padding: 10px 0px 0px 0px;
     }
     .head_pic{
         width: 100%;
@@ -713,6 +710,7 @@
     }
     .table-style{
         background: white;
+        height: 100%;
     }
     .basicTop span.red{
         color: red;
