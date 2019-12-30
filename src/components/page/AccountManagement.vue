@@ -99,7 +99,7 @@
                         width="">
                     <template slot-scope="scope">
                         <el-button size="mini" type="primary" @click="editYou(scope.row)" icon="el-icon-edit"></el-button>
-                        <el-button size="mini" type="primary" @click="deleteYou(scope.row,scope.$index)" icon="el-icon-delete"></el-button>
+                        <el-button size="mini" type="primary" icon="el-icon-delete"></el-button>
                     </template>
                 </el-table-column>
             </el-table>
@@ -114,10 +114,77 @@
                     :total="totle">
             </el-pagination>
         </el-row>
+        <el-dialog title="修改" :visible.sync="dialogFormVisible">
+            <div class="edit-box">
+                <span class="titlespan">编辑信息</span>
+                <el-form size="mini" :model="form" label-width="100px">
+                    <el-row :gutter="10">
+                        <el-col :span="8">
+                            <el-form-item label="用户名">
+                                <el-input size="mini" v-model="form.username" autocomplete="off"></el-input>
+                            </el-form-item>
+                            <el-form-item label="姓名">
+                                <el-input size="mini" v-model="form.name" autocomplete="off"></el-input>
+                            </el-form-item>
+                            <el-form-item label="出生日期">
+                                <el-date-picker
+                                        size="mini"
+                                        class="date-sty"
+                                        v-model="form.date"
+                                        type="date"
+                                        value-format="yyyy-MM-dd"
+                                        placeholder="选择日期">
+                                </el-date-picker>
+                            </el-form-item>
+                        </el-col>
+                        <el-col :span="8">
+                            <el-form-item label="密码">
+                                <el-input size="mini" v-model="form.password" autocomplete="off"></el-input>
+                            </el-form-item>
+                            <el-form-item label="员工编号">
+                                <el-input size="mini" v-model="form.employeerno" autocomplete="off"></el-input>
+                            </el-form-item>
+                            <el-form-item label="Auth key">
+                                <el-input size="mini" v-model="form.authkey" autocomplete="off"></el-input>
+                            </el-form-item>
+                        </el-col>
+                        <el-col :span="8">
+                            <el-form-item label="邮箱">
+                                <el-input size="mini" v-model="form.email" autocomplete="off"></el-input>
+                            </el-form-item>
+                            <el-form-item label="状态">
+                                <el-select v-model="form.status" placeholder="状态">
+                                    <el-option
+                                            v-for="item in options"
+                                            :key="item.value"
+                                            :label="item.label"
+                                            :value="item.value">
+                                    </el-option>
+                                </el-select>
+                            </el-form-item>
+                            <el-form-item label="Access Token">
+                                <el-input size="mini" v-model="form.accesstoken" autocomplete="off"></el-input>
+                            </el-form-item>
+                        </el-col>
+                    </el-row>
+                </el-form>
+            </div>
+            <div class="privilege">
+                <span class="privilegespan">权限信息</span>
+                <el-checkbox-group size="mini" v-model="checkedPrivileges">
+                    <el-checkbox v-for="privilege in privileges" :label="privilege" :key="privilege"></el-checkbox>
+                </el-checkbox-group>
+            </div>
+            <div slot="footer" class="dialog-footer">
+                <el-button @click="dialogFormVisible = false">取 消</el-button>
+                <el-button type="primary" @click="dialogFormVisible = false">确 定</el-button>
+            </div>
+        </el-dialog>
     </div>
 </template>
 
 <script>
+    const privilegeOptions = ['admin', '账户管理员', 'ceshi'];
     export default {
         data() {
             return {
@@ -138,6 +205,18 @@
                     email:'',
                     date:[]
                 },
+                form:{
+                    username:'',
+                    password:'',
+                    email:'',
+                    name:'',
+                    employeerno:'',
+                    status:'',
+                    date:'',
+                    authkey:'',
+                    accesstoken:''
+                },
+                dialogFormVisible:false,
                 totle:16,
                 currentPage:1,
                 pageSize:10,
@@ -163,7 +242,9 @@
                         status:'激活'
                     }
                 ],
-                multipleSelection:[]
+                multipleSelection:[],
+                checkedPrivileges: ['admin', '账户管理员'],
+                privileges: privilegeOptions,
             };
         },
         methods: {
@@ -198,6 +279,9 @@
                         type: 'warning'
                     });
                 }
+            },
+            editYou(row){
+                this.dialogFormVisible = true;
             }
         },
         computed: {},
@@ -208,5 +292,35 @@
 <style scoped>
     .btn-position{
         float: right;
+    }
+    .edit-box{
+        border: 1px dashed #13ce66;
+        padding: 10px;
+        position: relative;
+    }
+    .titlespan{
+        color: #13ce66;
+        padding: 2px 5px;
+        position: absolute;
+        top: -13px;
+        left: 12px;
+        background: white;
+    }
+    .privilege{
+        border: 1px dashed #13ce66;
+        padding: 10px;
+        position: relative;
+        margin-top: 20px;
+    }
+    .privilegespan{
+        color: #13ce66;
+        padding: 2px 5px;
+        position: absolute;
+        top: -13px;
+        left: 12px;
+        background: white;
+    }
+    .date-sty{
+        width: 100%;
     }
 </style>
