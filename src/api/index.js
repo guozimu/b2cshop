@@ -1,4 +1,6 @@
 import request from '../utils/request';
+import ajax from './ajax'
+
 
 export const fetchData = query => {
     return request({
@@ -7,3 +9,4 @@ export const fetchData = query => {
         params: query
     });
 };
+export  const reqUserInfo = () => ajax('/userinfo');

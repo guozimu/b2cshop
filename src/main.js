@@ -10,6 +10,8 @@ import './assets/css/icon.css';
 import './components/common/directives';
 import 'babel-polyfill';
 import VCharts from 'v-charts'
+import store from './sotre'
+
 Vue.config.productionTip = false;
 Vue.use(VueI18n);
 Vue.use(ElementUI, {
@@ -44,6 +46,7 @@ router.beforeEach((to, from, next) => {
 
 new Vue({
     router,
+    store,
     i18n,
     render: h => h(App)
 }).$mount('#app');

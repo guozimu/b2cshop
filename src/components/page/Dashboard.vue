@@ -36,7 +36,7 @@
                             <div class="grid-content grid-con-1">
                                 <i class="el-icon-lx-people grid-con-icon"></i>
                                 <div class="grid-cont-right">
-                                    <div class="grid-num">1234</div>
+                                    <div class="grid-num">{{ userinfo.visit_times }}</div>
                                     <div>用户访问量</div>
                                 </div>
                             </div>
@@ -47,7 +47,7 @@
                             <div class="grid-content grid-con-2">
                                 <i class="el-icon-lx-notice grid-con-icon"></i>
                                 <div class="grid-cont-right">
-                                    <div class="grid-num">321</div>
+                                    <div class="grid-num">{{ userinfo.system_message }}</div>
                                     <div>系统消息</div>
                                 </div>
                             </div>
@@ -58,7 +58,7 @@
                             <div class="grid-content grid-con-3">
                                 <i class="el-icon-lx-goods grid-con-icon"></i>
                                 <div class="grid-cont-right">
-                                    <div class="grid-num">5000</div>
+                                    <div class="grid-num">{{ userinfo.num }}</div>
                                     <div>数量</div>
                                 </div>
                             </div>
@@ -112,67 +112,14 @@
 
 <script>
 import bus from '../common/bus';
+
+import {mapState} from 'vuex'
 export default {
     name: 'dashboard',
     data() {
         return {
             name: localStorage.getItem('ms_username'),
-            todoList: [
-                {
-                    title: '今天要修复100个bug',
-                    status: false
-                },
-                {
-                    title: '今天要修复100个bug',
-                    status: false
-                },
-                {
-                    title: '今天要写100行代码加几个bug吧',
-                    status: false
-                },
-                {
-                    title: '今天要修复100个bug',
-                    status: false
-                },
-                {
-                    title: '今天要修复100个bug',
-                    status: true
-                },
-                {
-                    title: '今天要写100行代码加几个bug吧',
-                    status: true
-                }
-            ],
-            data: [
-                {
-                    name: '2018/09/04',
-                    value: 1083
-                },
-                {
-                    name: '2018/09/05',
-                    value: 941
-                },
-                {
-                    name: '2018/09/06',
-                    value: 1139
-                },
-                {
-                    name: '2018/09/07',
-                    value: 816
-                },
-                {
-                    name: '2018/09/08',
-                    value: 327
-                },
-                {
-                    name: '2018/09/09',
-                    value: 228
-                },
-                {
-                    name: '2018/09/10',
-                    value: 1065
-                }
-            ],
+
             chartData: {
                 columns: ['日期', '订单总额', '支付订单总额','比率'],
                 rows: [
@@ -203,7 +150,11 @@ export default {
     computed: {
         role() {
             return this.name === 'admin' ? '超级管理员' : '普通用户';
-        }
+        },
+        ...mapState(['userinfo'])
+    },
+    created() {
+
     },
     // created() {
     //     this.handleListener();
@@ -238,6 +189,9 @@ export default {
         //     this.$refs.bar.renderChart();
         //     this.$refs.line.renderChart();
         // }
+    },
+    mounted() {
+
     }
 };
 </script>
