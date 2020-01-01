@@ -1,9 +1,282 @@
 {
   "userinfo": {
     "last_login_time": "2019-12-30",
-    "last_login-place": "潍坊",
+    "last_login_place": "潍坊",
     "visit_times": 1285,
     "system_message": 300,
     "num": 8000
-  }
+  },
+  "goodsList": [
+    {
+      "id|1-100":1,
+      "img":"/img/goods.jpg",
+      "title|1-10":"★",
+      "spu":"test",
+      "sku":"test",
+      "goodsnum|1-800":200,
+      "weight|1-600":300,
+      "status":"激活",
+      "price|1-1000":150,
+      "founder|1-5":"★",
+      "creattime":"2019-09-11",
+      "updatetime":"2019-09-11"
+
+    },
+    {
+      "id|1-100":1,
+      "img":"/img/goods.jpg",
+      "title|1-10":"★",
+      "spu":"test",
+      "sku":"test",
+      "goodsnum|1-800":200,
+      "weight|1-600":300,
+      "status":"激活",
+      "price|1-1000":150,
+      "founder|1-5":"★",
+      "creattime":"2019-09-11",
+      "updatetime":"2019-09-11"
+
+    },
+    {
+      "id|1-100":1,
+      "img":"/img/goods.jpg",
+      "title|1-10":"★",
+      "spu":"test",
+      "sku":"test",
+      "goodsnum|1-800":200,
+      "weight|1-600":300,
+      "status":"激活",
+      "price|1-1000":150,
+      "founder|1-5":"★",
+      "creattime":"2019-09-11",
+      "updatetime":"2019-09-11"
+
+    },
+    {
+      "id|1-100":1,
+      "img":"/img/goods.jpg",
+      "title|1-10":"★",
+      "spu":"test",
+      "sku":"test",
+      "goodsnum|1-800":200,
+      "weight|1-600":300,
+      "status":"激活",
+      "price|1-1000":150,
+      "founder|1-5":"★",
+      "creattime":"2019-09-11",
+      "updatetime":"2019-09-11"
+
+    },
+    {
+      "id|1-100":1,
+      "img":"/img/goods.jpg",
+      "title|1-10":"★",
+      "spu":"test",
+      "sku":"test",
+      "goodsnum|1-800":200,
+      "weight|1-600":300,
+      "status":"激活",
+      "price|1-1000":150,
+      "founder|1-5":"★",
+      "creattime":"2019-09-11",
+      "updatetime":"2019-09-11"
+
+    },
+    {
+      "id|1-100":1,
+      "img":"/img/goods.jpg",
+      "title|1-10":"★",
+      "spu":"test",
+      "sku":"test",
+      "goodsnum|1-800":200,
+      "weight|1-600":300,
+      "status":"激活",
+      "price|1-1000":150,
+      "founder|1-5":"★",
+      "creattime":"2019-09-11",
+      "updatetime":"2019-09-11"
+
+    },
+    {
+      "id|1-100":1,
+      "img":"/img/goods.jpg",
+      "title|1-10":"★",
+      "spu":"test",
+      "sku":"test",
+      "goodsnum|1-800":200,
+      "weight|1-600":300,
+      "status":"激活",
+      "price|1-1000":150,
+      "founder|1-5":"★",
+      "creattime":"2019-09-11",
+      "updatetime":"2019-09-11"
+
+    },
+    {
+      "id|1-100":1,
+      "img":"/img/goods.jpg",
+      "title|1-10":"★",
+      "spu":"test",
+      "sku":"test",
+      "goodsnum|1-800":200,
+      "weight|1-600":300,
+      "status":"激活",
+      "price|1-1000":150,
+      "founder|1-5":"★",
+      "creattime":"2019-09-11",
+      "updatetime":"2019-09-11"
+
+    },
+    {
+      "id|1-100":1,
+      "img":"/img/goods.jpg",
+      "title|1-10":"★",
+      "spu":"test",
+      "sku":"test",
+      "goodsnum|1-800":200,
+      "weight|1-600":300,
+      "status":"激活",
+      "price|1-1000":150,
+      "founder|1-5":"★",
+      "creattime":"2019-09-11",
+      "updatetime":"2019-09-11"
+
+    },
+    {
+      "id|1-100":1,
+      "img":"/img/goods.jpg",
+      "title|1-10":"★",
+      "spu":"test",
+      "sku":"test",
+      "goodsnum|1-800":200,
+      "weight|1-600":300,
+      "status":"激活",
+      "price|1-1000":150,
+      "founder|1-5":"★",
+      "creattime":"2019-09-11",
+      "updatetime":"2019-09-11"
+
+    },
+    {
+      "id|1-100":1,
+      "img":"/img/goods.jpg",
+      "title|1-10":"★",
+      "spu":"test",
+      "sku":"test",
+      "goodsnum|1-800":200,
+      "weight|1-600":300,
+      "status":"激活",
+      "price|1-1000":150,
+      "founder|1-5":"★",
+      "creattime":"2019-09-11",
+      "updatetime":"2019-09-11"
+
+    },
+    {
+      "id|1-100":1,
+      "img":"/img/goods.jpg",
+      "title|1-10":"★",
+      "spu":"test",
+      "sku":"test",
+      "goodsnum|1-800":200,
+      "weight|1-600":300,
+      "status":"激活",
+      "price|1-1000":150,
+      "founder|1-5":"★",
+      "creattime":"2019-09-11",
+      "updatetime":"2019-09-11"
+
+    },
+    {
+      "id|1-100":1,
+      "img":"/img/goods.jpg",
+      "title|1-10":"★",
+      "spu":"test",
+      "sku":"test",
+      "goodsnum|1-800":200,
+      "weight|1-600":300,
+      "status":"激活",
+      "price|1-1000":150,
+      "founder|1-5":"★",
+      "creattime":"2019-09-11",
+      "updatetime":"2019-09-11"
+
+    },
+    {
+      "id|1-100":1,
+      "img":"/img/goods.jpg",
+      "title|1-10":"★",
+      "spu":"test",
+      "sku":"test",
+      "goodsnum|1-800":200,
+      "weight|1-600":300,
+      "status":"激活",
+      "price|1-1000":150,
+      "founder|1-5":"★",
+      "creattime":"2019-09-11",
+      "updatetime":"2019-09-11"
+
+    },
+    {
+      "id|1-100":1,
+      "img":"/img/goods.jpg",
+      "title|1-10":"★",
+      "spu":"test",
+      "sku":"test",
+      "goodsnum|1-800":200,
+      "weight|1-600":300,
+      "status":"激活",
+      "price|1-1000":150,
+      "founder|1-5":"★",
+      "creattime":"2019-09-11",
+      "updatetime":"2019-09-11"
+
+    },
+    {
+      "id|1-100":1,
+      "img":"/img/goods.jpg",
+      "title|1-10":"★",
+      "spu":"test",
+      "sku":"test",
+      "goodsnum|1-800":200,
+      "weight|1-600":300,
+      "status":"激活",
+      "price|1-1000":150,
+      "founder|1-5":"★",
+      "creattime":"2019-09-11",
+      "updatetime":"2019-09-11"
+
+    }
+  ],
+  "basicData": {
+      "status": [
+        {
+          "label":"激活",
+          "value": 1
+        },
+        {
+          "label": "关闭",
+          "value": 0
+        },
+        {
+          "label": "状态",
+          "value": 2
+        }
+      ],
+      "kcstatus": [
+        {
+          "label":"有货",
+          "value": 1
+        },
+        {
+          "label": "缺货",
+          "value": 0
+        },
+        {
+          "label": "库存状态",
+          "value": 2
+        }
+
+      ]
+    }
 }

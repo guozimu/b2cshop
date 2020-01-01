@@ -11,6 +11,7 @@ import './components/common/directives';
 import 'babel-polyfill';
 import VCharts from 'v-charts'
 import store from './sotre'
+import './mock/mokeServer'
 
 Vue.config.productionTip = false;
 Vue.use(VueI18n);

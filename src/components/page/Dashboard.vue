@@ -12,24 +12,15 @@
                     </div>
                     <div class="user-info-list">
                         上次登录时间：
-                        <span>2019-11-01</span>
+                        <span>{{ userinfo.last_login_time }}</span>
                     </div>
                     <div class="user-info-list">
                         上次登录地点：
-                        <span>山东潍坊</span>
+                        <span>{{ userinfo.last_login_place }}</span>
                     </div>
                 </el-card>
-                <!--<el-card shadow="hover" style="height:252px;">-->
-                    <!--<div slot="header" class="clearfix">-->
-                        <!--<span>情况</span>-->
-                    <!--</div>回报率-->
-                    <!--<el-progress :percentage="71.3" color="#42b983"></el-progress>下单率-->
-                    <!--<el-progress :percentage="24.1" color="#f1e05a"></el-progress>使用率-->
-                    <!--<el-progress :percentage="13.7"></el-progress>上架率-->
-                    <!--<el-progress :percentage="5.9" color="#f56c6c"></el-progress>-->
-                <!--</el-card>-->
             </el-col>
-            <el-col :span="16">
+            <el-col :span="16" v-if="userinfo">
                 <el-row :gutter="20" class="mgb20">
                     <el-col :span="8">
                         <el-card shadow="hover" :body-style="{padding: '0px'}">
@@ -65,39 +56,11 @@
                         </el-card>
                     </el-col>
                 </el-row>
-                <!--<el-card shadow="hover" style="height:403px;">-->
-                    <!--<div slot="header" class="clearfix">-->
-                        <!--<span>待办事项</span>-->
-                        <!--<el-button style="float: right; padding: 3px 0" type="text">添加</el-button>-->
-                    <!--</div>-->
-                    <!--<el-table :show-header="false" :data="todoList" style="width:100%;">-->
-                        <!--<el-table-column width="40">-->
-                            <!--<template slot-scope="scope">-->
-                                <!--<el-checkbox v-model="scope.row.status"></el-checkbox>-->
-                            <!--</template>-->
-                        <!--</el-table-column>-->
-                        <!--<el-table-column>-->
-                            <!--<template slot-scope="scope">-->
-                                <!--<div-->
-                                    <!--class="todo-item"-->
-                                    <!--:class="{'todo-item-del': scope.row.status}"-->
-                                <!--&gt;{{scope.row.title}}</div>-->
-                            <!--</template>-->
-                        <!--</el-table-column>-->
-                        <!--<el-table-column width="60">-->
-                            <!--<template>-->
-                                <!--<i class="el-icon-edit"></i>-->
-                                <!--<i class="el-icon-delete"></i>-->
-                            <!--</template>-->
-                        <!--</el-table-column>-->
-                    <!--</el-table>-->
-                <!--</el-card>-->
             </el-col>
         </el-row>
         <el-row :gutter="20">
             <el-col :span="12">
                 <el-card shadow="hover">
-                    <!--<schart ref="bar" class="schart" canvasId="bar" :options="options"></schart>-->
                     <ve-histogram :data="chartData"></ve-histogram>
                 </el-card>
             </el-col>
@@ -112,8 +75,7 @@
 
 <script>
 import bus from '../common/bus';
-
-import {mapState} from 'vuex'
+import {mapGetters} from 'vuex'
 export default {
     name: 'dashboard',
     data() {
@@ -151,22 +113,13 @@ export default {
         role() {
             return this.name === 'admin' ? '超级管理员' : '普通用户';
         },
-        ...mapState(['userinfo'])
+        ...mapGetters('userInfo',{
+            userinfo:'renderuserinfo'
+        })
     },
     created() {
 
     },
-    // created() {
-    //     this.handleListener();
-    //     this.changeDate();
-    // },
-    // activated() {
-    //     this.handleListener();
-    // },
-    // deactivated() {
-    //     window.removeEventListener('resize', this.renderChart);
-    //     bus.$off('collapse', this.handleBus);
-    // },
     methods: {
         changeDate() {
             const now = new Date().getTime();
@@ -175,23 +128,9 @@ export default {
                 item.name = `${date.getFullYear()}/${date.getMonth() + 1}/${date.getDate()}`;
             });
         }
-        // handleListener() {
-        //     bus.$on('collapse', this.handleBus);
-        //     // 调用renderChart方法对图表进行重新渲染
-        //     window.addEventListener('resize', this.renderChart);
-        // },
-        // handleBus(msg) {
-        //     setTimeout(() => {
-        //         this.renderChart();
-        //     }, 200);
-        // },
-        // renderChart() {
-        //     this.$refs.bar.renderChart();
-        //     this.$refs.line.renderChart();
-        // }
     },
     mounted() {
-
+        this.$store.dispatch('userInfo/getUserInfo');
     }
 };
 </script>

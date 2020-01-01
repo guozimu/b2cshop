@@ -1,20 +1,20 @@
 <template>
     <div>
         <el-row :gutter="10">
-            <el-col :span="2">
-                <el-select size="mini" v-model="statevalue">
+            <el-col :span="2" v-if="BasicData">
+                <el-select size="mini" v-model="statevalue" placeholder="状态">
                     <el-option
-                            v-for="item in status"
+                            v-for="item in BasicData.status"
                             :key="item.value"
                             :label="item.label"
                             :value="item.value">
                     </el-option>
                 </el-select>
             </el-col>
-            <el-col :span="2">
-                <el-select size="mini" v-model="kcstatusvalue">
+            <el-col :span="2" v-if="BasicData">
+                <el-select size="mini" v-model="kcstatusvalue" placeholder="库存状态">
                     <el-option
-                            v-for="item in kcstatus"
+                            v-for="item in BasicData.kcstatus"
                             :key="item.value"
                             :label="item.label"
                             :value="item.value">
@@ -308,23 +308,10 @@
     import Kindinfo from './goodsedit/KindInfo'
     import Attrgroup from './goodsedit/AttrGroup'
     import Aboutpro from './goodsedit/AboutPro'
+    import { mapGetters } from 'vuex'
     export default {
         data() {
             return {
-                status:[
-                    {
-                        label:'状态',
-                        value:0
-                    },
-                    {
-                        label:'激活',
-                        value:1
-                    },
-                    {
-                        label:'关闭',
-                        value:2
-                    }
-                ],
                 attrGroups:[
                     {
                         label:'default',
@@ -343,279 +330,26 @@
                         value:3
                     }
                 ],
+                status:[],
+                kcstatus:[],
                 labelPosition:'left',
                 attrGroup:1,
                 activeName:'basicinfo',
                 activeLang:'en',
                 dialogFormVisible:false,
                 formLabelWidth:'120px',
-                statevalue:0,
-                kcstatus:[
-                    {
-                        label:'库存状态',
-                        value:0
-                    },
-                    {
-                        label:'有货',
-                        value:1
-                    },
-                    {
-                        label:'缺货',
-                        value:2
-                    }
-                ],
+                statevalue:2,
                 totle:16,
                 currentPage:1,
                 pageSize:10,
-                kcstatusvalue:0,
+                kcstatusvalue:2,
                 datevalue: '',
                 goodsname:'',
                 spu:'',
                 sku:'',
                 kcbegin:'',
                 kcend:'',
-                goodsdata:[
-                    {
-                        id:1,
-                        img:'/img/goods.jpg',
-                        title:'拔刀斩',
-                        spu:'test',
-                        sku:'test',
-                        goodsnum:200,
-                        weight:300,
-                        status:'激活',
-                        price:150,
-                        founder:'虢新会',
-                        creattime:'2019-09-11',
-                        updatetime:'2019-11-11',
 
-                    },
-                    {
-                        id:2,
-                        img:'/img/goods.jpg',
-                        title:'拔刀斩',
-                        spu:'test',
-                        sku:'test',
-                        goodsnum:200,
-                        weight:300,
-                        status:'激活',
-                        price:150,
-                        founder:'虢新会',
-                        creattime:'2019-09-11',
-                        updatetime:'2019-11-11',
-
-                    },
-                    {
-                        id:3,
-                        img:'/img/goods.jpg',
-                        title:'拔刀斩',
-                        spu:'test',
-                        sku:'test',
-                        goodsnum:200,
-                        weight:300,
-                        status:'激活',
-                        price:150,
-                        founder:'虢新会',
-                        creattime:'2019-09-11',
-                        updatetime:'2019-11-11',
-
-                    },
-                    {
-                        id:4,
-                        img:'/img/goods.jpg',
-                        title:'拔刀斩',
-                        spu:'test',
-                        sku:'test',
-                        goodsnum:200,
-                        weight:300,
-                        status:'激活',
-                        price:150,
-                        founder:'虢新会',
-                        creattime:'2019-09-11',
-                        updatetime:'2019-11-11',
-
-                    },
-                    {
-                        id:5,
-                        img:'/img/goods.jpg',
-                        title:'拔刀斩',
-                        spu:'test',
-                        sku:'test',
-                        goodsnum:200,
-                        weight:300,
-                        status:'激活',
-                        price:150,
-                        founder:'虢新会',
-                        creattime:'2019-09-11',
-                        updatetime:'2019-11-11',
-
-                    },
-                    {
-                        id:6,
-                        img:'/img/goods.jpg',
-                        title:'拔刀斩',
-                        spu:'test',
-                        sku:'test',
-                        goodsnum:200,
-                        weight:300,
-                        status:'激活',
-                        price:150,
-                        founder:'虢新会',
-                        creattime:'2019-09-11',
-                        updatetime:'2019-11-11',
-
-                    },
-                    {
-                        id:7,
-                        img:'/img/goods.jpg',
-                        title:'拔刀斩',
-                        spu:'test',
-                        sku:'test',
-                        goodsnum:200,
-                        weight:300,
-                        status:'激活',
-                        price:150,
-                        founder:'虢新会',
-                        creattime:'2019-09-11',
-                        updatetime:'2019-11-11',
-
-                    },
-                    {
-                        id:8,
-                        img:'/img/goods.jpg',
-                        title:'拔刀斩',
-                        spu:'test',
-                        sku:'test',
-                        goodsnum:200,
-                        weight:300,
-                        status:'激活',
-                        price:150,
-                        founder:'虢新会',
-                        creattime:'2019-09-11',
-                        updatetime:'2019-11-11',
-
-                    },
-                    {
-                        id:9,
-                        img:'/img/goods.jpg',
-                        title:'拔刀斩',
-                        spu:'test',
-                        sku:'test',
-                        goodsnum:200,
-                        weight:300,
-                        status:'激活',
-                        price:150,
-                        founder:'虢新会',
-                        creattime:'2019-09-11',
-                        updatetime:'2019-11-11',
-
-                    },
-                    {
-                        id:10,
-                        img:'/img/goods.jpg',
-                        title:'拔刀斩',
-                        spu:'test',
-                        sku:'test',
-                        goodsnum:200,
-                        weight:300,
-                        status:'激活',
-                        price:150,
-                        founder:'虢新会',
-                        creattime:'2019-09-11',
-                        updatetime:'2019-11-11',
-
-                    },
-                    {
-                        id:11,
-                        img:'/img/goods.jpg',
-                        title:'拔刀斩',
-                        spu:'test',
-                        sku:'test',
-                        goodsnum:200,
-                        weight:300,
-                        status:'激活',
-                        price:150,
-                        founder:'虢新会',
-                        creattime:'2019-09-11',
-                        updatetime:'2019-11-11',
-
-                    },
-                    {
-                        id:12,
-                        img:'/img/goods.jpg',
-                        title:'拔刀斩',
-                        spu:'test',
-                        sku:'test',
-                        goodsnum:200,
-                        weight:300,
-                        status:'激活',
-                        price:150,
-                        founder:'虢新会',
-                        creattime:'2019-09-11',
-                        updatetime:'2019-11-11',
-
-                    },
-                    {
-                        id:13,
-                        img:'/img/goods.jpg',
-                        title:'拔刀斩',
-                        spu:'test',
-                        sku:'test',
-                        goodsnum:200,
-                        weight:300,
-                        status:'激活',
-                        price:150,
-                        founder:'虢新会',
-                        creattime:'2019-09-11',
-                        updatetime:'2019-11-11',
-
-                    },
-                    {
-                        id:14,
-                        img:'/img/goods.jpg',
-                        title:'拔刀斩',
-                        spu:'test',
-                        sku:'test',
-                        goodsnum:200,
-                        weight:300,
-                        status:'激活',
-                        price:150,
-                        founder:'虢新会',
-                        creattime:'2019-09-11',
-                        updatetime:'2019-11-11',
-
-                    },
-                    {
-                        id:15,
-                        img:'/img/goods.jpg',
-                        title:'拔刀斩',
-                        spu:'test',
-                        sku:'test',
-                        goodsnum:200,
-                        weight:300,
-                        status:'激活',
-                        price:150,
-                        founder:'虢新会',
-                        creattime:'2019-09-11',
-                        updatetime:'2019-11-11',
-
-                    },
-                    {
-                        id:16,
-                        img:'/img/goods.jpg',
-                        title:'拔刀斩',
-                        spu:'test',
-                        sku:'test',
-                        goodsnum:200,
-                        weight:300,
-                        status:'激活',
-                        price:150,
-                        founder:'虢新会',
-                        creattime:'2019-09-11',
-                        updatetime:'2019-11-11',
-
-                    }
-                ],
                 multipleSelection: [],
                 tableHeight:0
             };
@@ -669,7 +403,12 @@
             }
         },
         computed: {
-
+            ...mapGetters('goodsList',{
+                goodsdata:'getgoods'
+            }),
+            ...mapGetters('basicData',{
+                BasicData:'renderbasicData'
+            })
         },
         components: {
             Price,
@@ -683,8 +422,8 @@
             this.tableHeight = document.documentElement.clientHeight - 284;
         },
         mounted() {
-
-            console.log(document.documentElement.clientHeight - 166);
+            this.$store.dispatch('goodsList/getGoodsList');
+            this.$store.dispatch('basicData/getBasicData');
         }
     };
 </script>

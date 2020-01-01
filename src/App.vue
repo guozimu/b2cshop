@@ -4,17 +4,18 @@
     </div>
 </template>
 <script>
-    import './mock/mokeServer'
+
     import {mapActions} from 'vuex'
     export default {
         computed: {
 
         },
         methods:{
-            ...mapActions(['getUserInfo'])
+            // ...mapActions(['getUserInfo'])
         },
         mounted() {
-            this.getUserInfo();
+            // this.getUserInfo();
+            // this.$store.dispatch('getUserInfo',JSON.parse(JSON.stringify(obj)))
         }
     }
 </script>
