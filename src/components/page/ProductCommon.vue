@@ -4,7 +4,7 @@
             <el-col :span="3">
                 <el-select size="mini" v-model="common">
                     <el-option
-                            v-for="item in commons"
+                            v-for="item in BasicData.comment"
                             :key="item.value"
                             :label="item.label"
                             :value="item.value">
@@ -121,25 +121,8 @@
     export default {
         data() {
             return {
-                commons:[
-                    {
-                        label:'评论状态',
-                        value:0
-                    },
-                    {
-                        label:'等待审核',
-                        value:1
-                    },
-                    {
-                        label:'审核通过',
-                        value:2
-                    },
-                    {
-                        label:'审核拒绝',
-                        value:3
-                    }
-                ],
-                common:0,
+                BasicData:JSON.parse(localStorage.getItem('basicdata')),
+                common:'',
                 commonValue:''
             };
         },

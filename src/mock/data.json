@@ -248,6 +248,317 @@
 
     }
   ],
+  "goodsAttr":[
+    {
+      "id|1-100":1,
+      "attrtype|1":["普通属性","Spu属性"],
+      "attrname":"memory_capacity",
+      "state|1":["激活","关闭"],
+      "datatype|1":["String","Number"],
+      "showimg|1":["是","否"],
+      "type|1":["inputString","inputString-Lang","inputEmail","inputDate","editSelect","select"],
+      "iswrite|1":["是","否"],
+      "defaultvalue":"",
+      "creattime":"2019-12-23 9:38",
+      "updatetime":"2019-12-23 9:38"
+    },
+    {
+      "id|1-100":1,
+      "attrtype|1":["普通属性","Spu属性"],
+      "attrname":"memory_capacity",
+      "state|1":["激活","关闭"],
+      "datatype|1":["String","Number"],
+      "showimg|1":["是","否"],
+      "type|1":["inputString","inputString-Lang","inputEmail","inputDate","editSelect","select"],
+      "iswrite|1":["是","否"],
+      "defaultvalue":"",
+      "creattime":"2019-12-23 9:38",
+      "updatetime":"2019-12-23 9:38"
+    },
+    {
+      "id|1-100":1,
+      "attrtype|1":["普通属性","Spu属性"],
+      "attrname":"memory_capacity",
+      "state|1":["激活","关闭"],
+      "datatype|1":["String","Number"],
+      "showimg|1":["是","否"],
+      "type|1":["inputString","inputString-Lang","inputEmail","inputDate","editSelect","select"],
+      "iswrite|1":["是","否"],
+      "defaultvalue":"",
+      "creattime":"2019-12-23 9:38",
+      "updatetime":"2019-12-23 9:38"
+    },
+    {
+      "id|1-100":1,
+      "attrtype|1":["普通属性","Spu属性"],
+      "attrname":"memory_capacity",
+      "state|1":["激活","关闭"],
+      "datatype|1":["String","Number"],
+      "showimg|1":["是","否"],
+      "type|1":["inputString","inputString-Lang","inputEmail","inputDate","editSelect","select"],
+      "iswrite|1":["是","否"],
+      "defaultvalue":"",
+      "creattime":"2019-12-23 9:38",
+      "updatetime":"2019-12-23 9:38"
+    },
+    {
+      "id|1-100":1,
+      "attrtype|1":["普通属性","Spu属性"],
+      "attrname":"memory_capacity",
+      "state|1":["激活","关闭"],
+      "datatype|1":["String","Number"],
+      "showimg|1":["是","否"],
+      "type|1":["inputString","inputString-Lang","inputEmail","inputDate","editSelect","select"],
+      "iswrite|1":["是","否"],
+      "defaultvalue":"",
+      "creattime":"2019-12-23 9:38",
+      "updatetime":"2019-12-23 9:38"
+    },
+    {
+      "id|1-100":1,
+      "attrtype|1":["普通属性","Spu属性"],
+      "attrname":"memory_capacity",
+      "state|1":["激活","关闭"],
+      "datatype|1":["String","Number"],
+      "showimg|1":["是","否"],
+      "type|1":["inputString","inputString-Lang","inputEmail","inputDate","editSelect","select"],
+      "iswrite|1":["是","否"],
+      "defaultvalue":"",
+      "creattime":"2019-12-23 9:38",
+      "updatetime":"2019-12-23 9:38"
+    },
+    {
+      "id|1-100":1,
+      "attrtype|1":["普通属性","Spu属性"],
+      "attrname":"memory_capacity",
+      "state|1":["激活","关闭"],
+      "datatype|1":["String","Number"],
+      "showimg|1":["是","否"],
+      "type|1":["inputString","inputString-Lang","inputEmail","inputDate","editSelect","select"],
+      "iswrite|1":["是","否"],
+      "defaultvalue":"",
+      "creattime":"2019-12-23 9:38",
+      "updatetime":"2019-12-23 9:38"
+    },
+    {
+      "id|1-100":1,
+      "attrtype|1":["普通属性","Spu属性"],
+      "attrname":"memory_capacity",
+      "state|1":["激活","关闭"],
+      "datatype|1":["String","Number"],
+      "showimg|1":["是","否"],
+      "type|1":["inputString","inputString-Lang","inputEmail","inputDate","editSelect","select"],
+      "iswrite|1":["是","否"],
+      "defaultvalue":"",
+      "creattime":"2019-12-23 9:38",
+      "updatetime":"2019-12-23 9:38"
+    },
+    {
+      "id|1-100":1,
+      "attrtype|1":["普通属性","Spu属性"],
+      "attrname":"memory_capacity",
+      "state|1":["激活","关闭"],
+      "datatype|1":["String","Number"],
+      "showimg|1":["是","否"],
+      "type|1":["inputString","inputString-Lang","inputEmail","inputDate","editSelect","select"],
+      "iswrite|1":["是","否"],
+      "defaultvalue":"",
+      "creattime":"2019-12-23 9:38",
+      "updatetime":"2019-12-23 9:38"
+    },
+    {
+      "id|1-100":1,
+      "attrtype|1":["普通属性","Spu属性"],
+      "attrname":"memory_capacity",
+      "state|1":["激活","关闭"],
+      "datatype|1":["String","Number"],
+      "showimg|1":["是","否"],
+      "type|1":["inputString","inputString-Lang","inputEmail","inputDate","editSelect","select"],
+      "iswrite|1":["是","否"],
+      "defaultvalue":"",
+      "creattime":"2019-12-23 9:38",
+      "updatetime":"2019-12-23 9:38"
+    },
+    {
+      "id|1-100":1,
+      "attrtype|1":["普通属性","Spu属性"],
+      "attrname":"memory_capacity",
+      "state|1":["激活","关闭"],
+      "datatype|1":["String","Number"],
+      "showimg|1":["是","否"],
+      "type|1":["inputString","inputString-Lang","inputEmail","inputDate","editSelect","select"],
+      "iswrite|1":["是","否"],
+      "defaultvalue":"",
+      "creattime":"2019-12-23 9:38",
+      "updatetime":"2019-12-23 9:38"
+    },
+    {
+      "id|1-100":1,
+      "attrtype|1":["普通属性","Spu属性"],
+      "attrname":"memory_capacity",
+      "state|1":["激活","关闭"],
+      "datatype|1":["String","Number"],
+      "showimg|1":["是","否"],
+      "type|1":["inputString","inputString-Lang","inputEmail","inputDate","editSelect","select"],
+      "iswrite|1":["是","否"],
+      "defaultvalue":"",
+      "creattime":"2019-12-23 9:38",
+      "updatetime":"2019-12-23 9:38"
+    },
+    {
+      "id|1-100":1,
+      "attrtype|1":["普通属性","Spu属性"],
+      "attrname":"memory_capacity",
+      "state|1":["激活","关闭"],
+      "datatype|1":["String","Number"],
+      "showimg|1":["是","否"],
+      "type|1":["inputString","inputString-Lang","inputEmail","inputDate","editSelect","select"],
+      "iswrite|1":["是","否"],
+      "defaultvalue":"",
+      "creattime":"2019-12-23 9:38",
+      "updatetime":"2019-12-23 9:38"
+    },
+    {
+      "id|1-100":1,
+      "attrtype|1":["普通属性","Spu属性"],
+      "attrname":"memory_capacity",
+      "state|1":["激活","关闭"],
+      "datatype|1":["String","Number"],
+      "showimg|1":["是","否"],
+      "type|1":["inputString","inputString-Lang","inputEmail","inputDate","editSelect","select"],
+      "iswrite|1":["是","否"],
+      "defaultvalue":"",
+      "creattime":"2019-12-23 9:38",
+      "updatetime":"2019-12-23 9:38"
+    },
+    {
+      "id|1-100":1,
+      "attrtype|1":["普通属性","Spu属性"],
+      "attrname":"memory_capacity",
+      "state|1":["激活","关闭"],
+      "datatype|1":["String","Number"],
+      "showimg|1":["是","否"],
+      "type|1":["inputString","inputString-Lang","inputEmail","inputDate","editSelect","select"],
+      "iswrite|1":["是","否"],
+      "defaultvalue":"",
+      "creattime":"2019-12-23 9:38",
+      "updatetime":"2019-12-23 9:38"
+    }
+  ],
+  "goodsAttrGroup": [
+    {
+      "id|1-100":1,
+      "attrgroupname":"memory_capacity",
+      "state|1":["激活","关闭"],
+      "creattime":"2019-12-23 9:38",
+      "updatetime":"2019-12-23 9:38"
+    },
+    {
+      "id|1-100":1,
+      "attrgroupname":"memory_capacity",
+      "state|1":["激活","关闭"],
+      "creattime":"2019-12-23 9:38",
+      "updatetime":"2019-12-23 9:38"
+    },
+    {
+      "id|1-100":1,
+      "attrgroupname":"memory_capacity",
+      "state|1":["激活","关闭"],
+      "creattime":"2019-12-23 9:38",
+      "updatetime":"2019-12-23 9:38"
+    },
+    {
+      "id|1-100":1,
+      "attrgroupname":"memory_capacity",
+      "state|1":["激活","关闭"],
+      "creattime":"2019-12-23 9:38",
+      "updatetime":"2019-12-23 9:38"
+    },
+    {
+      "id|1-100":1,
+      "attrgroupname":"memory_capacity",
+      "state|1":["激活","关闭"],
+      "creattime":"2019-12-23 9:38",
+      "updatetime":"2019-12-23 9:38"
+    },
+    {
+      "id|1-100":1,
+      "attrgroupname":"memory_capacity",
+      "state|1":["激活","关闭"],
+      "creattime":"2019-12-23 9:38",
+      "updatetime":"2019-12-23 9:38"
+    },
+    {
+      "id|1-100":1,
+      "attrgroupname":"memory_capacity",
+      "state|1":["激活","关闭"],
+      "creattime":"2019-12-23 9:38",
+      "updatetime":"2019-12-23 9:38"
+    },
+    {
+      "id|1-100":1,
+      "attrgroupname":"memory_capacity",
+      "state|1":["激活","关闭"],
+      "creattime":"2019-12-23 9:38",
+      "updatetime":"2019-12-23 9:38"
+    },
+    {
+      "id|1-100":1,
+      "attrgroupname":"memory_capacity",
+      "state|1":["激活","关闭"],
+      "creattime":"2019-12-23 9:38",
+      "updatetime":"2019-12-23 9:38"
+    },
+    {
+      "id|1-100":1,
+      "attrgroupname":"memory_capacity",
+      "state|1":["激活","关闭"],
+      "creattime":"2019-12-23 9:38",
+      "updatetime":"2019-12-23 9:38"
+    },
+    {
+      "id|1-100":1,
+      "attrgroupname":"memory_capacity",
+      "state|1":["激活","关闭"],
+      "creattime":"2019-12-23 9:38",
+      "updatetime":"2019-12-23 9:38"
+    },
+    {
+      "id|1-100":1,
+      "attrgroupname":"memory_capacity",
+      "state|1":["激活","关闭"],
+      "creattime":"2019-12-23 9:38",
+      "updatetime":"2019-12-23 9:38"
+    },
+    {
+      "id|1-100":1,
+      "attrgroupname":"memory_capacity",
+      "state|1":["激活","关闭"],
+      "creattime":"2019-12-23 9:38",
+      "updatetime":"2019-12-23 9:38"
+    },
+    {
+      "id|1-100":1,
+      "attrgroupname":"memory_capacity",
+      "state|1":["激活","关闭"],
+      "creattime":"2019-12-23 9:38",
+      "updatetime":"2019-12-23 9:38"
+    },
+    {
+      "id|1-100":1,
+      "attrgroupname":"memory_capacity",
+      "state|1":["激活","关闭"],
+      "creattime":"2019-12-23 9:38",
+      "updatetime":"2019-12-23 9:38"
+    },
+    {
+      "id|1-100":1,
+      "attrgroupname":"memory_capacity",
+      "state|1":["激活","关闭"],
+      "creattime":"2019-12-23 9:38",
+      "updatetime":"2019-12-23 9:38"
+    }
+  ],
   "basicData": {
       "status": [
         {
@@ -277,6 +588,115 @@
           "value": 2
         }
 
+      ],
+      "attrtype": [
+        {
+          "label":"Spu属性",
+          "value": 1
+        },
+        {
+          "label": "普通属性",
+          "value": 0
+        },
+        {
+          "label": "属性类型",
+          "value": ""
+        }
+      ],
+      "datatype": [
+        {
+          "label":"String",
+          "value": 1
+        },
+
+        {
+          "label": "数据类型",
+          "value": ""
+        }
+      ],
+      "imgisshow": [
+        {
+          "label": "是",
+          "value": true
+        },
+        {
+          "label": "否",
+          "value": false
+        }
+      ],
+      "mustfill": [
+        {
+          "label": "是",
+          "value": true
+        },
+        {
+          "label": "否",
+          "value": false
+        }
+      ],
+      "type": [
+        {
+          "label": "inputString",
+          "value": 1
+        },
+        {
+          "label": "inputString-Lang",
+          "value": 2
+        },
+        {
+          "label": "inputEmail",
+          "value": 3
+        },
+        {
+          "label": "inputDate",
+          "value": 4
+        },
+        {
+          "label": "editSelect",
+          "value": 5
+        },
+        {
+          "label": "select",
+          "value": 6
+        }
+      ],
+      "specialprices":[
+        {
+          "label": "是",
+          "value": true
+        },
+        {
+          "label": "否",
+          "value": false
+        }
+      ],
+      "zeros": [
+        {
+          "label": "是",
+          "value": true
+        },
+        {
+          "label": "否",
+          "value": false
+        }
+      ],
+      "comment": [
+        {
+          "label": "评论状态",
+          "value": ""
+        },
+        {
+          "label": "等待审核",
+          "value": 1
+        },
+        {
+          "label": "审核通过",
+          "value": 2
+        },
+        {
+          "label": "审核拒绝",
+          "value": 3
+        }
       ]
     }
 }

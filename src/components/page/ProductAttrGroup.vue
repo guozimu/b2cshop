@@ -1,10 +1,10 @@
 <template>
     <div>
         <el-row>
-            <el-col :span="4">
+            <el-col v-if="BasicData" :span="4">
                 <el-select size="mini" v-model="statevalue">
                     <el-option
-                            v-for="item in status"
+                            v-for="item in BasicData.status"
                             :key="item.value"
                             :label="item.label"
                             :value="item.value">
@@ -22,9 +22,11 @@
         </el-row>
         <el-row class="table-sty">
             <el-table
-                    :data="attrdata.slice((currentPage-1)*pageSize,currentPage*pageSize)"
+                    :data="attrgroupdata.slice((currentPage-1)*pageSize,currentPage*pageSize)"
                     :height="450"
                     ref="table"
+                    :cell-style="cellStyle"
+                    :header-cell-style="rowStyle"
                     border
                     style="width: 100%;"
                     @selection-change="handleSelectionChange">
@@ -74,7 +76,7 @@
                     :page-sizes="[10, 20, 50, 100]"
                     :page-size="pageSize"
                     layout="sizes, prev, pager, next"
-                    :total="totle">
+                    :total="attrgroupdata.length">
             </el-pagination>
         </el-row>
         <el-dialog title="修改" :visible.sync="dialogVisible">
@@ -89,9 +91,9 @@
 
                         <el-col :span="8">
                             <el-form-item label="状态">
-                                <el-select size="mini" v-model="statu" placeholder="请选择">
+                                <el-select size="mini" v-if="BasicData" v-model="statu" placeholder="请选择">
                                     <el-option
-                                            v-for="item in status"
+                                            v-for="item in BasicData.status"
                                             :key="item.value"
                                             :label="item.label"
                                             :value="item.value">
@@ -175,23 +177,11 @@
 </template>
 
 <script>
+    import { mapGetters } from 'vuex'
     export default {
         data() {
             return {
-                status:[
-                    {
-                        label:'状态',
-                        value:0
-                    },
-                    {
-                        label:'激活',
-                        value:1
-                    },
-                    {
-                        label:'关闭',
-                        value:2
-                    }
-                ],
+                BasicData:JSON.parse(localStorage.getItem('basicdata')),
                 dialogVisible:false,
                 statevalue:0,
                 statu:0,
@@ -199,43 +189,6 @@
                 currentPage:1,
                 pageSize:10,
                 multipleSelection:[],
-                attrdata:[
-                    {
-                        id:1,
-                        attrgroupname:'memory_capacity',
-                        state:'激活',
-                        creattime:'2019-12-23 9:38',
-                        updatetime:'2019-12-23 9:38'
-                    },
-                    {
-                        id:2,
-                        attrgroupname:'memory_capacity',
-                        state:'激活',
-                        creattime:'2019-12-23 9:38',
-                        updatetime:'2019-12-23 9:38'
-                    },
-                    {
-                        id:3,
-                        attrgroupname:'memory_capacity',
-                        state:'激活',
-                        creattime:'2019-12-23 9:38',
-                        updatetime:'2019-12-23 9:38'
-                    },
-                    {
-                        id:4,
-                        attrgroupname:'memory_capacity',
-                        state:'激活',
-                        creattime:'2019-12-23 9:38',
-                        updatetime:'2019-12-23 9:38'
-                    },
-                    {
-                        id:5,
-                        attrgroupname:'memory_capacity',
-                        state:'激活',
-                        creattime:'2019-12-23 9:38',
-                        updatetime:'2019-12-23 9:38'
-                    }
-                ],
                 attrgroupedit:[
                     {
                         id:1,
@@ -305,8 +258,15 @@
                 this.dialogVisible = true;
             }
         },
-        computed: {},
-        components: {}
+        computed: {
+            ...mapGetters('goodsAttrGroup',{
+                attrgroupdata:'rendergoodsattrgroup'
+            })
+        },
+        components: {},
+        mounted() {
+            this.$store.dispatch('goodsAttrGroup/getGoodsAttrGroup');
+        }
     };
 </script>
 

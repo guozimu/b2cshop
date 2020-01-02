@@ -24,6 +24,7 @@ const actions = {
         const result = await reqBasicData();
         if(result.code === 0){
             context.commit('getbasic',result.data);
+            localStorage.setItem("basicdata",JSON.stringify(result.data));
         }
 
     }

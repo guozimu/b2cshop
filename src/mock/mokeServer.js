@@ -8,3 +8,7 @@ Mock.mock('/userinfo',{code:0,data:data.userinfo});
 Mock.mock('/goodslist',{code:0,data:data.goodsList});
 // 基础数据的接口各种select的数据
 Mock.mock('/basicdata',{code:0,data:data.basicData});
+// 获取商品属性的数据
+Mock.mock('/goodsattr',{code:0,data:data.goodsAttr});
+// 获取商品属性组的数据
+Mock.mock('/goodsattrgroup',{code:0,data:data.goodsAttrGroup});

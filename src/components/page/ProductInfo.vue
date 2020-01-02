@@ -349,7 +349,7 @@
                 sku:'',
                 kcbegin:'',
                 kcend:'',
-
+                BasicData:JSON.parse(localStorage.getItem('basicdata')),
                 multipleSelection: [],
                 tableHeight:0
             };
@@ -406,9 +406,9 @@
             ...mapGetters('goodsList',{
                 goodsdata:'getgoods'
             }),
-            ...mapGetters('basicData',{
-                BasicData:'renderbasicData'
-            })
+            // ...mapGetters('basicData',{
+            //     BasicData:'renderbasicData'
+            // })
         },
         components: {
             Price,
@@ -423,7 +423,6 @@
         },
         mounted() {
             this.$store.dispatch('goodsList/getGoodsList');
-            this.$store.dispatch('basicData/getBasicData');
         }
     };
 </script>

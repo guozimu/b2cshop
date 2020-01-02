@@ -4,7 +4,7 @@
             <el-col :span="4">
                 <el-select size="mini" v-model="statevalue">
                     <el-option
-                            v-for="item in status"
+                            v-for="item in BasicData.status"
                             :key="item.value"
                             :label="item.label"
                             :value="item.value">
@@ -26,6 +26,8 @@
                     :height="450"
                     ref="table"
                     border
+                    :cell-style="cellStyle"
+                    :header-cell-style="rowStyle"
                     style="width: 100%;"
                     @selection-change="handleSelectionChange">
                 <el-table-column
@@ -91,7 +93,7 @@
                         label="操作">
                     <template slot-scope="scope">
                         <el-button size="mini" type="primary" @click="editattr" icon="el-icon-edit"></el-button>
-                        <el-button size="mini" type="primary" icon="el-icon-delete"></el-button>
+                        <el-button size="mini" type="primary" @click="deleteYou" icon="el-icon-delete"></el-button>
                     </template>
                 </el-table-column>
             </el-table>
@@ -103,10 +105,10 @@
                     :page-sizes="[10, 20, 50, 100]"
                     :page-size="pageSize"
                     layout="sizes, prev, pager, next"
-                    :total="totle">
+                    :total="attrdata.length">
             </el-pagination>
         </el-row>
-        <el-dialog title="修改" :visible.sync="dialogVisible">
+        <el-dialog title="修改" v-if="BasicData" :visible.sync="dialogVisible">
             <el-form :inline="true" size="mini" label-width="100px">
                 <div class="edit-box">
                     <el-row>
@@ -114,7 +116,7 @@
                             <el-form-item label="属性类型">
                                 <el-select size="mini" v-model="attrvalue" placeholder="请选择">
                                     <el-option
-                                            v-for="item in attrs"
+                                            v-for="item in BasicData.attrtype"
                                             :key="item.value"
                                             :label="item.label"
                                             :value="item.value">
@@ -127,7 +129,7 @@
                             <el-form-item label="状态">
                                 <el-select size="mini" v-model="statu" placeholder="请选择">
                                     <el-option
-                                            v-for="item in status"
+                                            v-for="item in BasicData.status"
                                             :key="item.value"
                                             :label="item.label"
                                             :value="item.value">
@@ -149,7 +151,7 @@
                             <el-form-item label="图片显示">
                                 <el-select size="mini" v-model="showimg" placeholder="请选择">
                                     <el-option
-                                            v-for="item in showimgs"
+                                            v-for="item in BasicData.imgisshow"
                                             :key="item.value"
                                             :label="item.label"
                                             :value="item.value">
@@ -161,7 +163,7 @@
                             <el-form-item label="必填">
                                 <el-select size="mini" v-model="write" placeholder="请选择">
                                     <el-option
-                                            v-for="item in writes"
+                                            v-for="item in BasicData.mustfill"
                                             :key="item.value"
                                             :label="item.label"
                                             :value="item.value">
@@ -178,9 +180,9 @@
                     <el-row>
                         <el-col :span="8">
                             <el-form-item label="数据类型">
-                                <el-select size="mini" v-model="datatype" placeholder="请选择">
+                                <el-select size="mini" v-model="data_type" placeholder="请选择">
                                     <el-option
-                                            v-for="item in datatypes"
+                                            v-for="item in BasicData.datatype"
                                             :key="item.value"
                                             :label="item.label"
                                             :value="item.value">
@@ -195,7 +197,7 @@
                         <el-form-item label="类型">
                             <el-select size="mini" v-model="kind" placeholder="请选择">
                                 <el-option
-                                        v-for="item in kinds"
+                                        v-for="item in BasicData.type"
                                         :key="item.value"
                                         :label="item.label"
                                         :value="item.value">
@@ -214,191 +216,27 @@
 </template>
 
 <script>
+    import { mapGetters,mapState } from 'vuex'
     export default {
         data() {
             return {
-                status:[
-                    {
-                        label:'状态',
-                        value:0
-                    },
-                    {
-                        label:'激活',
-                        value:1
-                    },
-                    {
-                        label:'关闭',
-                        value:2
-                    }
-                ],
-                statevalue:0,
-                totle:5,
+                status:[],
+                statevalue:1,
                 currentPage:1,
                 pageSize:10,
-                attrdata:[
-                    {
-                        id:1,
-                        attrtype:'普通属性',
-                        attrname:'memory_capacity',
-                        state:'激活',
-                        datatype:'String',
-                        showimg:'否',
-                        type:'inputString',
-                        iswrite:'否',
-                        defaultvalue:'',
-                        creattime:'2019-12-23 9:38',
-                        updatetime:'2019-12-23 9:38'
-                    },
-                    {
-                        id:2,
-                        attrtype:'普通属性',
-                        attrname:'memory_capacity',
-                        state:'激活',
-                        datatype:'String',
-                        showimg:'否',
-                        type:'inputString',
-                        iswrite:'否',
-                        defaultvalue:'',
-                        creattime:'2019-12-23 9:38',
-                        updatetime:'2019-12-23 9:38'
-                    },
-                    {
-                        id:3,
-                        attrtype:'普通属性',
-                        attrname:'memory_capacity',
-                        state:'激活',
-                        datatype:'String',
-                        showimg:'否',
-                        type:'inputString',
-                        iswrite:'否',
-                        defaultvalue:'',
-                        creattime:'2019-12-23 9:38',
-                        updatetime:'2019-12-23 9:38'
-                    },
-                    {
-                        id:4,
-                        attrtype:'普通属性',
-                        attrname:'memory_capacity',
-                        state:'激活',
-                        datatype:'String',
-                        showimg:'否',
-                        type:'inputString',
-                        iswrite:'否',
-                        defaultvalue:'',
-                        creattime:'2019-12-23 9:38',
-                        updatetime:'2019-12-23 9:38'
-                    },
-                    {
-                        id:5,
-                        attrtype:'普通属性',
-                        attrname:'memory_capacity',
-                        state:'激活',
-                        datatype:'String',
-                        showimg:'否',
-                        type:'inputString',
-                        iswrite:'否',
-                        defaultvalue:'',
-                        creattime:'2019-12-23 9:38',
-                        updatetime:'2019-12-23 9:38'
-                    }
-                ],
-                attrs:[
-                    {
-                        label:'属性类型',
-                        value:0
-                    },
-                    {
-                        label:'Spu属性',
-                        value:1
-                    },
-                    {
-                        label:'普通属性',
-                        value:2
-                    }
-                ],
-                attrvalue:2,
+                attrvalue:'',
                 attrname:'memory_capacity',
-                status:[
-                    {
-                        label:'状态',
-                        value:0
-                    },
-                    {
-                        label:'激活',
-                        value:1
-                    },
-                    {
-                        label:'关闭',
-                        value:2
-                    }
-                ],
+                BasicData:JSON.parse(localStorage.getItem('basicdata')),
                 statu:1,
-                datatypes:[
-                    {
-                        label:'数据类型',
-                        value:0
-                    },
-                    {
-                        label:'String',
-                        value:1
-                    }
-                ],
-                datatype:1,
-                showimgs:[
-                    {
-                        label:'是',
-                        value:true
-                    },
-                    {
-                        label:'否',
-                        value:false
-                    }
-                ],
+                data_type:1,
                 showimg:false,
-                writes:[
-                    {
-                        label:'是',
-                        value:true
-                    },
-                    {
-                        label:'否',
-                        value:false
-                    }
-                ],
                 write:false,
                 dialogVisible:false,
-                kinds:[
-                    {
-                        label:'inputString',
-                        value:1
-                    },
-                    {
-                        label:'inputString-Lang',
-                        value:2
-                    },
-                    {
-                        label:'inputEmail',
-                        value:3
-                    },
-                    {
-                        label:'inputDate',
-                        value:4
-                    },
-                    {
-                        label:'editSelect',
-                        value:5
-                    },
-                    {
-                        label:'select',
-                        value:6
-                    }
-                ],
                 kind:1
             };
         },
         methods: {
             handleSelectionChange(val) {
-                console.log(val)
                 this.multipleSelection = val;
             },
             handleSizeChange(val) {
@@ -408,13 +246,28 @@
             handleCurrentChange(currentPage) {
                 this.currentPage = currentPage;
             },
+            cellStyle(){
+                return "text-align:center"
+            },
+            rowStyle(){
+                return "text-align:center"
+            },
             editattr(){
-                // @click="dialogVisible = true"
                 this.dialogVisible = true
+            },
+            deleteYou(){
+                console.log(this.attrdata);
             }
         },
-        computed: {},
-        components: {}
+        computed: {
+            ...mapGetters('goodsAttr',{
+                attrdata:'rendergoodsattr',
+            }),
+        },
+        components: {},
+        mounted() {
+            this.$store.dispatch('goodsAttr/getGoodsAttr')
+        }
     };
 </script>
 

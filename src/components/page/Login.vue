@@ -72,6 +72,7 @@ export default {
             this.$refs.login.validate(valid => {
                 if (valid) {
                     this.$message.success('登录成功');
+                    this.$store.dispatch('basicData/getBasicData');
                     localStorage.setItem('ms_username', this.param.username);
                     this.$router.push('/');
                 } else {
@@ -82,6 +83,9 @@ export default {
             });
         },
     },
+    mounted() {
+
+    }
 };
 </script>
 

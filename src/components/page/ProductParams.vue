@@ -44,9 +44,9 @@
             <el-row :gutter="10">
                 <el-col :span="7">
                     <el-form-item label="特价大于原价？">
-                        <el-select size="mini" v-model="specialprice">
+                        <el-select v-if="BasicData" size="mini" v-model="specialprice">
                             <el-option
-                                    v-for="item in specialprices"
+                                    v-for="item in BasicData.specialprices"
                                     :key="item.value"
                                     :label="item.label"
                                     :value="item.value">
@@ -61,9 +61,9 @@
             <el-row :gutter="10">
                 <el-col :span="7">
                     <el-form-item label="是否零库存模式？">
-                        <el-select size="mini" v-model="zero">
+                        <el-select v-if="BasicData" size="mini" v-model="zero">
                             <el-option
-                                    v-for="item in zeros"
+                                    v-for="item in BasicData.zeros"
                                     :key="item.value"
                                     :label="item.label"
                                     :value="item.value">
@@ -87,27 +87,8 @@
     export default {
         data() {
             return {
-                specialprices:[
-                    {
-                        label:'是',
-                        value:true
-                    },
-                    {
-                        label:'否',
-                        value:false
-                    }
-                ],
+                BasicData:JSON.parse(localStorage.getItem('basicdata')),
                 specialprice:false,
-                zeros:[
-                    {
-                        label:'是',
-                        value:true
-                    },
-                    {
-                        label:'否',
-                        value:false
-                    }
-                ],
                 zero:false
             };
         },
