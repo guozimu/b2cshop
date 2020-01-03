@@ -54,7 +54,7 @@
                     <el-form-item label="是否支持游客订单">
                         <el-select v-model="support" placeholder="是否支持游客订单">
                             <el-option
-                                    v-for="item in supports"
+                                    v-for="item in BasicData.issupportvisit"
                                     :key="item.value"
                                     :label="item.label"
                                     :value="item.value">
@@ -76,16 +76,7 @@
     export default {
         data() {
             return {
-                supports:[
-                    {
-                        label:'是',
-                        value:true
-                    },
-                    {
-                        label:'否',
-                        value:false
-                    }
-                ],
+                BasicData:JSON.parse(localStorage.getItem('basicdata')),
                 support:''
             };
         },

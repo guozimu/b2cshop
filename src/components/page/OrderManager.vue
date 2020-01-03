@@ -11,7 +11,7 @@
                     <el-form-item>
                         <el-select size="mini" v-model="orderstatu" placeholder="订单状态">
                             <el-option
-                                    v-for="item in orderstatus"
+                                    v-for="item in BasicData.orderstatus"
                                     :key="item.value"
                                     :label="item.label"
                                     :value="item.value">
@@ -50,7 +50,7 @@
         </el-row>
         <el-row class="table-style">
             <el-table
-                    :data="orders.slice((currentPage-1)*pageSize,currentPage*pageSize)"
+                    :data="orderList.slice((currentPage-1)*pageSize,currentPage*pageSize)"
                     :height="450"
                     ref="table"
                     border
@@ -70,7 +70,7 @@
                 <el-table-column
                         prop="orderno"
                         label="订单号"
-                        width="120">
+                        width="250">
                 </el-table-column>
                 <el-table-column
                         prop="creattime"
@@ -141,152 +141,23 @@
                     :page-sizes="[10, 20, 50, 100]"
                     :page-size="pageSize"
                     layout="sizes, prev, pager, next"
-                    :total="totle">
+                    :total="orderList.length">
             </el-pagination>
         </el-row>
     </div>
 </template>
 
 <script>
+    import { mapGetters } from 'vuex'
     export default {
         data() {
             return {
-                orderstatus:[
-                    {
-                        label:'等待支付(payment_pending)',
-                        value:'payment_pending'
-                    },
-                    {
-                        label:'支付处理中(payment_processing)',
-                        value:'payment_processing'
-                    },
-                    {
-                        label:'支付成功(payment_confirmed)',
-                        value:'payment_confirmed'
-                    },
-                    {
-                        label:'支付取消(payment_canceled)',
-                        value:'payment_canceled'
-                    },
-                    {
-                        label:'欺诈订单(payment_suspected_fraud)',
-                        value:'payment_suspected_fraud'
-                    },
-                    {
-                        label:'审核订单(holded)',
-                        value:'holded'
-                    },
-                    {
-                        label:'备货中订单(processing)',
-                        value:'processing'
-                    },
-                    {
-                        label:'已发货订单(dispatched)',
-                        value:'dispatched'
-                    },
-                    {
-                        label:'已退货订单(refunded)',
-                        value:'refunded'
-                    },
-                    {
-                        label:'已完成订单(completed)',
-                        value:'completed'
-                    },
-
-
-                ],
+                BasicData:JSON.parse(localStorage.getItem('basicdata')),
                 orderstatu:'',
                 datevalue:'',
-                totle:6,
                 currentPage:1,
                 pageSize:10,
                 multipleSelection:[],
-                orders:[
-                    {
-                        id:1,
-                        orderno:'22252352365',
-                        creattime:'2019-12-26',
-                        order_status:'等待支付',
-                        orderall:30,
-                        orderweight:'30kg',
-                        orderamount:40000.00,
-                        paytype:'支付宝',
-                        deliverytype:'邮政',
-                        deliverycost:80.00,
-                        country:'中国',
-                        email:'937517563@qq.com'
-                    },
-                    {
-                        id:2,
-                        orderno:'15452352365',
-                        creattime:'2019-12-26',
-                        order_status:'等待支付',
-                        orderall:30,
-                        orderweight:'30kg',
-                        orderamount:40000.00,
-                        paytype:'支付宝',
-                        deliverytype:'邮政',
-                        deliverycost:80.00,
-                        country:'中国',
-                        email:'937517563@qq.com'
-                    },
-                    {
-                        id:3,
-                        orderno:'33352352365',
-                        creattime:'2019-12-26',
-                        order_status:'等待支付',
-                        orderall:30,
-                        orderweight:'30kg',
-                        orderamount:40000.00,
-                        paytype:'微信',
-                        deliverytype:'邮政',
-                        deliverycost:80.00,
-                        country:'中国',
-                        email:'937517563@qq.com'
-                    },
-                    {
-                        id:4,
-                        orderno:'44452352365',
-                        creattime:'2019-12-26',
-                        order_status:'等待支付',
-                        orderall:30,
-                        orderweight:'30kg',
-                        orderamount:40000.00,
-                        paytype:'支付宝',
-                        deliverytype:'邮政',
-                        deliverycost:80.00,
-                        country:'中国',
-                        email:'937517563@qq.com'
-                    },
-                    {
-                        id:5,
-                        orderno:'55552352365',
-                        creattime:'2019-12-26',
-                        order_status:'等待支付',
-                        orderall:30,
-                        orderweight:'30kg',
-                        orderamount:40000.00,
-                        paytype:'支付宝',
-                        deliverytype:'邮政',
-                        deliverycost:80.00,
-                        country:'中国',
-                        email:'937517563@qq.com'
-                    },
-                    {
-                        id:6,
-                        orderno:'66652352365',
-                        creattime:'2019-12-26',
-                        order_status:'等待支付',
-                        orderall:30,
-                        orderweight:'30kg',
-                        orderamount:40000.00,
-                        paytype:'微信',
-                        deliverytype:'邮政',
-                        deliverycost:80.00,
-                        country:'中国',
-                        email:'937517563@qq.com'
-                    }
-                ]
             };
         },
         methods: {
@@ -308,8 +179,17 @@
                 return "text-align:center"
             }
         },
-        computed: {},
-        components: {}
+        computed: {
+            ...mapGetters('orderList',{
+                orderList:'renderOrderList'
+            })
+        },
+        components: {
+
+        },
+        mounted() {
+            this.$store.dispatch('orderList/getOrderList')
+        }
     };
 </script>
 

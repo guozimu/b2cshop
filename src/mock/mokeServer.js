@@ -12,3 +12,7 @@ Mock.mock('/basicdata',{code:0,data:data.basicData});
 Mock.mock('/goodsattr',{code:0,data:data.goodsAttr});
 // 获取商品属性组的数据
 Mock.mock('/goodsattrgroup',{code:0,data:data.goodsAttrGroup});
+// 获取评论的数据
+Mock.mock('/commentlist',{code:0,data:data.commentList});
+// 获取订单的数据
+Mock.mock('/orderlist',{code:0,data:data.orderList});

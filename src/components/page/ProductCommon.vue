@@ -38,9 +38,11 @@
             <el-button size="mini" type="primary">编辑</el-button>
             <el-button size="mini" type="danger">批量删除</el-button>
         </el-row>
-        <el-row>
+        <el-row class="table-style">
             <el-table
+                    :data="commentlist.slice((currentPage-1)*pageSize,currentPage*pageSize)"
                     :height="450"
+
                     ref="table"
                     border
                     :cell-style="cellStyle"
@@ -61,7 +63,7 @@
                         width="200">
                 </el-table-column>
                 <el-table-column
-                        prop="commenstar"
+                        prop="commentstars"
                         label="评星"
                         width="100">
                 </el-table-column>
@@ -113,17 +115,30 @@
                     </template>
                 </el-table-column>
             </el-table>
+            <el-pagination
+                    class="page-style"
+                    @size-change="handleSizeChange"
+                    @current-change="handleCurrentChange"
+                    :current-page="currentPage"
+                    :page-sizes="[10, 20, 50, 100]"
+                    :page-size="pageSize"
+                    layout="sizes, prev, pager, next"
+                    :total="commentlist.length">
+            </el-pagination>
         </el-row>
     </div>
 </template>
 
 <script>
+    import { mapGetters } from 'vuex'
     export default {
         data() {
             return {
                 BasicData:JSON.parse(localStorage.getItem('basicdata')),
                 common:'',
-                commonValue:''
+                commonValue:'',
+                currentPage:1,
+                pageSize:10
             };
         },
         methods: {
@@ -132,10 +147,28 @@
             },
             rowStyle(){
                 return "text-align:center"
-            }
+            },
+            handleSelectionChange(val) {
+                console.log(val)
+                this.multipleSelection = val;
+            },
+            handleSizeChange(val) {
+                console.log(`每页 ${val} 条`);
+                this.pageSize = val;
+            },
+            handleCurrentChange(currentPage) {
+                this.currentPage = currentPage;
+            },
         },
-        computed: {},
-        components: {}
+        computed: {
+            ...mapGetters('commentList',{
+                commentlist:'renderCommentList'
+            })
+        },
+        components: {},
+        mounted() {
+            this.$store.dispatch('commentList/getCommentList')
+        }
     };
 </script>
 
@@ -145,5 +178,14 @@
     }
     .btn-group{
         margin: 10px 0px;
+    }
+    .page-style{
+        padding-top: 10px;
+        padding-bottom: 10px;
+        float: right;
+    }
+    .table-style{
+        background: white;
+        height: 100%;
     }
 </style>

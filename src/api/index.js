@@ -19,3 +19,7 @@ export  const reqBasicData = () => ajax('/basicdata');
 export  const reqGoodsAttr = () => ajax('/goodsattr');
 // 商品属性组数据的接口
 export  const reqGoodsAttrGroup = () => ajax('/goodsattrgroup');
+// 商品评论组数据的接口
+export  const reqCommentList = () => ajax('/commentlist');
+// 订单数据的接口
+export  const reqorderList = () => ajax('/orderlist');
