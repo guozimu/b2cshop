@@ -23,7 +23,7 @@
         <el-row class="table-sty">
             <el-table
                     :data="attrdata.slice((currentPage-1)*pageSize,currentPage*pageSize)"
-                    :height="450"
+                    :height="tableHeight"
                     ref="table"
                     border
                     :cell-style="cellStyle"
@@ -42,7 +42,7 @@
                 <el-table-column
                         prop="attrtype"
                         label="属性类型"
-                        width="100">
+                        width="">
                 </el-table-column>
                 <el-table-column
                         prop="attrname"
@@ -52,44 +52,45 @@
                 <el-table-column
                         prop="state"
                         label="状态"
-                        width="120">
+                        width="">
                 </el-table-column>
                 <el-table-column
                         prop="datatype"
                         label="数据类型"
-                        width="120">
+                        width="">
                 </el-table-column>
                 <el-table-column
                         prop="showimg"
                         label="图片显示"
-                        width="120">
+                        width="">
                 </el-table-column>
                 <el-table-column
                         prop="type"
                         label="类型"
-                        width="120">
+                        width="150">
                 </el-table-column>
                 <el-table-column
                         prop="iswrite"
                         label="必填"
-                        width="120">
+                        width="">
                 </el-table-column>
                 <el-table-column
                         prop="defaultvalue"
                         label="默认值"
-                        width="120">
+                        width="">
                 </el-table-column>
                 <el-table-column
                         prop="creattime"
                         label="创建时间"
-                        width="120">
+                        width="150">
                 </el-table-column>
                 <el-table-column
                         prop="updatetime"
                         label="更新时间"
-                        width="120">
+                        width="150">
                 </el-table-column>
                 <el-table-column
+                        width="120"
                         label="操作">
                     <template slot-scope="scope">
                         <el-button size="mini" type="primary" @click="editattr" icon="el-icon-edit"></el-button>
@@ -216,7 +217,7 @@
 </template>
 
 <script>
-    import { mapGetters,mapState } from 'vuex'
+    import { mapGetters } from 'vuex'
     export default {
         data() {
             return {
@@ -232,7 +233,8 @@
                 showimg:false,
                 write:false,
                 dialogVisible:false,
-                kind:1
+                kind:1,
+                tableHeight:0
             };
         },
         methods: {
@@ -265,6 +267,9 @@
             }),
         },
         components: {},
+        created() {
+            this.tableHeight = document.documentElement.clientHeight - 264;
+        },
         mounted() {
             this.$store.dispatch('goodsAttr/getGoodsAttr')
         }
