@@ -41,7 +41,7 @@
         <el-row class="table-style">
             <el-table
                     :data="accounts.slice((currentPage-1)*pageSize,currentPage*pageSize)"
-                    :height="650"
+                    :height="tableHeight"
                     ref="table"
                     border
                     :cell-style="cellStyle"
@@ -61,7 +61,6 @@
                         prop="username"
                         label="用户名"
                         width="100">
-
                 </el-table-column>
                 <el-table-column
                         prop="name"
@@ -96,7 +95,7 @@
 
                 <el-table-column
                         label="操作"
-                        width="">
+                        width="150">
                     <template slot-scope="scope">
                         <el-button size="mini" type="primary" @click="editYou(scope.row)" icon="el-icon-edit"></el-button>
                         <el-button size="mini" type="primary" icon="el-icon-delete"></el-button>
@@ -220,6 +219,7 @@
                 totle:16,
                 currentPage:1,
                 pageSize:10,
+                tableHeight:0,
                 accounts:[
                     {
                         id:1,
@@ -285,7 +285,10 @@
             }
         },
         computed: {},
-        components: {}
+        components: {},
+        created() {
+            this.tableHeight = document.documentElement.clientHeight - 264;
+        },
     };
 </script>
 

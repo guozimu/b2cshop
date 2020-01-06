@@ -1,13 +1,15 @@
 <template>
-    <div class="tags" v-if="showTags">
-        <ul>
-            <li class="tags-li" v-for="(item,index) in tagsList" :class="{'active': isActive(item.path)}" :key="index">
+    <div ref="tagbox" class="tags" v-if="showTags">
+        <span v-if="showArrow" class="span-left"><i class="el-icon-lx-back"></i></span>
+        <ul :style="{width:ulwidth + 'px'}">
+            <li ref="ulli" class="tags-li" v-for="(item,index) in tagsList" :class="{'active': isActive(item.path)}" :key="index">
                 <router-link :to="item.path" class="tags-li-title">
                     {{item.title}}
                 </router-link>
                 <span class="tags-li-icon" @click="closeTags(index)"><i class="el-icon-close"></i></span>
             </li>
         </ul>
+        <span v-if="showArrow" class="span-right"><i class="el-icon-lx-right"></i></span>
         <div class="tags-close-box">
             <el-dropdown @command="handleTags">
                 <el-button size="mini" type="primary">
@@ -28,6 +30,8 @@
         data() {
             return {
                 tagsList: [],
+                ulwidth:0,
+                showArrow:false
             }
         },
         methods: {
@@ -36,13 +40,18 @@
             },
             // 关闭单个标签
             closeTags(index) {
-                const delItem = this.tagsList.splice(index, 1)[0];
-                const item = this.tagsList[index] ? this.tagsList[index] : this.tagsList[index - 1];
-                if (item) {
-                    delItem.path === this.$route.fullPath && this.$router.push(item.path);
+                if(this.tagsList[index].path === '/dashboard' && this.tagsList.length === 1){// 如果当前tag只有首页则无法关闭
+                    return false;
                 }else{
-                    this.$router.push('/');
+                    const delItem = this.tagsList.splice(index, 1)[0];
+                    const item = this.tagsList[index] ? this.tagsList[index] : this.tagsList[index - 1];
+                    if (item) {
+                        delItem.path === this.$route.fullPath && this.$router.push(item.path);
+                    }else{
+                        this.$router.push('/');
+                    }
                 }
+
             },
             // 关闭全部标签
             closeAll(){
@@ -62,9 +71,9 @@
                     return item.path === route.fullPath;
                 })
                 if(!isExist){
-                    if(this.tagsList.length >= 8){
-                        this.tagsList.shift();
-                    }
+                    // if(this.tagsList.length >= 8){
+                    //     this.tagsList.shift();
+                    // }
                     this.tagsList.push({
                         title: route.meta.title,
                         path: route.fullPath,
@@ -86,6 +95,26 @@
         watch:{
             $route(newValue, oldValue){
                 this.setTags(newValue);
+            },
+            tagsList:function(){
+                // console.log(this.$refs.tagbox.offsetWidth)
+
+                this.$nextTick(()=>{
+                    this.ulwidth = 0;
+                    this.$refs.ulli.forEach(el => {
+                        this.ulwidth = this.ulwidth + (el.offsetWidth+20)*2;
+                    });
+                });
+            },
+            ulwidth:function(value){
+                this.$nextTick(()=>{
+                    if(value/2 > this.$refs.tagbox.offsetWidth){
+                        this.showArrow = true;
+                    }else{
+                        this.showArrow = false;
+                    }
+                })
+
             }
         },
         created(){
@@ -128,7 +157,7 @@
 
     .tags ul {
         box-sizing: border-box;
-        width: 100%;
+        /*width: 200%;*/
         height: 100%;
         overflow: hidden;
     }
@@ -188,5 +217,26 @@
         box-shadow: -3px 0 15px 3px rgba(0, 0, 0, .1);
         z-index: 10;
     }
-
+    .span-left{
+        position: absolute;
+        left: 0px;
+        top: 0px;
+        height: 100%;
+        line-height: 30px;
+        cursor: pointer;
+        background: rgba(0,0,0,0.3);
+    }
+    .span-left i{
+        padding: 0px 0px;
+        color: #000;
+    }
+    .span-right{
+        position: absolute;
+        right: 110px;
+        top: 0px;
+        height: 100%;
+        line-height: 30px;
+        cursor: pointer;
+        background: rgba(0,0,0,0.3);
+    }
 </style>

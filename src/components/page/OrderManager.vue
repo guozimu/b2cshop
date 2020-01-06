@@ -51,7 +51,7 @@
         <el-row class="table-style">
             <el-table
                     :data="orderList.slice((currentPage-1)*pageSize,currentPage*pageSize)"
-                    :height="450"
+                    :height="tableHeight"
                     ref="table"
                     border
                     :cell-style="cellStyle"
@@ -157,6 +157,7 @@
                 datevalue:'',
                 currentPage:1,
                 pageSize:10,
+                tableHeight:0,
                 multipleSelection:[],
             };
         },
@@ -186,6 +187,9 @@
         },
         components: {
 
+        },
+        created() {
+            this.tableHeight = document.documentElement.clientHeight - 274;
         },
         mounted() {
             this.$store.dispatch('orderList/getOrderList')

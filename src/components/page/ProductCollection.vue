@@ -20,7 +20,7 @@
 
         <el-row class="tab-sty">
             <el-table
-                    :height="450"
+                    :height="tableHeight"
                     ref="table"
                     border
                     :cell-style="cellStyle"
@@ -72,7 +72,8 @@
     export default {
         data() {
             return {
-                creatValue:''
+                creatValue:'',
+                tableHeight:0
             };
         },
         methods: {
@@ -84,6 +85,9 @@
             }
         },
         computed: {},
+        created() {
+            this.tableHeight = document.documentElement.clientHeight - 244;
+        },
         components: {}
     };
 </script>

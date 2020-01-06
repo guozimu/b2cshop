@@ -6,7 +6,7 @@
                     <el-form-item label="sku加入购物车库存检查">
                         <el-select size="mini" v-model="sku" placeholder="sku加入购物车库存检查">
                             <el-option
-                                    v-for="item in skus"
+                                    v-for="item in DataBasic.skuschecked"
                                     :key="item.value"
                                     :label="item.label"
                                     :value="item.value">
@@ -36,16 +36,7 @@
     export default {
         data() {
             return {
-                skus:[
-                    {
-                        label:'是',
-                        value:true
-                    },
-                    {
-                        label:'否',
-                        value:false
-                    }
-                ],
+                DataBasic:JSON.parse(localStorage.getItem('basicdata')),
                 sku:'',
                 num:''
             };

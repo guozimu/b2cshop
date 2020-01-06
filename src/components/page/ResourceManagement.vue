@@ -38,7 +38,7 @@
         <el-row class="table-style">
             <el-table
                     :data="resources.slice((currentPage-1)*pageSize,currentPage*pageSize)"
-                    :height="650"
+                    :height="tableHeight"
                     ref="table"
                     border
                     :cell-style="cellStyle"
@@ -199,7 +199,8 @@
                     tagname:'',
                     resouce:'',
                     tagorder:''
-                }
+                },
+                tableHeight:0
             };
         },
         methods: {
@@ -225,7 +226,10 @@
             }
         },
         computed: {},
-        components: {}
+        components: {},
+        created() {
+            this.tableHeight = document.documentElement.clientHeight - 264;
+        },
     };
 </script>
 

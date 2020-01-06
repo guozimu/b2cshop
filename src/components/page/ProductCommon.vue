@@ -41,8 +41,7 @@
         <el-row class="table-style">
             <el-table
                     :data="commentlist.slice((currentPage-1)*pageSize,currentPage*pageSize)"
-                    :height="450"
-
+                    :height="tableHeight"
                     ref="table"
                     border
                     :cell-style="cellStyle"
@@ -80,7 +79,7 @@
                 <el-table-column
                         prop="commentime"
                         label="评论时间"
-                        width="120">
+                        width="">
                 </el-table-column>
                 <el-table-column
                         prop="store"
@@ -105,9 +104,10 @@
                 <el-table-column
                         prop="audittime"
                         label="审核时间"
-                        width="120">
+                        width="">
                 </el-table-column>
                 <el-table-column
+                        width="150"
                         label="操作">
                     <template slot-scope="scope">
                         <el-button size="mini" type="primary" icon="el-icon-edit"></el-button>
@@ -138,6 +138,7 @@
                 common:'',
                 commonValue:'',
                 currentPage:1,
+                tableHeight:0,
                 pageSize:10
             };
         },
@@ -166,6 +167,9 @@
             })
         },
         components: {},
+        created() {
+            this.tableHeight = document.documentElement.clientHeight - 264;
+        },
         mounted() {
             this.$store.dispatch('commentList/getCommentList')
         }

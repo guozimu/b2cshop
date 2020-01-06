@@ -23,7 +23,7 @@
         <el-row class="table-sty">
             <el-table
                     :data="attrgroupdata.slice((currentPage-1)*pageSize,currentPage*pageSize)"
-                    :height="450"
+                    :height="tableHeight"
                     ref="table"
                     :cell-style="cellStyle"
                     :header-cell-style="rowStyle"
@@ -42,23 +42,23 @@
                 <el-table-column
                         prop="attrgroupname"
                         label="属性组名称"
-                        width="200">
+                        width="">
                 </el-table-column>
 
                 <el-table-column
                         prop="state"
                         label="状态"
-                        width="200">
+                        width="120">
                 </el-table-column>
                 <el-table-column
                         prop="creattime"
                         label="创建时间"
-                        width="200">
+                        width="">
                 </el-table-column>
                 <el-table-column
                         prop="updatetime"
                         label="更新时间"
-                        width="200">
+                        width="">
                 </el-table-column>
                 <el-table-column
                         label="操作">
@@ -82,92 +82,85 @@
         <el-dialog title="修改" :visible.sync="dialogVisible">
             <el-form :inline="true" size="mini" label-width="100px">
                 <div class="edit-box">
-                    <el-row class="edit-top">
-                        <el-col :span="8">
-                            <el-form-item label="属性组名称">
-                                <el-input size="mini"></el-input>
-                            </el-form-item>
-                        </el-col>
-
-                        <el-col :span="8">
-                            <el-form-item label="状态">
-                                <el-select size="mini" v-if="BasicData" v-model="statu" placeholder="请选择">
-                                    <el-option
-                                            v-for="item in BasicData.status"
-                                            :key="item.value"
-                                            :label="item.label"
-                                            :value="item.value">
-                                    </el-option>
-                                </el-select>
-                            </el-form-item>
-                        </el-col>
-                    </el-row>
-                    <el-row>
-                        <el-table
-                                :data="attrgroupedit"
-                                :height="450"
-                                ref="table"
-                                border
-                                :cell-style="cellStyle"
-                                :header-cell-style="rowStyle"
-                                style="width: 100%;">
-                            <el-table-column
-                                    type="selection"
-                                    width="55">
-                            </el-table-column>
-                            <el-table-column
-                                    prop="id"
-                                    label="Sort Order"
-                                    width="100">
-                                <template slot-scope="scope">
-                                    <el-input size="mini" v-model="scope.row.id"></el-input>
-                                </template>
-                            </el-table-column>
-                            <el-table-column
-                                    prop="attrname"
-                                    label="属性名称"
-                                    width="150">
-                            </el-table-column>
-                            <el-table-column
-                                    prop="attrtype"
-                                    label="属性类型"
-                                    width="100">
-                            </el-table-column>
-                            <el-table-column
-                                    prop="state"
-                                    label="状态"
-                                    width="80">
-                            </el-table-column>
-                            <el-table-column
-                                    prop="datatype"
-                                    label="数据类型"
-                                    width="120">
-                            </el-table-column>
-                            <el-table-column
-                                    prop="showimg"
-                                    label="图片显示"
-                                    width="80">
-                            </el-table-column>
-                            <el-table-column
-                                    prop="type"
-                                    label="类型"
-                                    width="80">
-                            </el-table-column>
-                            <el-table-column
-                                    prop="iswrite"
-                                    label="必填"
-                                    width="60">
-                            </el-table-column>
-                            <el-table-column
-                                    prop="defaultvalue"
-                                    label="默认值"
-                                    width="80">
-                            </el-table-column>
-
-                        </el-table>
-                    </el-row>
+                    <el-form-item label="属性组名称">
+                        <el-input size="mini"></el-input>
+                    </el-form-item>
+                    <el-form-item label="状态">
+                        <el-select size="mini" v-if="BasicData" v-model="statu" placeholder="请选择">
+                            <el-option
+                                    v-for="item in BasicData.status"
+                                    :key="item.value"
+                                    :label="item.label"
+                                    :value="item.value">
+                            </el-option>
+                        </el-select>
+                    </el-form-item>
                 </div>
             </el-form>
+            <el-row>
+                <el-table
+                        :data="attrgroupedit"
+                        :height="450"
+                        ref="table"
+                        border
+                        :cell-style="cellStyle"
+                        :header-cell-style="rowStyle"
+                        style="width: 100%;">
+                    <el-table-column
+                            type="selection"
+                            width="55">
+                    </el-table-column>
+                    <el-table-column
+                            prop="id"
+                            label="Sort Order"
+                            width="100">
+                        <template slot-scope="scope">
+                            <el-input size="mini" v-model="scope.row.id"></el-input>
+                        </template>
+                    </el-table-column>
+                    <el-table-column
+                            prop="attrname"
+                            label="属性名称"
+                            width="150">
+                    </el-table-column>
+                    <el-table-column
+                            prop="attrtype"
+                            label="属性类型"
+                            width="100">
+                    </el-table-column>
+                    <el-table-column
+                            prop="state"
+                            label="状态"
+                            width="80">
+                    </el-table-column>
+                    <el-table-column
+                            prop="datatype"
+                            label="数据类型"
+                            width="120">
+                    </el-table-column>
+                    <el-table-column
+                            prop="showimg"
+                            label="图片显示"
+                            width="80">
+                    </el-table-column>
+                    <el-table-column
+                            prop="type"
+                            label="类型"
+                            width="80">
+                    </el-table-column>
+                    <el-table-column
+                            prop="iswrite"
+                            label="必填"
+                            width="60">
+                    </el-table-column>
+                    <el-table-column
+                            prop="defaultvalue"
+                            label="默认值"
+                            width="80">
+                    </el-table-column>
+
+                </el-table>
+            </el-row>
             <span slot="footer" class="dialog-footer">
                 <el-button @click="dialogVisible = false">取 消</el-button>
                 <el-button type="primary" @click="dialogVisible = false">确 定</el-button>
@@ -189,6 +182,7 @@
                 currentPage:1,
                 pageSize:10,
                 multipleSelection:[],
+                tableHeight:0,
                 attrgroupedit:[
                     {
                         id:1,
@@ -263,6 +257,9 @@
                 attrgroupdata:'rendergoodsattrgroup'
             })
         },
+        created() {
+            this.tableHeight = document.documentElement.clientHeight - 264;
+        },
         components: {},
         mounted() {
             this.$store.dispatch('goodsAttrGroup/getGoodsAttrGroup');
@@ -283,7 +280,7 @@
         padding-bottom: 10px;
         float: right;
     }
-    .edit-top{
+    .edit-box{
         border: 1px dashed #13ce66;
         padding-top: 10px;
         margin-bottom: 10px;

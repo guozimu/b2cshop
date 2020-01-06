@@ -20,7 +20,7 @@
         <el-row class="table-style">
             <el-table
                     :data="privils.slice((currentPage-1)*pageSize,currentPage*pageSize)"
-                    :height="650"
+                    :height="tableHeight"
                     ref="table"
                     border
                     :cell-style="cellStyle"
@@ -243,7 +243,8 @@
                 mainpage: [1],
                 mainpages: pages,
                 pros:[],
-                productS:products
+                productS:products,
+                tableHeight:0
             };
         },
         methods: {
@@ -272,7 +273,10 @@
             }
         },
         computed: {},
-        components: {}
+        components: {},
+        created() {
+            this.tableHeight = document.documentElement.clientHeight - 264;
+        },
     };
 </script>
 

@@ -20,7 +20,7 @@
         <el-row class="table-style">
             <el-table
                     :data="urldata.slice((currentPage-1)*pageSize,currentPage*pageSize)"
-                    :height="450"
+                    :height="tableHeight"
                     ref="table"
                     border
                     :cell-style="cellStyle"
@@ -114,6 +114,7 @@
                 totle:6,
                 currentPage:1,
                 pageSize:10,
+                tableHeight:0
             };
         },
         methods: {
@@ -136,7 +137,10 @@
             }
         },
         computed: {},
-        components: {}
+        components: {},
+        created() {
+            this.tableHeight = document.documentElement.clientHeight - 244;
+        },
     };
 </script>
 

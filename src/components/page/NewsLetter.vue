@@ -23,7 +23,7 @@
         <el-row class="table-style">
             <el-table
                     :data="letters.slice((currentPage-1)*pageSize,currentPage*pageSize)"
-                    :height="650"
+                    :height="tableHeight"
                     ref="table"
                     border
                     :cell-style="cellStyle"
@@ -87,7 +87,8 @@
                 currentPage:1,
                 pageSize:10,
                 multipleSelection:[],
-                letters:[]
+                letters:[],
+                tableHeight:0
             };
         },
         methods: {
@@ -110,7 +111,11 @@
             },
         },
         computed: {},
-        components: {}
+        components: {},
+        created() {
+            this.tableHeight = document.documentElement.clientHeight - 264;
+        }
+
     };
 </script>
 

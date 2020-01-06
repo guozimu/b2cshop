@@ -112,86 +112,64 @@
         <el-dialog title="修改" v-if="BasicData" :visible.sync="dialogVisible">
             <el-form :inline="true" size="mini" label-width="100px">
                 <div class="edit-box">
-                    <el-row>
-                        <el-col :span="8">
-                            <el-form-item label="属性类型">
-                                <el-select size="mini" v-model="attrvalue" placeholder="请选择">
-                                    <el-option
-                                            v-for="item in BasicData.attrtype"
-                                            :key="item.value"
-                                            :label="item.label"
-                                            :value="item.value">
-                                    </el-option>
-                                </el-select>
-                            </el-form-item>
-                        </el-col>
+                    <el-form-item label="属性类型">
+                        <el-select size="mini" v-model="attrvalue" placeholder="请选择">
+                            <el-option
+                                    v-for="item in BasicData.attrtype"
+                                    :key="item.value"
+                                    :label="item.label"
+                                    :value="item.value">
+                            </el-option>
+                        </el-select>
+                    </el-form-item>
+                    <el-form-item label="状态">
+                        <el-select size="mini" v-model="statu" placeholder="请选择">
+                            <el-option
+                                    v-for="item in BasicData.status"
+                                    :key="item.value"
+                                    :label="item.label"
+                                    :value="item.value">
+                            </el-option>
+                        </el-select>
+                    </el-form-item>
+                    <el-form-item label="属性名称">
+                        <el-input size="mini" v-model="attrname" placeholder="" suffix-icon="xxx">
 
-                        <el-col :span="8">
-                            <el-form-item label="状态">
-                                <el-select size="mini" v-model="statu" placeholder="请选择">
-                                    <el-option
-                                            v-for="item in BasicData.status"
-                                            :key="item.value"
-                                            :label="item.label"
-                                            :value="item.value">
-                                    </el-option>
-                                </el-select>
-                            </el-form-item>
-                        </el-col>
-                        <el-col :span="8">
-                            <el-form-item label="属性名称">
-                                <el-input size="mini" v-model="attrname" placeholder="">
-
-                                </el-input>
-                            </el-form-item>
-                        </el-col>
-                    </el-row>
-                    <el-row>
-
-                        <el-col :span="8">
-                            <el-form-item label="图片显示">
-                                <el-select size="mini" v-model="showimg" placeholder="请选择">
-                                    <el-option
-                                            v-for="item in BasicData.imgisshow"
-                                            :key="item.value"
-                                            :label="item.label"
-                                            :value="item.value">
-                                    </el-option>
-                                </el-select>
-                            </el-form-item>
-                        </el-col>
-                        <el-col :span="8">
-                            <el-form-item label="必填">
-                                <el-select size="mini" v-model="write" placeholder="请选择">
-                                    <el-option
-                                            v-for="item in BasicData.mustfill"
-                                            :key="item.value"
-                                            :label="item.label"
-                                            :value="item.value">
-                                    </el-option>
-                                </el-select>
-                            </el-form-item>
-                        </el-col>
-                        <el-col :span="8">
-                            <el-form-item label="默认值">
-                                <el-input size="mini"></el-input>
-                            </el-form-item>
-                        </el-col>
-                    </el-row>
-                    <el-row>
-                        <el-col :span="8">
-                            <el-form-item label="数据类型">
-                                <el-select size="mini" v-model="data_type" placeholder="请选择">
-                                    <el-option
-                                            v-for="item in BasicData.datatype"
-                                            :key="item.value"
-                                            :label="item.label"
-                                            :value="item.value">
-                                    </el-option>
-                                </el-select>
-                            </el-form-item>
-                        </el-col>
-                    </el-row>
+                        </el-input>
+                    </el-form-item>
+                    <el-form-item label="图片显示">
+                        <el-select size="mini" v-model="showimg" placeholder="请选择">
+                            <el-option
+                                    v-for="item in BasicData.imgisshow"
+                                    :key="item.value"
+                                    :label="item.label"
+                                    :value="item.value">
+                            </el-option>
+                        </el-select>
+                    </el-form-item>
+                    <el-form-item label="必填">
+                        <el-select size="mini" v-model="write" placeholder="请选择">
+                            <el-option
+                                    v-for="item in BasicData.mustfill"
+                                    :key="item.value"
+                                    :label="item.label"
+                                    :value="item.value">
+                            </el-option>
+                        </el-select>
+                    </el-form-item>
+                    <el-form-item label="默认值">
+                        <el-input size="mini" suffix-icon="xxx"></el-input>
+                    </el-form-item>
+                    <el-form-item label="数据类型">
+                        <el-select size="mini" v-model="data_type" placeholder="请选择">
+                            <el-option
+                                    v-for="item in BasicData.datatype"
+                                    :key="item.value"
+                                    :label="item.label"
+                                    :value="item.value">
+                            </el-option>
+                        </el-select>
+                    </el-form-item>
                 </div>
                 <div class="attr-box">
                     <el-row>

@@ -40,7 +40,7 @@
         </el-row>
         <el-row class="table-style">
             <el-table
-                    :height="650"
+                    :height="tableHeight"
                     ref="table"
                     border
                     :cell-style="cellStyle"
@@ -93,7 +93,7 @@
                 </el-table-column>
                 <el-table-column
                         label="操作"
-                        width="120">
+                        width="150">
                     <template slot-scope="scope">
                         <el-button size="mini" type="primary" icon="el-icon-edit"></el-button>
                         <el-button size="mini" type="primary" icon="el-icon-delete"></el-button>
@@ -133,6 +133,7 @@
                 totle:16,
                 currentPage:1,
                 pageSize:10,
+                tableHeight:0
             };
         },
         methods: {
@@ -155,7 +156,10 @@
             },
         },
         computed: {},
-        components: {}
+        components: {},
+        created() {
+            this.tableHeight = document.documentElement.clientHeight - 264;
+        },
     };
 </script>
 
