@@ -1,7 +1,7 @@
 <template>
     <div ref="tagbox" class="tags" v-if="showTags">
         <span v-if="showArrow" class="span-left"><i class="el-icon-lx-back"></i></span>
-        <ul :style="{width:ulwidth + 'px'}">
+        <ul ref="ul" :style="{width:ulwidth + 'px',left:left+'px'}">
             <li ref="ulli" class="tags-li" v-for="(item,index) in tagsList" :class="{'active': isActive(item.path)}" :key="index">
                 <router-link :to="item.path" class="tags-li-title">
                     {{item.title}}
@@ -31,6 +31,7 @@
             return {
                 tagsList: [],
                 ulwidth:0,
+                left:0,
                 showArrow:false
             }
         },
@@ -110,6 +111,8 @@
                 this.$nextTick(()=>{
                     if(value/2 > this.$refs.tagbox.offsetWidth){
                         this.showArrow = true;
+                        let offsetVlaue = this.$refs.tagbox.offsetWidth - value/2;
+                        this.left = offsetVlaue;
                     }else{
                         this.showArrow = false;
                     }
@@ -160,6 +163,7 @@
         /*width: 200%;*/
         height: 100%;
         overflow: hidden;
+        position: relative;
     }
 
     .tags-li {
