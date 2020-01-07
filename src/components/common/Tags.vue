@@ -1,6 +1,6 @@
 <template>
     <div ref="tagbox" class="tags" v-if="showTags">
-        <span v-if="showArrow" class="span-left"><i class="el-icon-lx-back"></i></span>
+        <span v-if="showArrow" @click="leftGo" class="span-left"><i class="el-icon-lx-back"></i></span>
         <ul ref="ul" :style="{width:ulwidth + 'px',left:left+'px'}">
             <li ref="ulli" class="tags-li" v-for="(item,index) in tagsList" :class="{'active': isActive(item.path)}" :key="index">
                 <router-link :to="item.path" class="tags-li-title">
@@ -9,7 +9,7 @@
                 <span class="tags-li-icon" @click="closeTags(index)"><i class="el-icon-close"></i></span>
             </li>
         </ul>
-        <span v-if="showArrow" class="span-right"><i class="el-icon-lx-right"></i></span>
+        <span v-if="showArrow" @click="rightGo" class="span-right"><i class="el-icon-lx-right"></i></span>
         <div class="tags-close-box">
             <el-dropdown @command="handleTags">
                 <el-button size="mini" type="primary">
@@ -30,8 +30,10 @@
         data() {
             return {
                 tagsList: [],
+                changedWidth:false,// 此值其实没有什么具体作用只是用来监听宽度变化
                 ulwidth:0,
                 left:0,
+                cacheLeft:0, // 缓存ul的left属性
                 showArrow:false
             }
         },
@@ -85,6 +87,19 @@
             },
             handleTags(command){
                 command === 'other' ? this.closeOther() : this.closeAll();
+            },
+            //向右点击 add by guoxinhui
+            rightGo(){
+                this.left = this.left+100;
+                if(this.left > 0){
+                    this.left = 0;
+                }
+            },
+            leftGo(){
+                this.left = this.left - 100;
+                if(this.left < this.cacheLeft){
+                    this.left = this.cacheLeft;
+                }
             }
         },
         computed: {
@@ -97,28 +112,48 @@
             $route(newValue, oldValue){
                 this.setTags(newValue);
             },
+            // watch tagsList和ulwidth来实现标签过多时候的左右切换
             tagsList:function(){
-                // console.log(this.$refs.tagbox.offsetWidth)
-
                 this.$nextTick(()=>{
                     this.ulwidth = 0;
                     this.$refs.ulli.forEach(el => {
-                        this.ulwidth = this.ulwidth + (el.offsetWidth+20)*2;
+                        this.ulwidth = this.ulwidth + (el.offsetWidth+8)*2;
                     });
                 });
             },
+            // watch tagsList和ulwidth来实现标签过多时候的左右切换
             ulwidth:function(value){
                 this.$nextTick(()=>{
-                    if(value/2 > this.$refs.tagbox.offsetWidth){
+                    let tagboxWidth = this.$refs.tagbox.clientWidth - 120;
+                    if(value/2 > tagboxWidth){
                         this.showArrow = true;
-                        let offsetVlaue = this.$refs.tagbox.offsetWidth - value/2;
+                        let offsetVlaue = tagboxWidth - value/2;
                         this.left = offsetVlaue;
+                        this.cacheLeft = offsetVlaue;// 这个值用来缓存ul left属性，用于向左点击时候的初值判断（当this.left<this.cacheLeft的时候重置为this.cacheLedt）
                     }else{
+                        this.left = 0;// 如果关闭的标签是中间部分的标签，但整体宽度小于.tagbox的宽度时，ul的left属性重置为0
                         this.showArrow = false;
                     }
                 })
 
+            },
+            changedWidth:function(){
+                this.$nextTick(()=>{
+                    setTimeout(()=>{
+                        let tagboxWidth = this.$refs.tagbox.clientWidth - 120;
+                        if(this.ulwidth/2 > tagboxWidth){
+                            this.showArrow = true;
+                            let offsetVlaue = tagboxWidth - this.ulwidth/2;
+                            this.left = offsetVlaue;
+                            this.cacheLeft = offsetVlaue;// 这个值用来缓存ul left属性，用于向左点击时候的初值判断（当this.left<this.cacheLeft的时候重置为this.cacheLedt）
+                        }else{
+                            this.left = 0;// 如果关闭的标签是中间部分的标签，但整体宽度小于.tagbox的宽度时，ul的left属性重置为0
+                            this.showArrow = false;
+                        }
+                    },300)
+                })
             }
+
         },
         created(){
             this.setTags(this.$route);
@@ -138,6 +173,9 @@
                         break;
                     }
                 }
+            })
+            bus.$on('collapseChanged',msg =>{
+                this.changedWidth = msg
             })
         },
         mounted() {
@@ -164,6 +202,7 @@
         height: 100%;
         overflow: hidden;
         position: relative;
+        transition: all 0.6s;
     }
 
     .tags-li {
@@ -228,19 +267,25 @@
         height: 100%;
         line-height: 30px;
         cursor: pointer;
-        background: rgba(0,0,0,0.3);
+        background: #324157;
+        z-index: 2;
     }
     .span-left i{
         padding: 0px 0px;
-        color: #000;
+        color: white;
     }
     .span-right{
         position: absolute;
-        right: 110px;
+        right: 109px;
         top: 0px;
         height: 100%;
         line-height: 30px;
         cursor: pointer;
-        background: rgba(0,0,0,0.3);
+        background: #324157;
+        z-index: 2;
+    }
+    .span-right i{
+        padding: 0px 0px;
+        color: white;
     }
 </style>

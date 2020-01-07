@@ -5,7 +5,7 @@
             <i v-if="!collapse" class="el-icon-s-fold"></i>
             <i v-else class="el-icon-s-unfold"></i>
         </div>
-        <div class="logo">后台管理系统</div>
+        <div class="logo">VUE+Elementui后台管理系统</div>
         <div class="header-right">
             <div class="header-user-con">
                 <!-- 全屏显示 -->
@@ -55,7 +55,7 @@ export default {
         return {
             collapse: false,
             fullscreen: false,
-            name: 'linxin',
+            name: '虢新会',
             message: 2
         };
     },
@@ -77,6 +77,7 @@ export default {
         collapseChage() {
             this.collapse = !this.collapse;
             bus.$emit('collapse', this.collapse);
+            bus.$emit('collapseChanged',this.collapse);
         },
         // 全屏事件
         handleFullScreen() {
