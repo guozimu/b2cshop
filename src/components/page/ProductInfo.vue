@@ -155,7 +155,7 @@
                     :page-sizes="[10, 20, 50, 100]"
                     :page-size="pageSize"
                     layout="sizes, prev, pager, next"
-                    :total="totle">
+                    :total="goodsdata.length">
             </el-pagination>
         </el-row>
 
@@ -169,7 +169,7 @@
                         </div>
                         <el-select size="mini" v-model="attrGroup" placeholder="请选择">
                             <el-option
-                                    v-for="item in attrGroups"
+                                    v-for="item in BasicData.attrGroups"
                                     :key="item.value"
                                     :label="item.label"
                                     :value="item.value">
@@ -226,7 +226,7 @@
                             <el-form-item label="状态" :label-width="formLabelWidth">
                                 <el-select size="mini" v-model="statevalue" placeholder="请选择">
                                     <el-option
-                                            v-for="item in status"
+                                            v-for="item in BasicData.status"
                                             :key="item.value"
                                             :label="item.label"
                                             :value="item.value">
@@ -260,7 +260,7 @@
                             <el-form-item label="库存状态" :label-width="formLabelWidth">
                                 <el-select size="mini" v-model="kcstatusvalue" placeholder="请选择">
                                     <el-option
-                                            v-for="item in kcstatus"
+                                            v-for="item in BasicData.kcstatus"
                                             :key="item.value"
                                             :label="item.label"
                                             :value="item.value">
@@ -312,24 +312,6 @@
     export default {
         data() {
             return {
-                attrGroups:[
-                    {
-                        label:'default',
-                        value:0
-                    },
-                    {
-                        label:'clothes_group',
-                        value:1
-                    },
-                    {
-                        label:'men_group',
-                        value:2
-                    },
-                    {
-                        label:'computer_group',
-                        value:3
-                    }
-                ],
                 status:[],
                 kcstatus:[],
                 labelPosition:'left',
@@ -339,9 +321,8 @@
                 dialogFormVisible:false,
                 formLabelWidth:'120px',
                 statevalue:2,
-                totle:16,
-                currentPage:1,
                 pageSize:10,
+                currentPage:1,
                 kcstatusvalue:2,
                 datevalue: '',
                 goodsname:'',

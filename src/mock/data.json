@@ -1316,6 +1316,24 @@
         "label": "否",
         "value": false
       }
+    ],
+    "attrGroups": [
+      {
+        "label":"default",
+        "value":0
+      },
+      {
+        "label":"clothes_group",
+        "value":1
+      },
+      {
+        "label":"men_group",
+        "value":2
+      },
+      {
+        "label":"computer_group",
+        "value":3
+      }
     ]
-    }
+  }
 }
