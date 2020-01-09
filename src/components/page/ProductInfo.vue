@@ -85,7 +85,10 @@
                         label="图片"
                         width="100">
                     <template slot-scope="scope">
-                　　　　<img :src="scope.row.img" class="head_pic"/>
+                        <el-image
+                                :src="scope.row.img"
+                                :preview-src-list="[scope.row.img]">
+                        </el-image>
                 　　</template>
                 </el-table-column>
                 <el-table-column
@@ -386,10 +389,7 @@
         computed: {
             ...mapGetters('goodsList',{
                 goodsdata:'getgoods'
-            }),
-            // ...mapGetters('basicData',{
-            //     BasicData:'renderbasicData'
-            // })
+            })
         },
         components: {
             Price,
