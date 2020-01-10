@@ -10,7 +10,8 @@ import goodsAttr from './modules/goodsAttr'
 import goodsAttrGroup from './modules/goodsAttrGroup'
 import commentList from './modules/commentList'
 import orderList from './modules/orderList'
-
+import appList from './modules/appList'
+import pagesList from './modules/pagesList'
 
 Vue.use(Vuex);
 
@@ -22,7 +23,9 @@ export default new Vuex.Store({
         goodsAttr,
         goodsAttrGroup,
         commentList,
-        orderList
+        orderList,
+        appList,
+        pagesList
     }
 })
 

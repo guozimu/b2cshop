@@ -16,3 +16,10 @@ Mock.mock('/goodsattrgroup',{code:0,data:data.goodsAttrGroup});
 Mock.mock('/commentlist',{code:0,data:data.commentList});
 // 获取订单的数据
 Mock.mock('/orderlist',{code:0,data:data.orderList});
+// 获取应用的数据
+Mock.mock('/applist',{code:0,data:data.applications});
+//pages的数据
+Mock.mock('/pageslist',{code:0,data:data.pagesList});
+//静态块的数据
+Mock.mock('/staticlist',{code:0,data:data.staticList});
+

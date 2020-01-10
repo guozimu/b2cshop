@@ -1116,6 +1116,457 @@
       "email":"937517563@qq.com"
     }
   ],
+  "applications": [
+    {
+      "id|1-100":2,
+      "appname|1":["植物大战僵尸","逆水寒","天涯明月刀","天龙八部"],
+      "apppackname": "fecmall",
+      "appfoldername": "fecmall",
+      "apptype|1":["Online Install","Local Install"],
+      "status|1":["激活","关闭"],
+      "installstatus|1":["已安装","未安装"],
+      "creattime":"@date('yyyy-MM-dd')",
+      "priority": "ceshi",
+      "updatetime": "@date('yyyy-MM-dd')"
+    },
+    {
+      "id|1-100":2,
+      "appname|1":["植物大战僵尸","逆水寒","天涯明月刀","天龙八部"],
+      "apppackname": "fecmall",
+      "appfoldername": "fecmall",
+      "apptype|1":["Online Install","Local Install"],
+      "status|1":["激活","关闭"],
+      "installstatus|1":["已安装","未安装"],
+      "creattime":"@date('yyyy-MM-dd')",
+      "priority": "ceshi",
+      "updatetime": "@date('yyyy-MM-dd')"
+    },
+    {
+      "id|1-100":2,
+      "appname|1":["植物大战僵尸","逆水寒","天涯明月刀","天龙八部"],
+      "apppackname": "fecmall",
+      "appfoldername": "fecmall",
+      "apptype|1":["Online Install","Local Install"],
+      "status|1":["激活","关闭"],
+      "installstatus|1":["已安装","未安装"],
+      "creattime":"@date('yyyy-MM-dd')",
+      "priority": "ceshi",
+      "updatetime": "@date('yyyy-MM-dd')"
+    },
+    {
+      "id|1-100":2,
+      "appname|1":["植物大战僵尸","逆水寒","天涯明月刀","天龙八部"],
+      "apppackname": "fecmall",
+      "appfoldername": "fecmall",
+      "apptype|1":["Online Install","Local Install"],
+      "status|1":["激活","关闭"],
+      "installstatus|1":["已安装","未安装"],
+      "creattime":"@date('yyyy-MM-dd')",
+      "priority": "ceshi",
+      "updatetime": "@date('yyyy-MM-dd')"
+    },
+    {
+      "id|1-100":2,
+      "appname|1":["植物大战僵尸","逆水寒","天涯明月刀","天龙八部"],
+      "apppackname": "fecmall",
+      "appfoldername": "fecmall",
+      "apptype|1":["Online Install","Local Install"],
+      "status|1":["激活","关闭"],
+      "installstatus|1":["已安装","未安装"],
+      "creattime":"@date('yyyy-MM-dd')",
+      "priority": "ceshi",
+      "updatetime": "@date('yyyy-MM-dd')"
+    },
+    {
+      "id|1-100":2,
+      "appname|1":["植物大战僵尸","逆水寒","天涯明月刀","天龙八部"],
+      "apppackname": "fecmall",
+      "appfoldername": "fecmall",
+      "apptype|1":["Online Install","Local Install"],
+      "status|1":["激活","关闭"],
+      "installstatus|1":["已安装","未安装"],
+      "creattime":"@date('yyyy-MM-dd')",
+      "priority": "ceshi",
+      "updatetime": "@date('yyyy-MM-dd')"
+    },
+    {
+      "id|1-100":2,
+      "appname|1":["植物大战僵尸","逆水寒","天涯明月刀","天龙八部"],
+      "apppackname": "fecmall",
+      "appfoldername": "fecmall",
+      "apptype|1":["Online Install","Local Install"],
+      "status|1":["激活","关闭"],
+      "installstatus|1":["已安装","未安装"],
+      "creattime":"@date('yyyy-MM-dd')",
+      "priority": "ceshi",
+      "updatetime": "@date('yyyy-MM-dd')"
+    },
+    {
+      "id|1-100":2,
+      "appname|1":["植物大战僵尸","逆水寒","天涯明月刀","天龙八部"],
+      "apppackname": "fecmall",
+      "appfoldername": "fecmall",
+      "apptype|1":["Online Install","Local Install"],
+      "status|1":["激活","关闭"],
+      "installstatus|1":["已安装","未安装"],
+      "creattime":"@date('yyyy-MM-dd')",
+      "priority": "ceshi",
+      "updatetime": "@date('yyyy-MM-dd')"
+    },
+    {
+      "id|1-100":2,
+      "appname|1":["植物大战僵尸","逆水寒","天涯明月刀","天龙八部"],
+      "apppackname": "fecmall",
+      "appfoldername": "fecmall",
+      "apptype|1":["Online Install","Local Install"],
+      "status|1":["激活","关闭"],
+      "installstatus|1":["已安装","未安装"],
+      "creattime":"@date('yyyy-MM-dd')",
+      "priority": "ceshi",
+      "updatetime": "@date('yyyy-MM-dd')"
+    },
+    {
+      "id|1-100":2,
+      "appname|1":["植物大战僵尸","逆水寒","天涯明月刀","天龙八部"],
+      "apppackname": "fecmall",
+      "appfoldername": "fecmall",
+      "apptype|1":["Online Install","Local Install"],
+      "status|1":["激活","关闭"],
+      "installstatus|1":["已安装","未安装"],
+      "creattime":"@date('yyyy-MM-dd')",
+      "priority": "ceshi",
+      "updatetime": "@date('yyyy-MM-dd')"
+    },
+    {
+      "id|1-100":2,
+      "appname|1":["植物大战僵尸","逆水寒","天涯明月刀","天龙八部"],
+      "apppackname": "fecmall",
+      "appfoldername": "fecmall",
+      "apptype|1":["Online Install","Local Install"],
+      "status|1":["激活","关闭"],
+      "installstatus|1":["已安装","未安装"],
+      "creattime":"@date('yyyy-MM-dd')",
+      "priority": "ceshi",
+      "updatetime": "@date('yyyy-MM-dd')"
+    },
+    {
+      "id|1-100":2,
+      "appname|1":["植物大战僵尸","逆水寒","天涯明月刀","天龙八部"],
+      "apppackname": "fecmall",
+      "appfoldername": "fecmall",
+      "apptype|1":["Online Install","Local Install"],
+      "status|1":["激活","关闭"],
+      "installstatus|1":["已安装","未安装"],
+      "creattime":"@date('yyyy-MM-dd')",
+      "priority": "ceshi",
+      "updatetime": "@date('yyyy-MM-dd')"
+    },
+    {
+      "id|1-100":2,
+      "appname|1":["植物大战僵尸","逆水寒","天涯明月刀","天龙八部"],
+      "apppackname": "fecmall",
+      "appfoldername": "fecmall",
+      "apptype|1":["Online Install","Local Install"],
+      "status|1":["激活","关闭"],
+      "installstatus|1":["已安装","未安装"],
+      "creattime":"@date('yyyy-MM-dd')",
+      "priority": "ceshi",
+      "updatetime": "@date('yyyy-MM-dd')"
+    },
+    {
+      "id|1-100":2,
+      "appname|1":["植物大战僵尸","逆水寒","天涯明月刀","天龙八部"],
+      "apppackname": "fecmall",
+      "appfoldername": "fecmall",
+      "apptype|1":["Online Install","Local Install"],
+      "status|1":["激活","关闭"],
+      "installstatus|1":["已安装","未安装"],
+      "creattime":"@date('yyyy-MM-dd')",
+      "priority": "ceshi",
+      "updatetime": "@date('yyyy-MM-dd')"
+    },
+    {
+      "id|1-100":2,
+      "appname|1":["植物大战僵尸","逆水寒","天涯明月刀","天龙八部"],
+      "apppackname": "fecmall",
+      "appfoldername": "fecmall",
+      "apptype|1":["Online Install","Local Install"],
+      "status|1":["激活","关闭"],
+      "installstatus|1":["已安装","未安装"],
+      "creattime":"@date('yyyy-MM-dd')",
+      "priority": "ceshi",
+      "updatetime": "@date('yyyy-MM-dd')"
+    },
+    {
+      "id|1-100":2,
+      "appname|1":["植物大战僵尸","逆水寒","天涯明月刀","天龙八部"],
+      "apppackname": "fecmall",
+      "appfoldername": "fecmall",
+      "apptype|1":["Online Install","Local Install"],
+      "status|1":["激活","关闭"],
+      "installstatus|1":["已安装","未安装"],
+      "creattime":"@date('yyyy-MM-dd')",
+      "priority": "ceshi",
+      "updatetime": "@date('yyyy-MM-dd')"
+    },
+    {
+      "id|1-100":2,
+      "appname|1":["植物大战僵尸","逆水寒","天涯明月刀","天龙八部"],
+      "apppackname": "fecmall",
+      "appfoldername": "fecmall",
+      "apptype|1":["Online Install","Local Install"],
+      "status|1":["激活","关闭"],
+      "installstatus|1":["已安装","未安装"],
+      "creattime":"@date('yyyy-MM-dd')",
+      "priority": "ceshi",
+      "updatetime": "@date('yyyy-MM-dd')"
+    },
+    {
+      "id|1-100":2,
+      "appname|1":["植物大战僵尸","逆水寒","天涯明月刀","天龙八部"],
+      "apppackname": "fecmall",
+      "appfoldername": "fecmall",
+      "apptype|1":["Online Install","Local Install"],
+      "status|1":["激活","关闭"],
+      "installstatus|1":["已安装","未安装"],
+      "creattime":"@date('yyyy-MM-dd')",
+      "priority": "ceshi",
+      "updatetime": "@date('yyyy-MM-dd')"
+    },
+    {
+      "id|1-100":2,
+      "appname|1":["植物大战僵尸","逆水寒","天涯明月刀","天龙八部"],
+      "apppackname": "fecmall",
+      "appfoldername": "fecmall",
+      "apptype|1":["Online Install","Local Install"],
+      "status|1":["激活","关闭"],
+      "installstatus|1":["已安装","未安装"],
+      "creattime":"@date('yyyy-MM-dd')",
+      "priority": "ceshi",
+      "updatetime": "@date('yyyy-MM-dd')"
+    }
+  ],
+  "pagesList": [
+    {
+      "id|1-100":1,
+      "title|1": ["Listen to Eason Chan","Remember Me","I love You","Happy NewYear"],
+      "founder|1": ["admin","guozimu","liuyifei","yangyang","eason"],
+      "creattime":"@date('yyyy-MM-dd')",
+      "updatetime":"@date('yyyy-MM-dd')"
+    },
+    {
+      "id|1-100":1,
+      "title|1": ["Listen to Eason Chan","Remember Me","I love You","Happy NewYear"],
+      "founder|1": ["admin","guozimu","liuyifei","yangyang","eason"],
+      "creattime":"@date('yyyy-MM-dd')",
+      "updatetime":"@date('yyyy-MM-dd')"
+    },
+    {
+      "id|1-100":1,
+      "title|1": ["Listen to Eason Chan","Remember Me","I love You","Happy NewYear"],
+      "founder|1": ["admin","guozimu","liuyifei","yangyang","eason"],
+      "creattime":"@date('yyyy-MM-dd')",
+      "updatetime":"@date('yyyy-MM-dd')"
+    },
+    {
+      "id|1-100":1,
+      "title|1": ["Listen to Eason Chan","Remember Me","I love You","Happy NewYear"],
+      "founder|1": ["admin","guozimu","liuyifei","yangyang","eason"],
+      "creattime":"@date('yyyy-MM-dd')",
+      "updatetime":"@date('yyyy-MM-dd')"
+    },
+    {
+      "id|1-100":1,
+      "title|1": ["Listen to Eason Chan","Remember Me","I love You","Happy NewYear"],
+      "founder|1": ["admin","guozimu","liuyifei","yangyang","eason"],
+      "creattime":"@date('yyyy-MM-dd')",
+      "updatetime":"@date('yyyy-MM-dd')"
+    },
+    {
+      "id|1-100":1,
+      "title|1": ["Listen to Eason Chan","Remember Me","I love You","Happy NewYear"],
+      "founder|1": ["admin","guozimu","liuyifei","yangyang","eason"],
+      "creattime":"@date('yyyy-MM-dd')",
+      "updatetime":"@date('yyyy-MM-dd')"
+    },
+    {
+      "id|1-100":1,
+      "title|1": ["Listen to Eason Chan","Remember Me","I love You","Happy NewYear"],
+      "founder|1": ["admin","guozimu","liuyifei","yangyang","eason"],
+      "creattime":"@date('yyyy-MM-dd')",
+      "updatetime":"@date('yyyy-MM-dd')"
+    },
+    {
+      "id|1-100":1,
+      "title|1": ["Listen to Eason Chan","Remember Me","I love You","Happy NewYear"],
+      "founder|1": ["admin","guozimu","liuyifei","yangyang","eason"],
+      "creattime":"@date('yyyy-MM-dd')",
+      "updatetime":"@date('yyyy-MM-dd')"
+    },
+    {
+      "id|1-100":1,
+      "title|1": ["Listen to Eason Chan","Remember Me","I love You","Happy NewYear"],
+      "founder|1": ["admin","guozimu","liuyifei","yangyang","eason"],
+      "creattime":"@date('yyyy-MM-dd')",
+      "updatetime":"@date('yyyy-MM-dd')"
+    },{
+      "id|1-100":1,
+      "title|1": ["Listen to Eason Chan","Remember Me","I love You","Happy NewYear"],
+      "founder|1": ["admin","guozimu","liuyifei","yangyang","eason"],
+      "creattime":"@date('yyyy-MM-dd')",
+      "updatetime":"@date('yyyy-MM-dd')"
+    },
+    {
+      "id|1-100":1,
+      "title|1": ["Listen to Eason Chan","Remember Me","I love You","Happy NewYear"],
+      "founder|1": ["admin","guozimu","liuyifei","yangyang","eason"],
+      "creattime":"@date('yyyy-MM-dd')",
+      "updatetime":"@date('yyyy-MM-dd')"
+    },
+    {
+      "id|1-100":1,
+      "title|1": ["Listen to Eason Chan","Remember Me","I love You","Happy NewYear"],
+      "founder|1": ["admin","guozimu","liuyifei","yangyang","eason"],
+      "creattime":"@date('yyyy-MM-dd')",
+      "updatetime":"@date('yyyy-MM-dd')"
+    },{
+      "id|1-100":1,
+      "title|1": ["Listen to Eason Chan","Remember Me","I love You","Happy NewYear"],
+      "founder|1": ["admin","guozimu","liuyifei","yangyang","eason"],
+      "creattime":"@date('yyyy-MM-dd')",
+      "updatetime":"@date('yyyy-MM-dd')"
+    },{
+      "id|1-100":1,
+      "title|1": ["Listen to Eason Chan","Remember Me","I love You","Happy NewYear"],
+      "founder|1": ["admin","guozimu","liuyifei","yangyang","eason"],
+      "creattime":"@date('yyyy-MM-dd')",
+      "updatetime":"@date('yyyy-MM-dd')"
+    },{
+      "id|1-100":1,
+      "title|1": ["Listen to Eason Chan","Remember Me","I love You","Happy NewYear"],
+      "founder|1": ["admin","guozimu","liuyifei","yangyang","eason"],
+      "creattime":"@date('yyyy-MM-dd')",
+      "updatetime":"@date('yyyy-MM-dd')"
+    }
+  ],
+  "staticList": [
+    {
+      "id|1-100":1,
+      "title|1": ["Listen to Eason Chan","Remember Me","I love You","Happy NewYear"],
+      "identifier|1": ["home-big-img","social","links_and_account","copy_right","copy_right_apphtml5"],
+      "founder|1": ["admin","guozimu","liuyifei","yangyang","eason"],
+      "creattime":"@date('yyyy-MM-dd')",
+      "updatetime":"@date('yyyy-MM-dd')"
+    },
+    {
+      "id|1-100":1,
+      "title|1": ["Listen to Eason Chan","Remember Me","I love You","Happy NewYear"],
+      "identifier|1": ["home-big-img","social","links_and_account","copy_right","copy_right_apphtml5"],
+      "founder|1": ["admin","guozimu","liuyifei","yangyang","eason"],
+      "creattime":"@date('yyyy-MM-dd')",
+      "updatetime":"@date('yyyy-MM-dd')"
+    },
+    {
+      "id|1-100":1,
+      "title|1": ["Listen to Eason Chan","Remember Me","I love You","Happy NewYear"],
+      "identifier|1": ["home-big-img","social","links_and_account","copy_right","copy_right_apphtml5"],
+      "founder|1": ["admin","guozimu","liuyifei","yangyang","eason"],
+      "creattime":"@date('yyyy-MM-dd')",
+      "updatetime":"@date('yyyy-MM-dd')"
+    },
+    {
+      "id|1-100":1,
+      "title|1": ["Listen to Eason Chan","Remember Me","I love You","Happy NewYear"],
+      "identifier|1": ["home-big-img","social","links_and_account","copy_right","copy_right_apphtml5"],
+      "founder|1": ["admin","guozimu","liuyifei","yangyang","eason"],
+      "creattime":"@date('yyyy-MM-dd')",
+      "updatetime":"@date('yyyy-MM-dd')"
+    },
+    {
+      "id|1-100":1,
+      "title|1": ["Listen to Eason Chan","Remember Me","I love You","Happy NewYear"],
+      "identifier|1": ["home-big-img","social","links_and_account","copy_right","copy_right_apphtml5"],
+      "founder|1": ["admin","guozimu","liuyifei","yangyang","eason"],
+      "creattime":"@date('yyyy-MM-dd')",
+      "updatetime":"@date('yyyy-MM-dd')"
+    },
+    {
+      "id|1-100":1,
+      "title|1": ["Listen to Eason Chan","Remember Me","I love You","Happy NewYear"],
+      "identifier|1": ["home-big-img","social","links_and_account","copy_right","copy_right_apphtml5"],
+      "founder|1": ["admin","guozimu","liuyifei","yangyang","eason"],
+      "creattime":"@date('yyyy-MM-dd')",
+      "updatetime":"@date('yyyy-MM-dd')"
+    },
+    {
+      "id|1-100":1,
+      "title|1": ["Listen to Eason Chan","Remember Me","I love You","Happy NewYear"],
+      "identifier|1": ["home-big-img","social","links_and_account","copy_right","copy_right_apphtml5"],
+      "founder|1": ["admin","guozimu","liuyifei","yangyang","eason"],
+      "creattime":"@date('yyyy-MM-dd')",
+      "updatetime":"@date('yyyy-MM-dd')"
+    },
+    {
+      "id|1-100":1,
+      "title|1": ["Listen to Eason Chan","Remember Me","I love You","Happy NewYear"],
+      "identifier|1": ["home-big-img","social","links_and_account","copy_right","copy_right_apphtml5"],
+      "founder|1": ["admin","guozimu","liuyifei","yangyang","eason"],
+      "creattime":"@date('yyyy-MM-dd')",
+      "updatetime":"@date('yyyy-MM-dd')"
+    },
+    {
+      "id|1-100":1,
+      "title|1": ["Listen to Eason Chan","Remember Me","I love You","Happy NewYear"],
+      "identifier|1": ["home-big-img","social","links_and_account","copy_right","copy_right_apphtml5"],
+      "founder|1": ["admin","guozimu","liuyifei","yangyang","eason"],
+      "creattime":"@date('yyyy-MM-dd')",
+      "updatetime":"@date('yyyy-MM-dd')"
+    },{
+      "id|1-100":1,
+      "title|1": ["Listen to Eason Chan","Remember Me","I love You","Happy NewYear"],
+      "identifier|1": ["home-big-img","social","links_and_account","copy_right","copy_right_apphtml5"],
+      "founder|1": ["admin","guozimu","liuyifei","yangyang","eason"],
+      "creattime":"@date('yyyy-MM-dd')",
+      "updatetime":"@date('yyyy-MM-dd')"
+    },
+    {
+      "id|1-100":1,
+      "title|1": ["Listen to Eason Chan","Remember Me","I love You","Happy NewYear"],
+      "identifier|1": ["home-big-img","social","links_and_account","copy_right","copy_right_apphtml5"],
+      "founder|1": ["admin","guozimu","liuyifei","yangyang","eason"],
+      "creattime":"@date('yyyy-MM-dd')",
+      "updatetime":"@date('yyyy-MM-dd')"
+    },
+    {
+      "id|1-100":1,
+      "title|1": ["Listen to Eason Chan","Remember Me","I love You","Happy NewYear"],
+      "identifier|1": ["home-big-img","social","links_and_account","copy_right","copy_right_apphtml5"],
+      "founder|1": ["admin","guozimu","liuyifei","yangyang","eason"],
+      "creattime":"@date('yyyy-MM-dd')",
+      "updatetime":"@date('yyyy-MM-dd')"
+    },{
+      "id|1-100":1,
+      "title|1": ["Listen to Eason Chan","Remember Me","I love You","Happy NewYear"],
+      "identifier|1": ["home-big-img","social","links_and_account","copy_right","copy_right_apphtml5"],
+      "founder|1": ["admin","guozimu","liuyifei","yangyang","eason"],
+      "creattime":"@date('yyyy-MM-dd')",
+      "updatetime":"@date('yyyy-MM-dd')"
+    },{
+      "id|1-100":1,
+      "title|1": ["Listen to Eason Chan","Remember Me","I love You","Happy NewYear"],
+      "identifier|1": ["home-big-img","social","links_and_account","copy_right","copy_right_apphtml5"],
+      "founder|1": ["admin","guozimu","liuyifei","yangyang","eason"],
+      "creattime":"@date('yyyy-MM-dd')",
+      "updatetime":"@date('yyyy-MM-dd')"
+    },{
+      "id|1-100":1,
+      "title|1": ["Listen to Eason Chan","Remember Me","I love You","Happy NewYear"],
+      "identifier|1": ["home-big-img","social","links_and_account","copy_right","copy_right_apphtml5"],
+      "founder|1": ["admin","guozimu","liuyifei","yangyang","eason"],
+      "creattime":"@date('yyyy-MM-dd')",
+      "updatetime":"@date('yyyy-MM-dd')"
+    }
+  ],
   "basicData": {
       "status": [
         {
@@ -1333,6 +1784,16 @@
       {
         "label":"computer_group",
         "value":3
+      }
+    ],
+    "applicationType": [
+      {
+        "label": "Online Installed",
+        "value": 1
+      },
+      {
+        "label": "Local Installed",
+        "value": 2
       }
     ]
   }

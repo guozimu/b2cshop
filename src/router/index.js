@@ -222,6 +222,31 @@ export default new Router({
                     component: () => import(/* webpackChunkName: "donate" */ '../components/page/BackgroundConfiguration.vue'),
                     meta: { title: '后台配置' }
                 },
+                {
+                    path: '/applicationmarket',
+                    component: () => import(/* webpackChunkName: "donate" */ '../components/page/ApplicationCenter/ApplicationMarket.vue'),
+                    meta: { title: '应用市场' }
+                },
+                {
+                    path: '/installedapplication',
+                    component: () => import(/* webpackChunkName: "donate" */ '../components/page/ApplicationCenter/InstalledApplication.vue'),
+                    meta: { title: '已安装应用' }
+                },
+                {
+                    path: '/applicationgeneration',
+                    component: () => import(/* webpackChunkName: "donate" */ '../components/page/ApplicationCenter/ApplicationGeneration.vue'),
+                    meta: { title: '应用Gii生成' }
+                },
+                {
+                    path: '/pagemanagement',
+                    component: () => import(/* webpackChunkName: "donate" */ '../components/page/CMS/PageManagement.vue'),
+                    meta: { title: 'page管理' }
+                },
+                {
+                    path: '/staticblock',
+                    component: () => import(/* webpackChunkName: "donate" */ '../components/page/CMS/StaticBlock.vue'),
+                    meta: { title: '静态块' }
+                }
             ]
         },
         {

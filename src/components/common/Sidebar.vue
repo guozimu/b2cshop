@@ -297,6 +297,84 @@ export default {
                             title:'后台配置'
                         }
                     ]
+                },
+                {
+                    icon: 'el-icon-lx-goods',
+                    index: '12',
+                    title: '应用中心',
+                    subs:[
+                        {
+                            index: '12-1',
+                            title: '应用管理',
+                            subs:[
+                                {
+                                    index: 'applicationmarket',
+                                    title: '应用市场'
+                                },
+                                {
+                                    index: 'installedapplication',
+                                    title: '已安装应用'
+                                }
+                            ]
+                        },
+                        {
+                            index:'12-2',
+                            title:'开发者中心',
+                            subs:[
+                                {
+                                    index: 'applicationgeneration',
+                                    title: '应用Gii生成'
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    icon: 'el-icon-lx-global',
+                    index: '13',
+                    title: 'CMS',
+                    subs:[
+                        {
+                            index: 'pagemanagement',
+                            title: 'Page管理'
+                        },
+                        {
+                            index:'staticblock',
+                            title:'静态块'
+                        }
+                    ]
+                },
+                {
+                    icon: 'el-icon-lx-global',
+                    index: '14',
+                    title: '网站配置',
+                    subs:[
+                        {
+                            index: '14-1',
+                            title: '基础配置',
+                            subs:[]
+                        },
+                        {
+                            index:'14-2',
+                            title:'支付参数配置',
+                            subs:[]
+                        },
+                        {
+                            index:'14-3',
+                            title:'Appfront配置',
+                            subs:[]
+                        },
+                        {
+                            index:'14-4',
+                            title:'Apphtml5配置',
+                            subs:[]
+                        },
+                        {
+                            index:'14-5',
+                            title:'Appserver配置',
+                            subs:[]
+                        }
+                    ]
                 }
             ]
         };
