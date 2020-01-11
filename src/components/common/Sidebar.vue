@@ -352,27 +352,156 @@ export default {
                         {
                             index: '14-1',
                             title: '基础配置',
-                            subs:[]
+                            subs:[
+                                {
+                                    index:'basicconfig',
+                                    title:'基础配置'
+                                },
+                                {
+                                    index:'databaseconfig',
+                                    title:'Service数据库配置'
+                                },
+                                {
+                                    index:'searchconfig',
+                                    title:'搜索引擎配置'
+                                },
+                                {
+                                    index:'multilanguageconfig',
+                                    title:'多语言配置'
+                                },
+                                {
+                                    index:'currencyconfig',
+                                    title:'货币配置'
+                                },
+                                {
+                                    index:'emailconfig',
+                                    title:'邮件配置'
+                                }
+                            ]
                         },
                         {
                             index:'14-2',
                             title:'支付参数配置',
-                            subs:[]
+                            subs:[
+                                {
+                                    index:'paypalconfig',
+                                    title:'PayPal支付配置'
+                                },
+                                {
+                                    index:'alipayconfig',
+                                    title:'支付宝支付配置'
+                                },
+                                {
+                                    index:'wxpayconfig',
+                                    title:'微信支付配置'
+                                }
+                            ]
                         },
                         {
                             index:'14-3',
                             title:'Appfront配置',
-                            subs:[]
+                            subs:[
+                                {
+                                    index:'afbasicconfig',
+                                    title:'基础配置'
+                                },
+                                {
+                                    index:'afindexconfig',
+                                    title:'首页配置'
+                                },
+                                {
+                                    index:'afcacheconfig',
+                                    title:'缓存配置'
+                                },
+                                {
+                                    index:'afstoreconfig',
+                                    title:'Store配置'
+                                },
+                                {
+                                    index:'afproductconfig',
+                                    title:'分类产品配置'
+                                },
+                                {
+                                    index:'afaccountconfig',
+                                    title:'账户配置'
+                                },
+                                {
+                                    index:'afpayconfig',
+                                    title:'支付配置'
+                                }
+                            ]
                         },
                         {
                             index:'14-4',
                             title:'Apphtml5配置',
-                            subs:[]
+                            subs:[
+                                {
+                                    index:'ahbasicconfig',
+                                    title:'基础配置'
+                                },
+                                {
+                                    index:'ahindexconfig',
+                                    title:'首页配置'
+                                },
+                                {
+                                    index:'ahcacheconfig',
+                                    title:'缓存配置'
+                                },
+                                {
+                                    index:'ahstoreconfig',
+                                    title:'Store配置'
+                                },
+                                {
+                                    index:'ahproductconfig',
+                                    title:'分类产品配置'
+                                },
+                                {
+                                    index:'ahaccountconfig',
+                                    title:'账户配置'
+                                },
+                                {
+                                    index:'ahpayconfig',
+                                    title:'支付配置'
+                                }
+                            ]
                         },
                         {
                             index:'14-5',
                             title:'Appserver配置',
-                            subs:[]
+                            subs:[
+                                {
+                                    index:'afbasicconfig',
+                                    title:'基础配置'
+                                },
+                                {
+                                    index:'afindexconfig',
+                                    title:'首页配置'
+                                },
+                                {
+                                    index:'afcacheconfig',
+                                    title:'缓存配置'
+                                },
+                                {
+                                    index:'afstoreconfig',
+                                    title:'Store配置'
+                                },
+                                {
+                                    index:'asstorelangconfig',
+                                    title:'Store语言配置'
+                                },
+                                {
+                                    index:'afproductconfig',
+                                    title:'分类产品配置'
+                                },
+                                {
+                                    index:'afaccountconfig',
+                                    title:'账户配置'
+                                },
+                                {
+                                    index:'afpayconfig',
+                                    title:'支付配置'
+                                }
+                            ]
                         }
                     ]
                 }

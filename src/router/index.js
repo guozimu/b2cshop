@@ -246,6 +246,161 @@ export default new Router({
                     path: '/staticblock',
                     component: () => import(/* webpackChunkName: "donate" */ '../components/page/CMS/StaticBlock.vue'),
                     meta: { title: '静态块' }
+                },
+                {
+                    path: '/basicconfig',
+                    component: () => import(/* webpackChunkName: "donate" */ '../components/page/WebsiteConfig/basicConfig/BasicConfig.vue'),
+                    meta: { title: '基础配置' }
+                },
+                {
+                    path: '/databaseconfig',
+                    component: () => import(/* webpackChunkName: "donate" */ '../components/page/WebsiteConfig/basicConfig/DatabaseConfig.vue'),
+                    meta: { title: 'Service数据库配置' }
+                },
+                {
+                    path: '/searchconfig',
+                    component: () => import(/* webpackChunkName: "donate" */ '../components/page/WebsiteConfig/basicConfig/SearchConfig.vue'),
+                    meta: { title: '搜索引擎配置' }
+                },
+                {
+                    path: '/multilanguageconfig',
+                    component: () => import(/* webpackChunkName: "donate" */ '../components/page/WebsiteConfig/basicConfig/MultilanguageConfig.vue'),
+                    meta: { title: '多语言配置' }
+                },
+                {
+                    path: '/currencyconfig',
+                    component: () => import(/* webpackChunkName: "donate" */ '../components/page/WebsiteConfig/basicConfig/CurrencyConfig.vue'),
+                    meta: { title: '货币配置' }
+                },
+                {
+                    path: '/emailconfig',
+                    component: () => import(/* webpackChunkName: "donate" */ '../components/page/WebsiteConfig/basicConfig/EmailConfig.vue'),
+                    meta: { title: '邮件配置' }
+                },
+                {
+                    path: '/paypalconfig',
+                    component: () => import(/* webpackChunkName: "donate" */ '../components/page/WebsiteConfig/payConfig/PaypalConfig.vue'),
+                    meta: { title: 'PayPal支付配置' }
+                },
+                {
+                    path: '/alipayconfig',
+                    component: () => import(/* webpackChunkName: "donate" */ '../components/page/WebsiteConfig/payConfig/AlipayConfig.vue'),
+                    meta: { title: '支付宝支付配置' }
+                },
+                {
+                    path: '/wxpayconfig',
+                    component: () => import(/* webpackChunkName: "donate" */ '../components/page/WebsiteConfig/payConfig/WXpayConfig.vue'),
+                    meta: { title: '微信支付配置' }
+                },
+                {
+                    path: '/afbasicconfig',
+                    component: () => import(/* webpackChunkName: "donate" */ '../components/page/WebsiteConfig/appfrontConfig/AfBasicConfig.vue'),
+                    meta: { title: '基础配置' }
+                },
+                {
+                    path: '/afindexconfig',
+                    component: () => import(/* webpackChunkName: "donate" */ '../components/page/WebsiteConfig/appfrontConfig/AfIndexConfig.vue'),
+                    meta: { title: '首页配置' }
+                },
+                {
+                    path: '/afcacheconfig',
+                    component: () => import(/* webpackChunkName: "donate" */ '../components/page/WebsiteConfig/appfrontConfig/AfCacheconfig.vue'),
+                    meta: { title: '缓存配置' }
+                },
+                {
+                    path: '/afstoreconfig',
+                    component: () => import(/* webpackChunkName: "donate" */ '../components/page/WebsiteConfig/appfrontConfig/AfStoreConfig.vue'),
+                    meta: { title: 'Store配置' }
+                },
+                {
+                    path: '/afproductconfig',
+                    component: () => import(/* webpackChunkName: "donate" */ '../components/page/WebsiteConfig/appfrontConfig/AfProductConfig.vue'),
+                    meta: { title: '分类产品配置' }
+                },
+                {
+                    path: '/afaccountconfig',
+                    component: () => import(/* webpackChunkName: "donate" */ '../components/page/WebsiteConfig/appfrontConfig/AfAccountConfig.vue'),
+                    meta: { title: '账户配置' }
+                },
+                {
+                    path: '/afpayconfig',
+                    component: () => import(/* webpackChunkName: "donate" */ '../components/page/WebsiteConfig/appfrontConfig/AfPayConfig.vue'),
+                    meta: { title: '支付配置' }
+                },
+                {
+                    path: '/ahbasicconfig',
+                    component: () => import(/* webpackChunkName: "donate" */ '../components/page/WebsiteConfig/apphtml5Config/AhBasicConfig.vue'),
+                    meta: { title: '基础配置' }
+                },
+                {
+                    path: '/ahindexconfig',
+                    component: () => import(/* webpackChunkName: "donate" */ '../components/page/WebsiteConfig/apphtml5Config/AhIndexConfig.vue'),
+                    meta: { title: '首页配置' }
+                },
+                {
+                    path: '/ahcacheconfig',
+                    component: () => import(/* webpackChunkName: "donate" */ '../components/page/WebsiteConfig/apphtml5Config/AhCacheconfig.vue'),
+                    meta: { title: '缓存配置' }
+                },
+                {
+                    path: '/ahstoreconfig',
+                    component: () => import(/* webpackChunkName: "donate" */ '../components/page/WebsiteConfig/apphtml5Config/AhStoreConfig.vue'),
+                    meta: { title: 'Store配置' }
+                },
+                {
+                    path: '/ahproductconfig',
+                    component: () => import(/* webpackChunkName: "donate" */ '../components/page/WebsiteConfig/apphtml5Config/AhProductConfig.vue'),
+                    meta: { title: '分类产品配置' }
+                },
+                {
+                    path: '/ahaccountconfig',
+                    component: () => import(/* webpackChunkName: "donate" */ '../components/page/WebsiteConfig/apphtml5Config/AhAccountConfig.vue'),
+                    meta: { title: '账户配置' }
+                },
+                {
+                    path: '/ahpayconfig',
+                    component: () => import(/* webpackChunkName: "donate" */ '../components/page/WebsiteConfig/apphtml5Config/AhPayConfig.vue'),
+                    meta: { title: '支付配置' }
+                },
+                {
+                    path: '/asbasicconfig',
+                    component: () => import(/* webpackChunkName: "donate" */ '../components/page/WebsiteConfig/appserverConfig/AsBasicConfig.vue'),
+                    meta: { title: '基础配置' }
+                },
+                {
+                    path: '/asindexconfig',
+                    component: () => import(/* webpackChunkName: "donate" */ '../components/page/WebsiteConfig/appserverConfig/AsIndexConfig.vue'),
+                    meta: { title: '首页配置' }
+                },
+                {
+                    path: '/ascacheconfig',
+                    component: () => import(/* webpackChunkName: "donate" */ '../components/page/WebsiteConfig/appserverConfig/AsCacheconfig.vue'),
+                    meta: { title: '缓存配置' }
+                },
+                {
+                    path: '/asstoreconfig',
+                    component: () => import(/* webpackChunkName: "donate" */ '../components/page/WebsiteConfig/appserverConfig/AsStoreConfig.vue'),
+                    meta: { title: 'Store配置' }
+                },
+                {
+                    path: '/asstorelangconfig',
+                    component: () => import(/* webpackChunkName: "donate" */ '../components/page/WebsiteConfig/appserverConfig/AsStorelangConfig.vue'),
+                    meta: { title: 'Store语言配置' }
+                },
+                {
+                    path: '/asproductconfig',
+                    component: () => import(/* webpackChunkName: "donate" */ '../components/page/WebsiteConfig/appserverConfig/AsProductConfig.vue'),
+                    meta: { title: '分类产品配置' }
+                },
+                {
+                    path: '/asaccountconfig',
+                    component: () => import(/* webpackChunkName: "donate" */ '../components/page/WebsiteConfig/appserverConfig/AsAccountConfig.vue'),
+                    meta: { title: '账户配置' }
+                },
+                {
+                    path: '/aspayconfig',
+                    component: () => import(/* webpackChunkName: "donate" */ '../components/page/WebsiteConfig/appserverConfig/AsPayConfig.vue'),
+                    meta: { title: '支付配置' }
                 }
             ]
         },

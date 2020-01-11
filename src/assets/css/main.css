@@ -235,3 +235,8 @@ a {
     background: white;
     margin-top: 10px;
 }
+.help-info{
+    display: inline-block;
+    font-size: 12px;
+    margin-left: 15px;
+}

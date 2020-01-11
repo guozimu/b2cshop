@@ -1795,6 +1795,176 @@
         "label": "Local Installed",
         "value": 2
       }
+    ],
+    "basiclangs": [
+      {
+        "label": "en-US",
+        "value": "en-US"
+      },
+      {
+        "label": "zh-CN",
+        "value": "zh-CN"
+      },
+      {
+        "label": "fr-FR",
+        "value": "fr-FR"
+      },
+      {
+        "label": "de-DE",
+        "value": "de-DE"
+      },
+      {
+        "label": "es-ES",
+        "value": "es-ES"
+      },
+      {
+        "label": "pt-PT",
+        "value": "pt-PT"
+      },
+      {
+        "label": "ru-RU",
+        "value": "ru-RU"
+      },
+      {
+        "label": "it-IT",
+        "value": "it-IT"
+      }
+    ],
+    "basiccurrencys": [
+      {
+        "label": "EUR",
+        "value": "EUR"
+      },
+      {
+        "label": "USD",
+        "value": "USD"
+      },
+      {
+        "label": "GBP",
+        "value": "GBP"
+      },
+      {
+        "label": "CNY",
+        "value": "CNY"
+      }
+    ],
+    "defaultcurrencys": [
+      {
+        "label": "EUR",
+        "value": "EUR"
+      },
+      {
+        "label": "USD",
+        "value": "USD"
+      },
+      {
+        "label": "GBP",
+        "value": "GBP"
+      },
+      {
+        "label": "CNY",
+        "value": "CNY"
+      }
+    ],
+    "prodatas": [
+      {
+        "label": "Mongodb",
+        "value": "mongodb"
+      },
+      {
+        "label": "Mysqldb",
+        "value": "mysqldb"
+      }
+    ],
+    "procollections": [
+      {
+        "label": "Mongodb",
+        "value": "mongodb"
+      },
+      {
+        "label": "Mysqldb",
+        "value": "mysqldb"
+      }
+    ],
+    "procommons": [
+      {
+        "label": "Mongodb",
+        "value": "mongodb"
+      },
+      {
+        "label": "Mysqldb",
+        "value": "mysqldb"
+      }
+    ],
+    "pandsdatas": [
+      {
+        "label": "Mongodb",
+        "value": "mongodb"
+      },
+      {
+        "label": "Mysqldb",
+        "value": "mysqldb"
+      }
+    ],
+    "urlrewritedatas": [
+      {
+        "label": "Mongodb",
+        "value": "mongodb"
+      },
+      {
+        "label": "Mysqldb",
+        "value": "mysqldb"
+      }
+    ],
+    "newsletters": [
+      {
+        "label": "Mongodb",
+        "value": "mongodb"
+      },
+      {
+        "label": "Mysqldb",
+        "value": "mysqldb"
+      }
+    ],
+    "errordatas": [
+      {
+        "label": "Mongodb",
+        "value": "mongodb"
+      },
+      {
+        "label": "Mysqldb",
+        "value": "mysqldb"
+      }
+    ],
+    "mysqlsearch": [
+      {
+        "label": "Enable",
+        "value": true
+      },
+      {
+        "label": "Disable",
+        "value": false
+      }
+    ],
+    "mongodbsearch": [
+      {
+        "label": "Enable",
+        "value": true
+      },
+      {
+        "label": "Disable",
+        "value": false
+      }
+    ],
+    "xunsearch": [
+      {
+        "label": "Enable",
+        "value": true
+      },
+      {
+        "label": "Disable",
+        "value": false
+      }
     ]
   }
 }
