@@ -23,3 +23,5 @@ Mock.mock('/pageslist',{code:0,data:data.pagesList});
 //静态块的数据
 Mock.mock('/staticlist',{code:0,data:data.staticList});
 
+//多语言的数据
+Mock.mock('/langlist',{code:0,data:data.multiLanguages});

@@ -470,19 +470,19 @@ export default {
                             title:'Appserver配置',
                             subs:[
                                 {
-                                    index:'afbasicconfig',
+                                    index:'asbasicconfig',
                                     title:'基础配置'
                                 },
                                 {
-                                    index:'afindexconfig',
+                                    index:'asindexconfig',
                                     title:'首页配置'
                                 },
                                 {
-                                    index:'afcacheconfig',
+                                    index:'ascacheconfig',
                                     title:'缓存配置'
                                 },
                                 {
-                                    index:'afstoreconfig',
+                                    index:'asstoreconfig',
                                     title:'Store配置'
                                 },
                                 {
@@ -490,15 +490,15 @@ export default {
                                     title:'Store语言配置'
                                 },
                                 {
-                                    index:'afproductconfig',
+                                    index:'asproductconfig',
                                     title:'分类产品配置'
                                 },
                                 {
-                                    index:'afaccountconfig',
+                                    index:'asaccountconfig',
                                     title:'账户配置'
                                 },
                                 {
-                                    index:'afpayconfig',
+                                    index:'aspayconfig',
                                     title:'支付配置'
                                 }
                             ]

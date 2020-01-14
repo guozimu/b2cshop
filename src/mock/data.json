@@ -1567,6 +1567,48 @@
       "updatetime":"@date('yyyy-MM-dd')"
     }
   ],
+  "multiLanguages":[
+    {
+      "langname": "en-US",
+      "langcode": "en",
+      "search": "mysqlSearch"
+    },
+    {
+      "langname": "zh-CN",
+      "langcode": "zh",
+      "search": "mysqlSearch"
+    },
+    {
+      "langname": "fr-FR",
+      "langcode": "fr",
+      "search": "mysqlSearch"
+    },
+    {
+      "langname": "de-DE",
+      "langcode": "de",
+      "search": "mysqlSearch"
+    },
+    {
+      "langname": "es-ES",
+      "langcode": "es",
+      "search": "mysqlSearch"
+    },
+    {
+      "langname": "pt-PT",
+      "langcode": "pt",
+      "search": "mysqlSearch"
+    },
+    {
+      "langname": "ru-RU",
+      "langcode": "ru",
+      "search": "mysqlSearch"
+    },
+    {
+      "langname": "it-IT",
+      "langcode": "it",
+      "search": "mysqlSearch"
+    }
+  ],
   "basicData": {
       "status": [
         {
@@ -1963,6 +2005,106 @@
       },
       {
         "label": "Disable",
+        "value": false
+      }
+    ],
+    "registerIsSendEmail":[
+      {
+        "label": "是",
+        "value": true
+      },
+      {
+        "label": "否",
+        "value": false
+      }
+    ],
+    "newAccountIsActiveByEmail":[
+      {
+        "label": "是",
+        "value": true
+      },
+      {
+        "label": "否",
+        "value": false
+      }
+    ],
+    "contectUsIsSendEmail":[
+      {
+        "label": "是",
+        "value": true
+      },
+      {
+        "label": "否",
+        "value": false
+      }
+    ],
+    "loginIsSendEmail":[
+      {
+        "label": "是",
+        "value": true
+      },
+      {
+        "label": "否",
+        "value": false
+      }
+    ],
+    "newsLetterIsSendEmail":[
+      {
+        "label": "是",
+        "value": true
+      },
+      {
+        "label": "否",
+        "value": false
+      }
+    ],
+    "touristOrderIsSendEmail":[
+      {
+        "label": "是",
+        "value": true
+      },
+      {
+        "label": "否",
+        "value": false
+      }
+    ],
+    "loginOrderIsSendEmail":[
+      {
+        "label": "是",
+        "value": true
+      },
+      {
+        "label": "否",
+        "value": false
+      }
+    ],
+    "forgetPasswordIsSendEmail": [
+      {
+        "label": "是",
+        "value": true
+      },
+      {
+        "label": "否",
+        "value": false
+      }
+    ],
+    "payEnviroment": [
+      {
+        "label": "沙箱环境",
+        "value": 1
+      },
+      {
+        "label": "开发环境",
+        "value": 2
+      }
+    ],
+    "jscsscopy": [
+      {
+        "label": "是",
+        "value": true
+      },
+      {
+        "label": "否",
         "value": false
       }
     ]

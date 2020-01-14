@@ -151,4 +151,7 @@ export default {
     display: block;
     font-size: 12px;
 }
+.el-form-item--small.el-form-item{
+    margin-bottom: 18px !important;
+}
 </style>

@@ -12,7 +12,7 @@ import commentList from './modules/commentList'
 import orderList from './modules/orderList'
 import appList from './modules/appList'
 import pagesList from './modules/pagesList'
-
+import multiLanguages from './modules/multiLanguages'
 Vue.use(Vuex);
 
 export default new Vuex.Store({
@@ -25,7 +25,8 @@ export default new Vuex.Store({
         commentList,
         orderList,
         appList,
-        pagesList
+        pagesList,
+        multiLanguages
     }
 })
 

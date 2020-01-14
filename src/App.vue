@@ -4,18 +4,15 @@
     </div>
 </template>
 <script>
-
-    import {mapActions} from 'vuex'
     export default {
         computed: {
 
         },
         methods:{
-            // ...mapActions(['getUserInfo'])
+
         },
         mounted() {
-            // this.getUserInfo();
-            // this.$store.dispatch('getUserInfo',JSON.parse(JSON.stringify(obj)))
+
         }
     }
 </script>

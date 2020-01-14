@@ -29,3 +29,5 @@ export  const reqappList = () => ajax('/applist');
 export  const reqpagesList = () => ajax('/pageslist');
 // 静态块的接口
 export  const reqstaticList = () => ajax('/staticlist');
+// 多语言的接口
+export  const reqlangList = () => ajax('/langlist');
