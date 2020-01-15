@@ -1,5 +1,7 @@
 <template>
-    <div>store语言配置</div>
+    <div>
+
+    </div>
 </template>
 
 <script>
