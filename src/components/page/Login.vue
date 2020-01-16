@@ -4,11 +4,11 @@
             <div class="ms-title"><img src="../../assets/img/blue_logo.png"/></div>
             <div class="ul-box">
                 <ul>
-                    <li><a>关于</a></li>
-                    <li><a>反馈</a></li>
-                    <li><a>帮助</a></li>
+                    <li><a>{{$t('i18n.about')}}</a></li>
+                    <li><a>{{$t('i18n.feedback')}}</a></li>
+                    <li><a>{{$t('i18n.help')}}</a></li>
                     <li>
-                        <el-select v-model="value" size="mini" placeholder="请选择">
+                        <el-select v-model="value" size="mini" @change="changeLang(value)" placeholder="请选择">
                             <el-option
                                     v-for="item in options"
                                     :key="item.value"
@@ -37,9 +37,9 @@
                     </el-input>
                 </el-form-item>
                 <div class="login-btn">
-                    <el-button type="primary" @click="submitForm()">登录</el-button>
+                    <el-button type="primary" @click="submitForm()">{{$t('i18n.login')}}</el-button>
                 </div>
-                <p class="login-tips">Tips : 用户名和密码随便填。</p>
+                <p class="login-tips">Tips : {{$t('i18n.tips')}}。</p>
             </el-form>
         </div>
     </div>
@@ -53,35 +53,42 @@ export default {
                 username: 'admin',
                 password: '123123',
             },
-            rules: {
-                username: [{ required: true, message: '请输入用户名', trigger: 'blur' }],
-                password: [{ required: true, message: '请输入密码', trigger: 'blur' }],
-            },
+
             options: [{
-                value: 'cn',
+                value: 'zh',
                 label: '中文'
             }, {
                 value: 'en',
                 label: 'English'
             }],
-            value: 'cn'
+            value: 'zh'
         };
+    },
+    computed:{
+        rules(){
+            return {
+                username: [{ required: true, message: this.$t('i18n.verifyusername'), trigger: 'blur' }],
+                password: [{ required: true, message: this.$t('i18n.verifypassword'), trigger: 'blur' }],
+            }
+        }
     },
     methods: {
         submitForm() {
             this.$refs.login.validate(valid => {
                 if (valid) {
-                    this.$message.success('登录成功');
+                    this.$message.success(this.$t('i18n.loginsuccess'));
                     this.$store.dispatch('basicData/getBasicData');
                     localStorage.setItem('ms_username', this.param.username);
                     this.$router.push('/');
                 } else {
-                    this.$message.error('请输入账号和密码');
-                    console.log('error submit!!');
+                    this.$message.error(this.$t('i18n.loginfail'));
                     return false;
                 }
             });
         },
+        changeLang(value){
+            this.$i18n.locale = value;
+        }
     },
     mounted() {
 
