@@ -153,55 +153,55 @@ export default {
                     subs: [
                         {
                             index: '9-1',
-                            title: '产品管理',
+                            title: this.$t('i18n.promanager'),
                             subs:[
                                 {
                                     index: 'productinfo',
-                                    title: '产品信息管理'
+                                    title: this.$t('i18n.productinfo')
                                 },
                                 {
                                     index: 'productattr',
-                                    title: '产品属性管理'
+                                    title: this.$t('i18n.productattr')
                                 },
                                 {
                                     index: 'productattrgroup',
-                                    title: '产品属性组管理'
+                                    title: this.$t('i18n.productattrgroup')
                                 },
                                 {
                                     index: 'productparams',
-                                    title: '产品参数管理'
+                                    title: this.$t('i18n.productparams')
                                 },
                                 {
                                     index: 'productcommon',
-                                    title: '产品评论'
+                                    title: this.$t('i18n.productcommon')
                                 },
                                 {
                                     index: 'productcollection',
-                                    title: '产品收藏'
+                                    title: this.$t('i18n.productcollection')
                                 },
                                 {
                                     index: 'productbatchupload',
-                                    title: '产品批量上传'
+                                    title: this.$t('i18n.productbatchupload')
                                 }
                             ]
                         },
                         {
                             index: '9-2',
-                            title: '分类管理',
+                            title: this.$t('i18n.sortkind'),
                             subs: [
                                 {
                                     index: 'sortinfo',
-                                    title: '分类信息'
+                                    title: this.$t('i18n.sortinfo')
                                 },
                                 {
                                     index: 'sortconfig',
-                                    title: '分类排序配置'
+                                    title: this.$t('i18n.sortconfig')
                                 }
                             ]
                         },
                         {
                             index: 'URl',
-                            title: 'URL重写功能'
+                            title: this.$t('i18n.url')
                         }
                     ]
                 },
@@ -212,34 +212,34 @@ export default {
                     subs: [
                         {
                             index: '10-1',
-                            title: '订单',
+                            title: this.$t('i18n.order'),
                             subs:[
                                 {
                                     index: 'ordermanager',
-                                    title: '订单管理'
+                                    title: this.$t('i18n.ordermanager')
                                 },
                                 {
                                     index: 'orderparamsmanager',
-                                    title: '订单参数配置'
+                                    title: this.$t('i18n.orderparamsmanager')
                                 }
                             ]
                         },
                         {
                             index: 'carparamsconfig',
-                            title: '购物车参数配置'
+                            title: this.$t('i18n.carparamsconfig')
 
                         },
                         {
                             index: 'coupon',
-                            title: '优惠券'
+                            title: this.$t('i18n.coupon')
                         },
                         {
                             index: '10-2',
-                            title: '用户',
+                            title: this.$t('i18n.account'),
                             subs:[
                                 {
                                     index: 'accountmanager',
-                                    title: '账户管理'
+                                    title: this.$t('i18n.accountmanagement')
                                 }
                             ]
                         },
@@ -256,41 +256,41 @@ export default {
                     subs:[
                         {
                             index: '11-1',
-                            title: '后台用户',
+                            title: this.$t('i18n.backgrounduser'),
                             subs:[
                                 {
                                     index: 'myaccount',
-                                    title: '我的账户'
+                                    title: this.$t('i18n.myaccount')
                                 },
                                 {
                                     index: 'accountmanagement',
-                                    title: '账户管理'
+                                    title: this.$t('i18n.accountmanagement')
                                 },
                                 {
                                     index: 'privilegemanagement',
-                                    title: '权限管理'
+                                    title: this.$t('i18n.privilegemanagement')
                                 },
                                 {
                                     index: 'resourcemanagement',
-                                    title: '资源管理'
+                                    title: this.$t('i18n.resourcemanagement')
                                 }
                             ]
                         },
                         {
                             index:'operationlog',
-                            title:'操作日志'
+                            title:this.$t('i18n.operationlog')
                         },
                         {
                             index:'logstatistics',
-                            title:'日志统计'
+                            title:this.$t('i18n.logstatistics')
                         },
                         {
                             index:'cachemanagement',
-                            title:'缓存管理'
+                            title:this.$t('i18n.cachemanagement')
                         },
                         {
                             index:'backgroundconfiguration',
-                            title:'后台配置'
+                            title:this.$t('i18n.backgroundconfiguration')
                         }
                     ]
                 },
@@ -301,25 +301,25 @@ export default {
                     subs:[
                         {
                             index: '12-1',
-                            title: '应用管理',
+                            title: this.$t('i18n.appmanagement'),
                             subs:[
                                 {
                                     index: 'applicationmarket',
-                                    title: '应用市场'
+                                    title: this.$t('i18n.applicationmarket')
                                 },
                                 {
                                     index: 'installedapplication',
-                                    title: '已安装应用'
+                                    title: this.$t('i18n.installedapplication')
                                 }
                             ]
                         },
                         {
                             index:'12-2',
-                            title:'开发者中心',
+                            title:this.$t('i18n.developercenter'),
                             subs:[
                                 {
                                     index: 'applicationgeneration',
-                                    title: '应用Gii生成'
+                                    title: this.$t('i18n.applicationgeneration')
                                 }
                             ]
                         }
@@ -332,11 +332,11 @@ export default {
                     subs:[
                         {
                             index: 'pagemanagement',
-                            title: 'Page管理'
+                            title: this.$t('i18n.pagemanagement')
                         },
                         {
                             index:'staticblock',
-                            title:'静态块'
+                            title:this.$t('i18n.staticblock')
                         }
                     ]
                 },

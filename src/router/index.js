@@ -100,82 +100,82 @@ export default new Router({
                 {
                     path: '/donate',
                     component: () => import(/* webpackChunkName: "donate" */ '../components/page/Donate.vue'),
-                    meta: { title: '支持作者' }
+                    meta: { title: 'i18n.supportauthor' }
                 },
                 {
                     path: '/productinfo',
                     component: () => import(/* webpackChunkName: "donate" */ '../components/page/ProductInfo.vue'),
-                    meta: { title: '产品信息管理' }
+                    meta: { title: 'i18n.productinfo' }
                 },
                 {
                     path: '/productattr',
                     component: () => import(/* webpackChunkName: "donate" */ '../components/page/ProductAttr.vue'),
-                    meta: { title: '产品属性管理' }
+                    meta: { title: 'i18n.productattr' }
                 },
                 {
                     path: '/productattrgroup',
                     component: () => import(/* webpackChunkName: "donate" */ '../components/page/ProductAttrGroup.vue'),
-                    meta: { title: '产品属性组管理' }
+                    meta: { title: 'i18n.productattrgroup' }
                 },
                 {
                     path: '/productparams',
                     component: () => import(/* webpackChunkName: "donate" */ '../components/page/ProductParams.vue'),
-                    meta: { title: '产品参数管理' }
+                    meta: { title: 'i18n.productparams' }
                 },
                 {
                     path: '/productcommon',
                     component: () => import(/* webpackChunkName: "donate" */ '../components/page/ProductCommon.vue'),
-                    meta: { title: '产品评论' }
+                    meta: { title: 'i18n.productcommon' }
                 },
                 {
                     path: '/productcollection',
                     component: () => import(/* webpackChunkName: "donate" */ '../components/page/ProductCollection.vue'),
-                    meta: { title: '产品收藏' }
+                    meta: { title: 'i18n.productcollection' }
                 },
                 {
                     path: '/productbatchupload',
                     component: () => import(/* webpackChunkName: "donate" */ '../components/page/ProductBatchUpload.vue'),
-                    meta: { title: '产品批量上传' }
+                    meta: { title: 'i18n.productbatchupload' }
                 },
                 {
                     path: '/sortinfo',
                     component: () => import(/* webpackChunkName: "donate" */ '../components/page/SortInfo.vue'),
-                    meta: { title: '分类信息' }
+                    meta: { title: 'i18n.sortinfo' }
                 },
                 {
                     path: '/sortconfig',
                     component: () => import(/* webpackChunkName: "donate" */ '../components/page/SortConfig.vue'),
-                    meta: { title: '分类排序配置' }
+                    meta: { title: 'i18n.sortconfig' }
                 },
                 {
                     path: '/url',
                     component: () => import(/* webpackChunkName: "donate" */ '../components/page/Url.vue'),
-                    meta: { title: 'URL重写功能' }
+                    meta: { title: 'i18n.url' }
                 },
                 {
                     path: '/ordermanager',
                     component: () => import(/* webpackChunkName: "donate" */ '../components/page/OrderManager.vue'),
-                    meta: { title: '订单管理' }
+                    meta: { title: 'i18n.ordermanager' }
                 },
                 {
                     path: '/orderparamsmanager',
                     component: () => import(/* webpackChunkName: "donate" */ '../components/page/OrderParamsManager.vue'),
-                    meta: { title: '订单参数配置' }
+                    meta: { title: 'i18n.orderparamsmanager' }
                 },
                 {
                     path: '/carparamsconfig',
                     component: () => import(/* webpackChunkName: "donate" */ '../components/page/CarParamsConfig.vue'),
-                    meta: { title: '购物车参数配置' }
+                    meta: { title: 'i18n.carparamsconfig' }
                 },
                 {
                     path: '/coupon',
                     component: () => import(/* webpackChunkName: "donate" */ '../components/page/Coupon.vue'),
-                    meta: { title: '优惠券' }
+                    meta: { title: 'i18n.coupon' }
                 },
                 {
                     path: '/accountmanager',
                     component: () => import(/* webpackChunkName: "donate" */ '../components/page/AccountManager.vue'),
-                    meta: { title: '账户管理' }
+                    meta: { title: 'i18n.accountmanagement' }
                 },
                 {
                     path: '/newsletter',
@@ -185,67 +185,67 @@ export default new Router({
                 {
                     path: '/myaccount',
                     component: () => import(/* webpackChunkName: "donate" */ '../components/page/MyAccount.vue'),
-                    meta: { title: '我的账户' }
+                    meta: { title: 'i18n.myaccount' }
                 },
                 {
                     path: '/accountmanagement',
                     component: () => import(/* webpackChunkName: "donate" */ '../components/page/AccountManagement.vue'),
-                    meta: { title: '账户管理' }
+                    meta: { title: 'i18n.accountmanagement' }
                 },
                 {
                     path: '/privilegemanagement',
                     component: () => import(/* webpackChunkName: "donate" */ '../components/page/PrivilegeManagement.vue'),
-                    meta: { title: '权限管理' }
+                    meta: { title: 'i18n.privilegemanagement' }
                 },
                 {
                     path: '/resourcemanagement',
                     component: () => import(/* webpackChunkName: "donate" */ '../components/page/ResourceManagement.vue'),
-                    meta: { title: '资源管理' }
+                    meta: { title: 'i18n.resourcemanagement' }
                 },
                 {
                     path: '/operationlog',
                     component: () => import(/* webpackChunkName: "donate" */ '../components/page/OperationLog.vue'),
-                    meta: { title: '操作日志' }
+                    meta: { title: 'i18n.operationlog' }
                 },
                 {
                     path: '/logstatistics',
                     component: () => import(/* webpackChunkName: "donate" */ '../components/page/LogStatistics.vue'),
-                    meta: { title: '日志统计' }
+                    meta: { title: 'i18n.logstatistics' }
                 },
                 {
                     path: '/cachemanagement',
                     component: () => import(/* webpackChunkName: "donate" */ '../components/page/CacheManagement.vue'),
-                    meta: { title: '缓存管理' }
+                    meta: { title: 'i18n.cachemanagement' }
                 },
                 {
                     path: '/backgroundconfiguration',
                     component: () => import(/* webpackChunkName: "donate" */ '../components/page/BackgroundConfiguration.vue'),
-                    meta: { title: '后台配置' }
+                    meta: { title: 'i18n.backgroundconfiguration' }
                 },
                 {
                     path: '/applicationmarket',
                     component: () => import(/* webpackChunkName: "donate" */ '../components/page/ApplicationCenter/ApplicationMarket.vue'),
-                    meta: { title: '应用市场' }
+                    meta: { title: 'i18n.applicationmarket' }
                 },
                 {
                     path: '/installedapplication',
                     component: () => import(/* webpackChunkName: "donate" */ '../components/page/ApplicationCenter/InstalledApplication.vue'),
-                    meta: { title: '已安装应用' }
+                    meta: { title: 'i18n.installedapplication' }
                 },
                 {
                     path: '/applicationgeneration',
                     component: () => import(/* webpackChunkName: "donate" */ '../components/page/ApplicationCenter/ApplicationGeneration.vue'),
-                    meta: { title: '应用Gii生成' }
+                    meta: { title: 'i18n.applicationgeneration' }
                 },
                 {
                     path: '/pagemanagement',
                     component: () => import(/* webpackChunkName: "donate" */ '../components/page/CMS/PageManagement.vue'),
-                    meta: { title: 'page管理' }
+                    meta: { title: 'i18n.pagemanagement' }
                 },
                 {
                     path: '/staticblock',
                     component: () => import(/* webpackChunkName: "donate" */ '../components/page/CMS/StaticBlock.vue'),
-                    meta: { title: '静态块' }
+                    meta: { title: 'i18n.staticblock' }
                 },
                 {
                     path: '/basicconfig',
