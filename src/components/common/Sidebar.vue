@@ -125,11 +125,11 @@ export default {
                 //         }
                 //     ]
                 // },
-                {
-                    icon: 'el-icon-lx-global',
-                    index: 'i18n',
-                    title: '国际化功能'
-                },
+                // {
+                //     icon: 'el-icon-lx-global',
+                //     index: 'i18n',
+                //     title: '国际化功能'
+                // },
                 // {
                 //     icon: 'el-icon-lx-warn',
                 //     index: '7',
@@ -347,155 +347,155 @@ export default {
                     subs:[
                         {
                             index: '14-1',
-                            title: '基础配置',
+                            title: this.$t('i18n.basicconfig'),
                             subs:[
                                 {
                                     index:'basicconfig',
-                                    title:'基础配置'
+                                    title:this.$t('i18n.basicconfig')
                                 },
                                 {
                                     index:'databaseconfig',
-                                    title:'Service数据库配置'
+                                    title:this.$t('i18n.databaseconfig')
                                 },
                                 {
                                     index:'searchconfig',
-                                    title:'搜索引擎配置'
+                                    title:this.$t('i18n.searchconfig')
                                 },
                                 {
                                     index:'multilanguageconfig',
-                                    title:'多语言配置'
+                                    title:this.$t('i18n.multilanguageconfig')
                                 },
                                 {
                                     index:'currencyconfig',
-                                    title:'货币配置'
+                                    title:this.$t('i18n.currencyconfig')
                                 },
                                 {
                                     index:'emailconfig',
-                                    title:'邮件配置'
+                                    title:this.$t('i18n.emailconfig')
                                 }
                             ]
                         },
                         {
                             index:'14-2',
-                            title:'支付参数配置',
+                            title:this.$t('i18n.payconfig'),
                             subs:[
                                 {
                                     index:'paypalconfig',
-                                    title:'PayPal支付配置'
+                                    title:this.$t('i18n.paypalconfig')
                                 },
                                 {
                                     index:'alipayconfig',
-                                    title:'支付宝支付配置'
+                                    title:this.$t('i18n.alipayconfig')
                                 },
                                 {
                                     index:'wxpayconfig',
-                                    title:'微信支付配置'
+                                    title:this.$t('i18n.wxpayconfig')
                                 }
                             ]
                         },
                         {
                             index:'14-3',
-                            title:'Appfront配置',
+                            title:this.$t('i18n.appfront'),
                             subs:[
                                 {
                                     index:'afbasicconfig',
-                                    title:'基础配置'
+                                    title:this.$t('i18n.basicconfig')
                                 },
                                 {
                                     index:'afindexconfig',
-                                    title:'首页配置'
+                                    title:this.$t('i18n.indexconfig')
                                 },
                                 {
                                     index:'afcacheconfig',
-                                    title:'缓存配置'
+                                    title:this.$t('i18n.cacheconfig')
                                 },
                                 {
                                     index:'afstoreconfig',
-                                    title:'Store配置'
+                                    title:this.$t('i18n.storeconfig')
                                 },
                                 {
                                     index:'afproductconfig',
-                                    title:'分类产品配置'
+                                    title:this.$t('i18n.prokindconfig')
                                 },
                                 {
                                     index:'afaccountconfig',
-                                    title:'账户配置'
+                                    title:this.$t('i18n.accountconfig')
                                 },
                                 {
                                     index:'afpayconfig',
-                                    title:'支付配置'
+                                    title:this.$t('i18n.payconfig')
                                 }
                             ]
                         },
                         {
                             index:'14-4',
-                            title:'Apphtml5配置',
+                            title:this.$t('i18n.apphtml5'),
                             subs:[
                                 {
                                     index:'ahbasicconfig',
-                                    title:'基础配置'
+                                    title:this.$t('i18n.basicconfig')
                                 },
                                 {
                                     index:'ahindexconfig',
-                                    title:'首页配置'
+                                    title:this.$t('i18n.indexconfig')
                                 },
                                 {
                                     index:'ahcacheconfig',
-                                    title:'缓存配置'
+                                    title:this.$t('i18n.cacheconfig')
                                 },
                                 {
                                     index:'ahstoreconfig',
-                                    title:'Store配置'
+                                    title:this.$t('i18n.storeconfig')
                                 },
                                 {
                                     index:'ahproductconfig',
-                                    title:'分类产品配置'
+                                    title:this.$t('i18n.prokindconfig')
                                 },
                                 {
                                     index:'ahaccountconfig',
-                                    title:'账户配置'
+                                    title:this.$t('i18n.accountconfig')
                                 },
                                 {
                                     index:'ahpayconfig',
-                                    title:'支付配置'
+                                    title:this.$t('i18n.payconfig')
                                 }
                             ]
                         },
                         {
                             index:'14-5',
-                            title:'Appserver配置',
+                            title:this.$t('i18n.appserver'),
                             subs:[
                                 {
                                     index:'asbasicconfig',
-                                    title:'基础配置'
+                                    title:this.$t('i18n.basicconfig')
                                 },
                                 {
                                     index:'asindexconfig',
-                                    title:'首页配置'
+                                    title:this.$t('i18n.indexconfig')
                                 },
                                 {
                                     index:'ascacheconfig',
-                                    title:'缓存配置'
+                                    title:this.$t('i18n.cacheconfig')
                                 },
                                 {
                                     index:'asstoreconfig',
-                                    title:'Store配置'
+                                    title:this.$t('i18n.storeconfig')
                                 },
                                 {
                                     index:'asstorelangconfig',
-                                    title:'Store语言配置'
+                                    title:this.$t('i18n.storelang')
                                 },
                                 {
                                     index:'asproductconfig',
-                                    title:'分类产品配置'
+                                    title:this.$t('i18n.prokindconfig')
                                 },
                                 {
                                     index:'asaccountconfig',
-                                    title:'账户配置'
+                                    title:this.$t('i18n.accountconfig')
                                 },
                                 {
                                     index:'aspayconfig',
-                                    title:'支付配置'
+                                    title:this.$t('i18n.payconfig')
                                 }
                             ]
                         }

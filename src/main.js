@@ -20,13 +20,13 @@ Vue.use(ElementUI, {
 });
 Vue.use(VCharts);
 const i18n = new VueI18n({
-    locale: 'zh',
+    locale: localStorage.getItem('lang') || 'zh',
     messages
 });
 
 //使用钩子函数对路由进行权限跳转
 router.beforeEach((to, from, next) => {
-    document.title = `${to.meta.title} | Vue+Element`;
+    document.title = `Vue+Element`;
     const role = localStorage.getItem('ms_username');
     if (!role && to.path !== '/login') {
         next('/login');
@@ -44,7 +44,6 @@ router.beforeEach((to, from, next) => {
         }
     }
 });
-
 new Vue({
     router,
     store,

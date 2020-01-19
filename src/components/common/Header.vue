@@ -71,6 +71,7 @@ export default {
             if (command == 'loginout') {
                 localStorage.removeItem('ms_username');
                 this.$i18n.locale = 'zh';
+                localStorage.setItem('lang','zh');
                 this.$router.push('/login');
             }
         },

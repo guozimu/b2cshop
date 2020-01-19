@@ -88,6 +88,7 @@ export default {
         },
         changeLang(value){
             this.$i18n.locale = value;
+            localStorage.setItem('lang',value);
         }
     },
     mounted() {
