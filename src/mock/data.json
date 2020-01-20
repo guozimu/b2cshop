@@ -1618,10 +1618,6 @@
         {
           "label": "关闭",
           "value": 0
-        },
-        {
-          "label": "状态",
-          "value": 2
         }
       ],
       "kcstatus": [
@@ -1632,10 +1628,6 @@
         {
           "label": "缺货",
           "value": 0
-        },
-        {
-          "label": "库存状态",
-          "value": 2
         }
 
       ],
@@ -1647,21 +1639,12 @@
         {
           "label": "普通属性",
           "value": 0
-        },
-        {
-          "label": "属性类型",
-          "value": ""
         }
       ],
       "datatype": [
         {
           "label":"String",
           "value": 1
-        },
-
-        {
-          "label": "数据类型",
-          "value": ""
         }
       ],
       "imgisshow": [

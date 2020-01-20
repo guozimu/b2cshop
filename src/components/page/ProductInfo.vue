@@ -2,7 +2,7 @@
     <div>
         <el-row :gutter="10">
             <el-col :span="2" v-if="BasicData">
-                <el-select size="mini" v-model="statevalue" placeholder="状态">
+                <el-select size="mini" v-model="statevalue" :placeholder="$t('ph.status')">
                     <el-option
                             v-for="item in BasicData.status"
                             :key="item.value"
@@ -12,7 +12,7 @@
                 </el-select>
             </el-col>
             <el-col :span="2" v-if="BasicData">
-                <el-select size="mini" v-model="kcstatusvalue" placeholder="库存状态">
+                <el-select size="mini" v-model="kcstatusvalue" :placeholder="$t('ph.kcstatus')">
                     <el-option
                             v-for="item in BasicData.kcstatus"
                             :key="item.value"
@@ -22,7 +22,7 @@
                 </el-select>
             </el-col>
             <el-col :span="2">
-               <el-input v-model="goodsname" size="mini" placeholder="商品名称"></el-input>
+               <el-input v-model="goodsname" size="mini" :placeholder="$t('ph.goodsname')"></el-input>
             </el-col>
             <el-col :span="2">
                 <el-input v-model="spu" size="mini" placeholder="SPU"></el-input>
@@ -37,28 +37,28 @@
                             v-model="datevalue"
                             size="mini"
                             type="daterange"
-                            range-separator="至"
-                            start-placeholder="更新开始日期"
-                            end-placeholder="更新结束日期"
+                            :range-separator="$t('ph.to')"
+                            :start-placeholder="$t('ph.datebegin')"
+                            :end-placeholder="$t('ph.dateend')"
                             value-format="yyyy-MM-dd">
                     </el-date-picker>
                 </div>
             </el-col>
             <el-col :span="2">
-                <el-input v-model="kcbegin" size="mini" placeholder="库存开始"></el-input>
+                <el-input v-model="kcbegin" size="mini" :placeholder="$t('ph.kcstart')"></el-input>
             </el-col>
             <el-col :span="2">
-                <el-input v-model="kcend" size="mini" placeholder="库存结束"></el-input>
+                <el-input v-model="kcend" size="mini" :placeholder="$t('ph.kcend')"></el-input>
             </el-col>
             <el-col :span="2" :offset="3" style="text-align: right">
-                <el-button size="mini" type="primary">查询</el-button>
+                <el-button size="mini" type="primary">{{ $t('btn.search') }}</el-button>
             </el-col>
         </el-row>
         <el-row class="btn-group">
-            <el-button size="mini" type="primary">新增</el-button>
-            <el-button size="mini" type="warning">批量添加</el-button>
-            <el-button size="mini" type="warning">修改</el-button>
-            <el-button size="mini" type="danger">批量删除</el-button>
+            <el-button size="mini" type="primary">{{ $t('btn.add') }}</el-button>
+            <el-button size="mini" type="warning">{{ $t('btn.batchadd') }}</el-button>
+            <el-button size="mini" type="warning">{{ $t('btn.edit') }}</el-button>
+            <el-button size="mini" type="danger">{{ $t('btn.batchdel') }}</el-button>
         </el-row>
         <el-row ref="table-box" class="table-style">
             <el-table
@@ -82,7 +82,7 @@
                 </el-table-column>
                 <el-table-column
                         prop="img"
-                        label="图片"
+                        :label="$t('table.img')"
                         width="100">
                     <template slot-scope="scope">
                         <el-image
@@ -93,7 +93,7 @@
                 </el-table-column>
                 <el-table-column
                         prop="title"
-                        label="标题"
+                        :label="$t('table.title')"
                         width="150">
                 </el-table-column>
                 <el-table-column
@@ -108,41 +108,41 @@
                 </el-table-column>
                 <el-table-column
                         prop="goodsnum"
-                        label="库存数量"
-                        width="120">
+                        :label="$t('table.kcnum')"
+                        width="">
                 </el-table-column>
                 <el-table-column
                         prop="weight"
-                        label="产品单重"
+                        :label="$t('table.weight')"
                         width="120">
                 </el-table-column>
                 <el-table-column
                         prop="status"
-                        label="状态"
+                        :label="$t('table.status')"
                         width="120">
                 </el-table-column>
                 <el-table-column
                         prop="price"
-                        label="销售价格"
+                        :label="$t('table.price')"
                         width="120">
                 </el-table-column>
                 <el-table-column
                         prop="founder"
-                        label="创建人"
+                        :label="$t('table.founder')"
                         width="120">
                 </el-table-column>
                 <el-table-column
                         prop="creattime"
-                        label="创建时间"
+                        :label="$t('table.creattime')"
                         width="120">
                 </el-table-column>
                 <el-table-column
                         prop="updatetime"
-                        label="更新时间"
+                        :label="$t('table.updatetime')"
                         width="120">
                 </el-table-column>
                 <el-table-column
-                        label="操作"
+                        :label="$t('table.operation')"
                         width="120">
                     <template slot-scope="scope">
                         <el-button size="mini" type="primary" @click="editYou(scope.row)" icon="el-icon-edit"></el-button>
@@ -323,10 +323,10 @@
                 activeLang:'en',
                 dialogFormVisible:false,
                 formLabelWidth:'120px',
-                statevalue:2,
+                statevalue:'',
                 pageSize:10,
                 currentPage:1,
-                kcstatusvalue:2,
+                kcstatusvalue:'',
                 datevalue: '',
                 goodsname:'',
                 spu:'',

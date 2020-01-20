@@ -11,11 +11,11 @@
                         </div>
                     </div>
                     <div class="user-info-list">
-                        上次登录时间：
+                        {{$t('common.lastlogintime')}}：
                         <span>{{ userinfo.last_login_time }}</span>
                     </div>
                     <div class="user-info-list">
-                        上次登录地点：
+                        {{$t('common.lastloginplace')}}：
                         <span>{{ userinfo.last_login_place }}</span>
                     </div>
                 </el-card>
@@ -28,7 +28,7 @@
                                 <i class="el-icon-lx-people grid-con-icon"></i>
                                 <div class="grid-cont-right">
                                     <div class="grid-num">{{ userinfo.visit_times }}</div>
-                                    <div>用户访问量</div>
+                                    <div>{{ $t('common.visitnum') }}</div>
                                 </div>
                             </div>
                         </el-card>
@@ -39,7 +39,7 @@
                                 <i class="el-icon-lx-notice grid-con-icon"></i>
                                 <div class="grid-cont-right">
                                     <div class="grid-num">{{ userinfo.system_message }}</div>
-                                    <div>系统消息</div>
+                                    <div>{{ $t('common.systemmessage') }}</div>
                                 </div>
                             </div>
                         </el-card>
@@ -50,7 +50,7 @@
                                 <i class="el-icon-lx-goods grid-con-icon"></i>
                                 <div class="grid-cont-right">
                                     <div class="grid-num">{{ userinfo.num }}</div>
-                                    <div>数量</div>
+                                    <div>{{ $t('common.num') }}</div>
                                 </div>
                             </div>
                         </el-card>
@@ -74,7 +74,6 @@
 </template>
 
 <script>
-import bus from '../common/bus';
 import {mapGetters} from 'vuex'
 export default {
     name: 'dashboard',
@@ -111,7 +110,7 @@ export default {
     },
     computed: {
         role() {
-            return this.name === 'admin' ? '超级管理员' : '普通用户';
+            return this.name === 'admin' ? this.$t('common.superadmin') : this.$t('common.ordinaryusers');
         },
         ...mapGetters('userInfo',{
             userinfo:'renderuserinfo'
@@ -121,13 +120,7 @@ export default {
 
     },
     methods: {
-        changeDate() {
-            const now = new Date().getTime();
-            this.data.forEach((item, index) => {
-                const date = new Date(now - (6 - index) * 86400000);
-                item.name = `${date.getFullYear()}/${date.getMonth() + 1}/${date.getDate()}`;
-            });
-        }
+
     },
     mounted() {
         this.$store.dispatch('userInfo/getUserInfo');
