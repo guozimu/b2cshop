@@ -92,7 +92,12 @@ const zh = {
         goodsname:'商品名称',
         datebegin:'更新开始日期',
         dateend:'更新结束日期',
-        to:'至'
+        to:'至',
+        kcstart:'库存开始',
+        kcend:'库存结束',
+        common:'请选择',
+        newprobegin:'新产品开始日期',
+        newproend:'新产品结束日期'
     },
     btn:{
         cancel:'取消',
@@ -101,7 +106,8 @@ const zh = {
         del:'删除',
         batchdel:'批量删除',
         search:'查询',
-        edit:'修改'
+        edit:'修改',
+        ok:'确定'
     },
     table:{
         img:'图片',
@@ -114,6 +120,38 @@ const zh = {
         creattime:'创建时间',
         updatetime:'更新时间',
         operation:'操作'
+    },
+    info:{
+        deltips:'你确定要删除此条数据吗?',
+        delsuccess:'删除成功！',
+        delfail:'已取消删除',
+        tips:'提示'
+    },
+    dialog:{
+        title:'修改',
+        basicinfo:'基本信息',
+        price:'价格部分',
+        discription:'描述部分',
+        meat:'Meat部分',
+        imginfo:'图片信息',
+        kindinfo:'分类信息',
+        attrgroup:'属性组',
+        aboutp:'相关产品',
+        switchtips:'产品属性组切换：编辑前请先切换相应的产品属性组',
+        long:'长(CM)',
+        width:'宽(CM)',
+        height:'高(CM)',
+        weightformula:'体积重(KG)公式',
+        weight:'重量(KG)',
+        score:'分值',
+        status:'状态',
+        time:'时间',
+        stockqty:'库存个数',
+        packagesalesqty:'打包销售个数',
+        min:'最小购买数',
+        kcstatus:'库存状态',
+        remark:'备注'
+
     },
     ...zhLocale
 };

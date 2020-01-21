@@ -94,7 +94,10 @@ const en = {
         dateend:'Update End',
         to:'To',
         kcstart:'Inventory Starts',
-        kcend:'Inventory End'
+        kcend:'Inventory End',
+        common:'Please Chose',
+        newprobegin:'New Product Begin',
+        newproend:'New Product End'
     },
     btn:{
         cancel:'Cancel',
@@ -103,7 +106,8 @@ const en = {
         del:'Delete',
         batchdel:'Batch Delete',
         search:'Search',
-        edit:'Edit'
+        edit:'Edit',
+        ok:'Ok'
     },
     table:{
         img:'image',
@@ -116,6 +120,38 @@ const en = {
         creattime:'Creattime',
         updatetime:'Updatetime',
         operation:'Operation'
+    },
+    info:{
+        deltips:'Are you sure you want to delete this item data?',
+        delsuccess:'Delete Successful!',
+        delfail:'Delete Cancelled',
+        tips:'Tips'
+    },
+    dialog:{
+        title:'Edit',
+        basicinfo:'Basicinfo',
+        price:'Price',
+        discription:'Discription',
+        meat:'Meat',
+        imginfo:'Imginfo',
+        kindinfo:'Kindinfo',
+        attrgroup:'Attrgroup',
+        aboutp:'Aboutpro',
+        switchtips:'Product attribute group switching: Please switch the product attribute group before editing',
+        long:'Long(CM)',
+        width:'Width(CM)',
+        height:'Height(CM)',
+        weightformula:'Volume weight(Kg) Formula ',
+        weight:'Weight(Kg)',
+        score:'Score',
+        status:'Status',
+        time:'Time',
+        stockqty:'Stock Qty',
+        packagesalesqty:'Package sales qty',
+        min:'Min sale qty',
+        kcstatus:'Stock Status',
+        remark:'Remark'
+
     },
     ...enLocale
 };

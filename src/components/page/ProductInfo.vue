@@ -163,14 +163,14 @@
         </el-row>
 
         <!--模态框-->
-        <el-dialog title="修改" :visible.sync="dialogFormVisible">
+        <el-dialog :title="$t('dialog.title')" :visible.sync="dialogFormVisible">
             <el-tabs v-model="activeName" class="editsty" @tab-click="handleClick">
-                <el-tab-pane label="基本信息" name="basicinfo">
+                <el-tab-pane :label="$t('dialog.basicinfo')" name="basicinfo">
                     <div class="basicTop">
                         <div>
-                            <span class="red">产品属性组切换：编辑前请先切换相应的产品属性组</span>
+                            <span class="red">{{$t('dialog.switchtips')}}</span>
                         </div>
-                        <el-select size="mini" v-model="attrGroup" placeholder="请选择">
+                        <el-select size="mini" v-model="attrGroup" :placeholder="$t('ph.common')">
                             <el-option
                                     v-for="item in BasicData.attrGroups"
                                     :key="item.value"
@@ -208,26 +208,26 @@
                             <el-form-item label="Sku" :label-width="formLabelWidth">
                                 <el-input size="mini" auto-complete="off"></el-input>
                             </el-form-item>
-                            <el-form-item label="长(CM)" :label-width="formLabelWidth">
+                            <el-form-item :label="$t('dialog.long')" :label-width="formLabelWidth">
                                 <el-input size="mini" auto-complete="off"></el-input>
                             </el-form-item>
-                            <el-form-item label="宽(CM)" :label-width="formLabelWidth">
+                            <el-form-item :label="$t('dialog.width')" :label-width="formLabelWidth">
                                 <el-input size="mini" auto-complete="off"></el-input>
                             </el-form-item>
-                            <el-form-item label="高(CM)" :label-width="formLabelWidth">
+                            <el-form-item :label="$t('dialog.height')" :label-width="formLabelWidth">
                                 <el-input size="mini" auto-complete="off"></el-input>
                             </el-form-item>
-                            <el-form-item label="体积重(KG)公式" :label-width="formLabelWidth">
+                            <el-form-item :label="$t('dialog.weightformula')" :label-width="formLabelWidth">
                                 <el-input size="mini" auto-complete="off"></el-input>
                             </el-form-item>
-                            <el-form-item label="重量(KG)" :label-width="formLabelWidth">
+                            <el-form-item :label="$t('dialog.weight')" :label-width="formLabelWidth">
                                 <el-input size="mini" auto-complete="off"></el-input>
                             </el-form-item>
-                            <el-form-item label="分值" :label-width="formLabelWidth">
+                            <el-form-item :label="$t('dialog.score')" :label-width="formLabelWidth">
                                 <el-input size="mini" auto-complete="off"></el-input>
                             </el-form-item>
-                            <el-form-item label="状态" :label-width="formLabelWidth">
-                                <el-select size="mini" v-model="statevalue" placeholder="请选择">
+                            <el-form-item :label="$t('dialog.status')" :label-width="formLabelWidth">
+                                <el-select size="mini" v-model="statevalue" :placeholder="$t('ph.common')">
                                     <el-option
                                             v-for="item in BasicData.status"
                                             :key="item.value"
@@ -236,32 +236,32 @@
                                     </el-option>
                                 </el-select>
                             </el-form-item>
-                            <el-form-item label="时间" :label-width="formLabelWidth">
+                            <el-form-item :label="$t('dialog.time')" :label-width="formLabelWidth">
                                 <el-date-picker
                                         class="datestymini"
                                         v-model="datevalue"
                                         size="mini"
                                         type="daterange"
-                                        range-separator="至"
-                                        start-placeholder="新产品开始日期"
-                                        end-placeholder="新产品结束日期"
+                                        :range-separator="$t('ph.to')"
+                                        :start-placeholder="$t('ph.newprobegin')"
+                                        :end-placeholder="$t('ph.newproend')"
                                         value-format="yyyy-MM-dd">
                                 </el-date-picker>
                             </el-form-item>
                             <el-form-item label="URL KEY" :label-width="formLabelWidth">
                                 <el-input size="mini" auto-complete="off"></el-input>
                             </el-form-item>
-                            <el-form-item label="库存个数" :label-width="formLabelWidth">
+                            <el-form-item :label="$t('dialog.stockqty')" :label-width="formLabelWidth">
                                 <el-input size="mini" auto-complete="off"></el-input>
                             </el-form-item>
-                            <el-form-item label="打包销售个数" :label-width="formLabelWidth">
+                            <el-form-item :label="$t('dialog.packagesalesqty')" :label-width="formLabelWidth">
                                 <el-input size="mini" auto-complete="off"></el-input>
                             </el-form-item>
-                            <el-form-item label="最小购买数" :label-width="formLabelWidth">
+                            <el-form-item :label="$t('dialog.min')" :label-width="formLabelWidth">
                                 <el-input size="mini" auto-complete="off"></el-input>
                             </el-form-item>
-                            <el-form-item label="库存状态" :label-width="formLabelWidth">
-                                <el-select size="mini" v-model="kcstatusvalue" placeholder="请选择">
+                            <el-form-item :label="$t('dialog.kcstatus')" :label-width="formLabelWidth">
+                                <el-select size="mini" v-model="kcstatusvalue" :placeholder="$t('ph.common')">
                                     <el-option
                                             v-for="item in BasicData.kcstatus"
                                             :key="item.value"
@@ -270,35 +270,35 @@
                                     </el-option>
                                 </el-select>
                             </el-form-item>
-                            <el-form-item label="备注" :label-width="formLabelWidth">
+                            <el-form-item :label="$t('dialog.remark')" :label-width="formLabelWidth">
                                 <el-input size="mini" auto-complete="off"></el-input>
                             </el-form-item>
                         </el-form>
                     </el-tabs>
                 </el-tab-pane>
-                <el-tab-pane label="价格部分" name="price">
+                <el-tab-pane :label="$t('dialog.price')" name="price">
                     <Price></Price>
                 </el-tab-pane>
-                <el-tab-pane label="Meat部分" name="meta">Meta部分</el-tab-pane>
-                <el-tab-pane label="描述部分" name="discription">
+                <el-tab-pane :label="$t('dialog.meat')" name="meta">Meta部分</el-tab-pane>
+                <el-tab-pane :label="$t('dialog.discription')" name="discription">
                     <Desciption></Desciption>
                 </el-tab-pane>
-                <el-tab-pane label="图片信息" name="imginfo">
+                <el-tab-pane :label="$t('dialog.imginfo')" name="imginfo">
                     <Img></Img>
                 </el-tab-pane>
-                <el-tab-pane label="分类信息" name="kindinfo">
+                <el-tab-pane :label="$t('dialog.kindinfo')" name="kindinfo">
                     <Kindinfo></Kindinfo>
                 </el-tab-pane>
-                <el-tab-pane label="属性组" name="attrgroup">
+                <el-tab-pane :label="$t('dialog.attrgroup')" name="attrgroup">
                     <Attrgroup></Attrgroup>
                 </el-tab-pane>
-                <el-tab-pane label="相关产品" name="aboutp">
+                <el-tab-pane :label="$t('dialog.aboutp')" name="aboutp">
                     <Aboutpro></Aboutpro>
                 </el-tab-pane>
             </el-tabs>
             <div slot="footer" class="dialog-footer">
-                <el-button @click="dialogFormVisible = false">取 消</el-button>
-                <el-button type="primary" @click="dialogFormVisible = false">确 定</el-button>
+                <el-button @click="dialogFormVisible = false">{{$t('btn.cancel')}}</el-button>
+                <el-button type="primary" @click="dialogFormVisible = false">{{$t('btn.ok')}}</el-button>
             </div>
         </el-dialog>
     </div>
@@ -350,21 +350,21 @@
             },
             deleteYou(row,index){
 
-                this.$confirm('确定要删除此条商品数据吗?', '提示', {
-                    confirmButtonText: '确定',
-                    cancelButtonText: '取消',
+                this.$confirm(this.$t('info.deltips'), this.$t('info.tips'), {
+                    confirmButtonText: this.$t('btn.ok'),
+                    cancelButtonText: this.$t('btn.cancel'),
                     type: 'warning',
                     center: true
                 }).then(() => {
                     this.goodsdata.splice(index,1);
                     this.$message({
                         type: 'success',
-                        message: '删除成功!'
+                        message: this.$t('info.delsuccess')
                     });
                 }).catch(() => {
                     this.$message({
                         type: 'info',
-                        message: '已取消删除'
+                        message: this.$t('info.delfail')
                     });
                 });
             },
